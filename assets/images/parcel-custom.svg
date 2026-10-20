@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="custBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF8FD"/>
+      <stop offset="100%" stop-color="#E2F1FA"/>
+    </linearGradient>
+    <linearGradient id="woodGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D4B08C"/>
+      <stop offset="100%" stop-color="#A67B52"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEECB"/>
+      <stop offset="50%" stop-color="#D9B56D"/>
+      <stop offset="100%" stop-color="#AA7F32"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#69BCEB"/>
+      <stop offset="100%" stop-color="#278CC8"/>
+    </linearGradient>
+    <filter id="custShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#153B5B" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="450" fill="url(#custBg)"/>
+
+  <!-- Badge Top Left -->
+  <g transform="translate(30, 30)">
+    <rect width="135" height="30" rx="15" fill="#D9B56D"/>
+    <text x="67" y="19" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#153B5B" text-anchor="middle" letter-spacing="1">CUSTOM BESPOKE</text>
+  </g>
+
+  <!-- Custom Hamper Setup Display -->
+  <g filter="url(#custShadow)" transform="translate(100, 70)">
+    <!-- Wooden Box / Acrylic Base -->
+    <rect x="30" y="150" width="350" height="175" rx="14" fill="#FFFFFF" stroke="#69BCEB" stroke-width="2"/>
+    <!-- Clear Glass / Acrylic Shine -->
+    <path d="M35 155L140 155L45 320L35 320Z" fill="#EFF8FD" opacity="0.6"/>
+
+    <!-- Custom Modular Elements Arranged -->
+    <!-- 1. Jar A (Cookies) -->
+    <g transform="translate(60, 60)">
+      <rect x="0" y="25" width="70" height="85" rx="10" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="1.5"/>
+      <rect x="3" y="15" width="64" height="14" rx="4" fill="url(#gold)"/>
+      <circle cx="22" cy="65" r="10" fill="#F5C344"/>
+      <circle cx="48" cy="65" r="10" fill="#F5C344"/>
+      <circle cx="35" cy="45" r="10" fill="#F5C344"/>
+      <text x="35" y="95" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700" fill="#153B5B" text-anchor="middle">CUSTOM KUE</text>
+    </g>
+
+    <!-- 2. Reed Diffuser Bottle (Aromatherapy) -->
+    <g transform="translate(150, 45)">
+      <!-- Diffuser Sticks -->
+      <line x1="25" y1="100" x2="10" y2="10" stroke="#8C6541" stroke-width="2.5"/>
+      <line x1="30" y1="100" x2="30" y2="5" stroke="#8C6541" stroke-width="2.5"/>
+      <line x1="35" y1="100" x2="52" y2="12" stroke="#8C6541" stroke-width="2.5"/>
+      <!-- Bottle Glass -->
+      <rect x="12" y="75" width="36" height="55" rx="8" fill="#153B5B" opacity="0.9"/>
+      <rect x="22" y="65" width="16" height="12" rx="3" fill="url(#gold)"/>
+      <text x="30" y="105" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="700" fill="#FFFFFF" text-anchor="middle">DIFFUSER</text>
+    </g>
+
+    <!-- 3. Turkish Silk Prayer Mat / Sajadah Roll -->
+    <g transform="translate(225, 55)">
+      <rect x="5" y="30" width="75" height="100" rx="12" fill="#237A57"/>
+      <!-- Gold Embroidery Patterns -->
+      <rect x="5" y="45" width="75" height="6" fill="url(#gold)"/>
+      <rect x="5" y="105" width="75" height="6" fill="url(#gold)"/>
+      <!-- Silk Ribbon Band -->
+      <rect x="28" y="30" width="28" height="100" fill="url(#gold)"/>
+      <text x="42" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700" fill="#153B5B" text-anchor="middle" transform="rotate(-90 42 85)">SAJADAH SILK</text>
+    </g>
+
+    <!-- 4. Artisan Honey / Tea Jar -->
+    <g transform="translate(315, 70)">
+      <rect x="0" y="20" width="55" height="70" rx="8" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="1.5"/>
+      <rect x="2" y="12" width="51" height="12" rx="3" fill="#B42318"/>
+      <ellipse cx="27" cy="55" rx="18" ry="14" fill="#E89225" opacity="0.8"/>
+      <text x="27" y="58" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="800" fill="#FFFFFF" text-anchor="middle">MADU MURNI</text>
+    </g>
+
+    <!-- Ribbon & Hangtag Selection Swatches -->
+    <g transform="translate(80, 190)">
+      <!-- Swatch circles of ribbon colors -->
+      <text x="0" y="12" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#607586">PILIHAN PITA:</text>
+      <circle cx="75" cy="9" r="8" fill="#278CC8"/>
+      <circle cx="98" cy="9" r="8" fill="#153B5B"/>
+      <circle cx="121" cy="9" r="8" fill="#D9B56D"/>
+      <circle cx="144" cy="9" r="8" fill="#237A57"/>
+      <circle cx="167" cy="9" r="8" fill="#B42318"/>
+
+      <!-- Custom Greeting Card preview -->
+      <rect x="0" y="30" width="240" height="75" rx="8" fill="#EFF8FD" stroke="#69BCEB" stroke-width="1"/>
+      <text x="15" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="800" fill="#153B5B">Bebas Custom Sesuai Budget</text>
+      <text x="15" y="66" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="500" fill="#253746">Wadah + Kue + Souvenir + Kartu Ucapan Akrilik / Foil</text>
+      <text x="15" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#278CC8">Mulai Rp 350.000 / paket</text>
+    </g>
+  </g>
+</svg>

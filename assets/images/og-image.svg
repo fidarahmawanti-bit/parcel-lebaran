@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="ogBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF8FD"/>
+      <stop offset="60%" stop-color="#E2F2FB"/>
+      <stop offset="100%" stop-color="#D5ECF8"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCEECB"/>
+      <stop offset="50%" stop-color="#D9B56D"/>
+      <stop offset="100%" stop-color="#AA7F32"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1C4B72"/>
+      <stop offset="100%" stop-color="#153B5B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+
+  <!-- Left Content -->
+  <g transform="translate(100, 140)">
+    <!-- Brand Badge -->
+    <rect width="260" height="38" rx="19" fill="#153B5B"/>
+    <text x="130" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="700" fill="#69BCEB" text-anchor="middle" letter-spacing="1">NIRMALA PARCEL LEBARAN</text>
+
+    <!-- Main Title -->
+    <text x="0" y="110" font-family="'Plus Jakarta Sans', sans-serif" font-size="52" font-weight="800" fill="#153B5B" letter-spacing="-1">Katalog Parcel &amp;</text>
+    <text x="0" y="175" font-family="'Plus Jakarta Sans', sans-serif" font-size="52" font-weight="800" fill="#278CC8" letter-spacing="-1">Hampers Lebaran 2026</text>
+
+    <!-- Description -->
+    <text x="0" y="235" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="500" fill="#607586">Pilihan Eksklusif untuk Keluarga, Relasi Bisnis, &amp; Korporat.</text>
+    <text x="0" y="270" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="500" fill="#607586">Kurasi Halal &amp; Higienis | Desain Mewah | Pengiriman Aman.</text>
+
+    <!-- WhatsApp CTA Pill -->
+    <g transform="translate(0, 320)">
+      <rect width="320" height="56" rx="28" fill="#25D366"/>
+      <text x="160" y="35" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" font-weight="700" fill="#FFFFFF" text-anchor="middle">WhatsApp: 0821-3108-7971</text>
+    </g>
+  </g>
+
+  <!-- Right Visual Hamper Presentation -->
+  <g transform="translate(700, 110)">
+    <!-- Outer Hamper Box -->
+    <rect x="30" y="180" width="380" height="230" rx="20" fill="url(#navy)" stroke="#DCEAF2" stroke-width="2"/>
+    <rect x="30" y="180" width="380" height="8" rx="4" fill="url(#gold)"/>
+    <rect x="200" y="180" width="36" height="230" fill="url(#gold)"/>
+
+    <!-- Jars inside -->
+    <g transform="translate(60, 50)">
+      <rect x="10" y="35" width="95" height="120" rx="14" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="2"/>
+      <rect x="14" y="20" width="87" height="18" rx="5" fill="url(#gold)"/>
+      <circle cx="40" cy="95" r="14" fill="#F5C344"/>
+      <circle cx="75" cy="95" r="14" fill="#F5C344"/>
+      <circle cx="58" cy="65" r="14" fill="#F5C344"/>
+      <rect x="20" y="105" width="75" height="24" rx="4" fill="#153B5B"/>
+      <text x="58" y="121" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">NASTAR WISMAN</text>
+    </g>
+
+    <g transform="translate(180, 20)">
+      <rect x="20" y="55" width="55" height="150" rx="12" fill="#237A57"/>
+      <rect x="35" y="15" width="25" height="45" rx="5" fill="#237A57"/>
+      <rect x="33" y="10" width="29" height="30" rx="4" fill="url(#gold)"/>
+      <rect x="24" y="90" width="47" height="65" rx="3" fill="#FFFFFF"/>
+      <text x="47" y="120" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="800" fill="#153B5B" text-anchor="middle">SPARKLING</text>
+      <text x="47" y="132" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700" fill="#D9B56D" text-anchor="middle">WHITE GRAPE</text>
+    </g>
+
+    <g transform="translate(260, 60)">
+      <rect x="10" y="30" width="95" height="110" rx="14" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="2"/>
+      <rect x="14" y="18" width="87" height="16" rx="5" fill="url(#gold)"/>
+      <rect x="24" y="75" width="30" height="14" rx="2" fill="#FAD06C"/>
+      <rect x="58" y="75" width="30" height="14" rx="2" fill="#FAD06C"/>
+      <rect x="20" y="100" width="75" height="24" rx="4" fill="#278CC8"/>
+      <text x="58" y="116" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">KASTENGEL</text>
+    </g>
+
+    <!-- Silk Bow -->
+    <g transform="translate(218, 180)">
+      <ellipse cx="-30" cy="-15" rx="36" ry="20" fill="#278CC8" transform="rotate(-15)"/>
+      <ellipse cx="30" cy="-15" rx="36" ry="20" fill="#278CC8" transform="rotate(15)"/>
+      <circle cx="0" cy="0" r="16" fill="url(#gold)"/>
+    </g>
+  </g>
+</svg>

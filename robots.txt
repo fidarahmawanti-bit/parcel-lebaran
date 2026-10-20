@@ -1,0 +1,25 @@
+# robots.txt — Nirmala Parcel Lebaran (2026-2027 Standard)
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+# AI & Answer Engine Bots (AEO & GEO Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://nirmalaparcel.id/sitemap.xml

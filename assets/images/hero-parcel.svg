@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EFF8FD"/>
+      <stop offset="60%" stop-color="#E2F2FB"/>
+      <stop offset="100%" stop-color="#D5ECF8"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1C4B72"/>
+      <stop offset="100%" stop-color="#153B5B"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="50%" stop-color="#D9B56D"/>
+      <stop offset="100%" stop-color="#B88A3C"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#69BCEB"/>
+      <stop offset="100%" stop-color="#278CC8"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#EFF8FD" stop-opacity="0.3"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#153B5B" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="800" height="500" rx="20" fill="url(#bgGrad)"/>
+
+  <!-- Subtle Islamic Pattern Accents -->
+  <g opacity="0.08" stroke="#153B5B" stroke-width="1.5" fill="none">
+    <circle cx="120" cy="80" r="60"/>
+    <polygon points="120,20 162,50 162,110 120,140 78,110 78,50"/>
+    <polygon points="120,30 155,90 85,90"/>
+    <polygon points="120,130 155,70 85,70"/>
+
+    <circle cx="700" cy="400" r="70"/>
+    <polygon points="700,330 750,365 750,435 700,470 650,435 650,365"/>
+  </g>
+
+  <!-- Islamic Crescent & Star Accent -->
+  <g transform="translate(680, 50) scale(0.9)">
+    <path d="M40 10C23 10 10 23 10 40C10 57 23 70 40 70C46 70 51 68 56 65C44 63 35 52 35 40C35 28 44 17 56 15C51 12 46 10 40 10Z" fill="url(#goldGrad)"/>
+    <polygon points="58,35 62,44 72,44 64,50 67,60 58,54 49,60 52,50 44,44 54,44" fill="url(#goldGrad)" transform="translate(10,-10) scale(0.4)"/>
+  </g>
+
+  <!-- Main Hamper Box Presentation Shadow & Base -->
+  <g filter="url(#cardShadow)">
+    <!-- Base Tray / Outer Box -->
+    <rect x="180" y="240" width="440" height="210" rx="16" fill="url(#boxGrad)"/>
+    <!-- Box Trim Gold Accent -->
+    <rect x="180" y="240" width="440" height="8" rx="4" fill="url(#goldGrad)"/>
+    <!-- Box Front Ribbon -->
+    <rect x="385" y="240" width="30" height="210" fill="url(#goldGrad)"/>
+    <!-- Box Front Brand Plate -->
+    <rect x="330" y="320" width="140" height="50" rx="8" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="2"/>
+    <text x="400" y="342" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#153B5B" text-anchor="middle" letter-spacing="1">NIRMALA PARCEL</text>
+    <text x="400" y="357" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="600" fill="#278CC8" text-anchor="middle" letter-spacing="1.5">EID COLLECTION 2026</text>
+  </g>
+
+  <!-- ITEMS INSIDE THE HAMPER (Elevated Composition) -->
+
+  <!-- 1. Sparkling Grape / Syrup Bottle (Left-Center) -->
+  <g transform="translate(260, 90)">
+    <!-- Bottle Body -->
+    <rect x="25" y="60" width="55" height="150" rx="12" fill="#237A57" opacity="0.9"/>
+    <!-- Bottle Neck -->
+    <rect x="42" y="15" width="22" height="50" rx="5" fill="#237A57"/>
+    <!-- Gold Foil Neck Wrap -->
+    <rect x="40" y="10" width="26" height="30" rx="4" fill="url(#goldGrad)"/>
+    <!-- Bottle Label -->
+    <rect x="28" y="95" width="49" height="70" rx="4" fill="#FFFFFF" stroke="url(#goldGrad)" stroke-width="1.5"/>
+    <text x="52" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#153B5B" text-anchor="middle">SPARKLING</text>
+    <text x="52" y="137" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="600" fill="#D9B56D" text-anchor="middle">WHITE GRAPE</text>
+    <circle cx="52" cy="150" r="4" fill="#D9B56D"/>
+  </g>
+
+  <!-- 2. Nastar Glass Jar (Center Right) -->
+  <g transform="translate(365, 120)">
+    <!-- Jar Shadow -->
+    <ellipse cx="60" cy="140" rx="55" ry="12" fill="#153B5B" opacity="0.2"/>
+    <!-- Glass Jar Cylinder -->
+    <rect x="10" y="30" width="100" height="110" rx="14" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="2"/>
+    <!-- Nastar Cookies inside (Golden balls) -->
+    <g fill="#F5C344" stroke="#D99B26" stroke-width="1">
+      <circle cx="35" cy="115" r="14"/><circle cx="35" cy="113" r="2" fill="#5B3A18"/>
+      <circle cx="65" cy="115" r="14"/><circle cx="65" cy="113" r="2" fill="#5B3A18"/>
+      <circle cx="85" cy="115" r="12"/><circle cx="85" cy="113" r="2" fill="#5B3A18"/>
+      <circle cx="50" cy="92" r="14"/><circle cx="50" cy="90" r="2" fill="#5B3A18"/>
+      <circle cx="78" cy="92" r="13"/><circle cx="78" cy="90" r="2" fill="#5B3A18"/>
+      <circle cx="30" cy="92" r="12"/><circle cx="30" cy="90" r="2" fill="#5B3A18"/>
+      <circle cx="62" cy="70" r="14"/><circle cx="62" cy="68" r="2" fill="#5B3A18"/>
+      <circle cx="42" cy="70" r="13"/><circle cx="42" cy="68" r="2" fill="#5B3A18"/>
+    </g>
+    <!-- Jar Gold Lid -->
+    <rect x="15" y="15" width="90" height="18" rx="6" fill="url(#goldGrad)"/>
+    <!-- Jar Ribbon / Seal -->
+    <rect x="52" y="15" width="16" height="55" fill="url(#skyGrad)"/>
+    <rect x="25" y="80" width="70" height="24" rx="4" fill="#FFFFFF" opacity="0.95" stroke="#69BCEB" stroke-width="1"/>
+    <text x="60" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="#153B5B" text-anchor="middle">NASTAR WISMAN</text>
+  </g>
+
+  <!-- 3. Kastengel Jar (Far Left) -->
+  <g transform="translate(190, 150)">
+    <rect x="10" y="30" width="85" height="95" rx="12" fill="#FFFFFF" stroke="#DCEAF2" stroke-width="2"/>
+    <!-- Cheese sticks -->
+    <g fill="#FAD06C" stroke="#D99B26" stroke-width="1">
+      <rect x="20" y="85" width="28" height="12" rx="3"/>
+      <rect x="52" y="85" width="28" height="12" rx="3"/>
+      <rect x="25" y="68" width="28" height="12" rx="3"/>
+      <rect x="48" y="68" width="28" height="12" rx="3"/>
+      <rect x="34" y="52" width="30" height="12" rx="3"/>
+    </g>
+    <!-- Gold Lid -->
+    <rect x="14" y="18" width="77" height="16" rx="5" fill="url(#goldGrad)"/>
+    <rect x="20" y="88" width="65" height="20" rx="3" fill="#FFFFFF" stroke="#278CC8" stroke-width="1"/>
+    <text x="52" y="102" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#153B5B" text-anchor="middle">KASTENGEL EDAM</text>
+  </g>
+
+  <!-- 4. Artisan Tea Tin Box (Far Right) -->
+  <g transform="translate(500, 140)">
+    <rect x="10" y="25" width="90" height="115" rx="10" fill="#278CC8" stroke="url(#goldGrad)" stroke-width="2"/>
+    <rect x="8" y="14" width="94" height="16" rx="6" fill="url(#goldGrad)"/>
+    <!-- Tea artwork -->
+    <circle cx="55" cy="65" r="22" fill="#153B5B"/>
+    <path d="M55 52C50 58 48 65 55 74C62 65 60 58 55 52Z" fill="#D9B56D"/>
+    <text x="55" y="102" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" font-weight="700" fill="#FFFFFF" text-anchor="middle">ARTISAN TEA</text>
+    <text x="55" y="113" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="500" fill="#EFF8FD" text-anchor="middle">Chamomile Mint</text>
+  </g>
+
+  <!-- 5. Acrylic Eid Mubarak Greeting Card (Center Foreground) -->
+  <g transform="translate(320, 205)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="160" height="95" rx="10" fill="url(#glassGrad)" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Gold Star Motif -->
+    <polygon points="80,14 83,21 91,21 84,26 87,33 80,28 73,33 76,26 69,21 77,21" fill="url(#goldGrad)"/>
+    <text x="80" y="50" font-family="'Plus Jakarta Sans', sans-serif" font-size="13" font-weight="800" fill="#153B5B" text-anchor="middle">Selamat Idulfitri</text>
+    <text x="80" y="65" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#D9B56D" text-anchor="middle">1447 H / 2026 M</text>
+    <text x="80" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="500" fill="#607586" text-anchor="middle">Mohon Maaf Lahir &amp; Batin</text>
+  </g>
+
+  <!-- Big Luxurious Ribbon Bow on Box Corner -->
+  <g transform="translate(230, 240)">
+    <path d="M0 0C-30 -40 -60 10 0 0Z" fill="url(#skyGrad)"/>
+    <path d="M0 0C30 -40 60 10 0 0Z" fill="url(#skyGrad)"/>
+    <circle cx="0" cy="0" r="14" fill="url(#goldGrad)"/>
+    <!-- Ribbon Tails hanging down -->
+    <path d="M-8 8L-25 70L-10 65L0 75L-2 8Z" fill="url(#skyGrad)"/>
+    <path d="M6 8L20 75L30 65L45 70L10 8Z" fill="url(#skyGrad)"/>
+  </g>
+</svg>
