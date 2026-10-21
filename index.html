@@ -70,7 +70,7 @@
   <!-- Performance: Preload LCP hero image with accurate responsive sizes -->
   <link rel="preload" as="image" href="assets/images/hero-parcel-sm.webp"
     imagesrcset="assets/images/hero-parcel-sm.webp 480w, assets/images/hero-parcel.webp 800w"
-    imagesizes="(max-width: 576px) 100vw, (max-width: 991px) 720px, 532px" fetchpriority="high">
+    imagesizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) 720px, 532px" fetchpriority="high">
 
   <!-- Performance: Preload Bootstrap Icons font to avoid FOIT -->
   <link rel="preload" as="font" type="font/woff2" crossorigin
@@ -501,9 +501,9 @@
           <div class="col-lg-6">
             <div class="hero-visual-wrapper">
               <div class="hero-img-card">
-                <img src="assets/images/hero-parcel.webp"
+                <img src="assets/images/hero-parcel-sm.webp"
                   srcset="assets/images/hero-parcel-sm.webp 480w, assets/images/hero-parcel.webp 800w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 991px) 720px, 532px"
+                  sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) 720px, 532px"
                   alt="Koleksi Parcel Lebaran dan Hampers Idulfitri Eksklusif 2026" width="800" height="446"
                   fetchpriority="high" decoding="sync">
               </div>
@@ -692,9 +692,9 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-premium">Premium VIP</span>
-                <img src="assets/images/parcel-premium.webp"
+                <img src="assets/images/parcel-premium-sm.webp"
                   srcset="assets/images/parcel-premium-sm.webp 400w, assets/images/parcel-premium.webp 600w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 388px"
+                  sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 24px), 280px"
                   alt="Hampers Lebaran Paket Al-Karim Kemasan Premium" class="package-card-img" width="600" height="448"
                   loading="lazy">
               </div>
@@ -730,9 +730,9 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-ekonomis">Favorit Keluarga</span>
-                <img src="assets/images/parcel-ekonomis.webp"
+                <img src="assets/images/parcel-ekonomis-sm.webp"
                   srcset="assets/images/parcel-ekonomis-sm.webp 400w, assets/images/parcel-ekonomis.webp 600w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 388px"
+                  sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 24px), 280px"
                   alt="Hampers Lebaran Paket Fitrah Ekonomis" class="package-card-img" width="600" height="448"
                   loading="lazy">
               </div>
@@ -767,9 +767,9 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-korporat">Korporasi &amp; B2B</span>
-                <img src="assets/images/parcel-korporat.webp"
+                <img src="assets/images/parcel-korporat-sm.webp"
                   srcset="assets/images/parcel-korporat-sm.webp 400w, assets/images/parcel-korporat.webp 600w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 388px"
+                  sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 24px), 280px"
                   alt="Hampers Paket Eksekutif Sapphire untuk Korporat" class="package-card-img" width="600"
                   height="448" loading="lazy">
               </div>
@@ -804,9 +804,9 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-custom">Bebas Custom</span>
-                <img src="assets/images/parcel-custom.webp"
+                <img src="assets/images/parcel-custom-sm.webp"
                   srcset="assets/images/parcel-custom-sm.webp 400w, assets/images/parcel-custom.webp 600w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 388px"
+                  sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) calc(50vw - 24px), 280px"
                   alt="Hampers Paket Mahabbah Custom Sesuai Anggaran" class="package-card-img" width="600" height="448"
                   loading="lazy">
               </div>
@@ -972,9 +972,9 @@
 
           <div class="col-lg-6">
             <div class="p-4 bg-light rounded-4 border border-light-subtle shadow-sm text-center">
-              <img src="assets/images/parcel-korporat.webp"
+              <img src="assets/images/parcel-korporat-sm.webp"
                 srcset="assets/images/parcel-korporat-sm.webp 400w, assets/images/parcel-korporat.webp 600w"
-                sizes="(max-width: 576px) 100vw, (max-width: 991px) 720px, 532px" alt="Koleksi Hampers Korporat dengan Branding Logo Perusahaan"
+                sizes="(max-width: 576px) calc(100vw - 32px), (max-width: 991px) 720px, 532px" alt="Koleksi Hampers Korporat dengan Branding Logo Perusahaan"
                 class="img-fluid rounded-3 mb-3" width="600" height="448" loading="lazy">
               <div class="fw-bold text-navy-900">Telah Dipercaya Puluhan Perusahaan Terkemuka</div>
               <small class="text-muted">Perbankan, BUMN, Firma Hukum, Agensi Digital &amp; Start-up</small>

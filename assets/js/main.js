@@ -1,35 +1,28 @@
 /**
- * Parcel Lebaran — Vanilla JavaScript Logic
- * Features: Navbar Scroll State, Package Filters, Custom Parcel Calculator,
- * WhatsApp Link Generators, Form Handling, and Keyboard Accessibility.
+ * Parcel Lebaran — High-Performance Vanilla JavaScript Logic
+ * Zero-layout-shift, zero-forced-reflow, passive listeners.
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Sticky Navbar Scroll State (Optimized with requestAnimationFrame to prevent forced reflow)
+  // 1. Sticky Navbar Scroll State (Passive scroll listener, zero forced reflow on load)
   const navbar = document.querySelector(".site-navbar");
   if (navbar) {
     let isScrolled = false;
     let ticking = false;
 
-    const updateNavbar = () => {
-      const scrolled = window.scrollY > 30;
-      if (scrolled !== isScrolled) {
-        isScrolled = scrolled;
-        navbar.classList.toggle("scrolled", scrolled);
-      }
-      ticking = false;
-    };
-
-    const handleScroll = () => {
+    window.addEventListener("scroll", function () {
       if (!ticking) {
-        requestAnimationFrame(updateNavbar);
+        window.requestAnimationFrame(function () {
+          const scrolled = window.scrollY > 30;
+          if (scrolled !== isScrolled) {
+            isScrolled = scrolled;
+            navbar.classList.toggle("scrolled", scrolled);
+          }
+          ticking = false;
+        });
         ticking = true;
       }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    // Defer initial check to requestAnimationFrame so DOMContentLoaded completes without reflow
-    requestAnimationFrame(updateNavbar);
+    }, { passive: true });
   }
 
   // 2. Package Listing Filter
@@ -37,19 +30,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const packageCards = document.querySelectorAll("[data-package-category]");
 
   if (packageFilterBtns.length > 0 && packageCards.length > 0) {
-    packageFilterBtns.forEach((btn) => {
+    packageFilterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        packageFilterBtns.forEach((b) => b.classList.remove("active"));
+        packageFilterBtns.forEach(function (b) { b.classList.remove("active"); });
         this.classList.add("active");
 
         const filterValue = this.getAttribute("data-package-filter");
-
-        packageCards.forEach((card) => {
+        packageCards.forEach(function (card) {
           const cardCategory = card.getAttribute("data-package-category");
-          if (filterValue === "all" || cardCategory === filterValue) {
-            card.closest(".package-grid-item").style.display = "block";
-          } else {
-            card.closest(".package-grid-item").style.display = "none";
+          const parentItem = card.closest(".package-grid-item");
+          if (parentItem) {
+            parentItem.style.display = (filterValue === "all" || cardCategory === filterValue) ? "block" : "none";
           }
         });
       });
@@ -61,19 +52,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const portfolioItems = document.querySelectorAll("[data-portfolio-category]");
 
   if (portfolioFilterBtns.length > 0 && portfolioItems.length > 0) {
-    portfolioFilterBtns.forEach((btn) => {
+    portfolioFilterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        portfolioFilterBtns.forEach((b) => b.classList.remove("active"));
+        portfolioFilterBtns.forEach(function (b) { b.classList.remove("active"); });
         this.classList.add("active");
 
         const filterValue = this.getAttribute("data-portfolio-filter");
-
-        portfolioItems.forEach((item) => {
+        portfolioItems.forEach(function (item) {
           const itemCat = item.getAttribute("data-portfolio-category");
-          if (filterValue === "all" || itemCat === filterValue) {
-            item.closest(".portfolio-grid-item").style.display = "block";
-          } else {
-            item.closest(".portfolio-grid-item").style.display = "none";
+          const parentItem = item.closest(".portfolio-grid-item");
+          if (parentItem) {
+            parentItem.style.display = (filterValue === "all" || itemCat === filterValue) ? "block" : "none";
           }
         });
       });
@@ -91,62 +80,54 @@ document.addEventListener("DOMContentLoaded", function () {
     const waCustomBtn = document.getElementById("waCustomOrderBtn");
 
     function updateCustomCalculation() {
-      // Base packaging price
       let packagingPrice = 0;
       let packagingName = "Hardbox Signature";
-      packagingRadios.forEach((radio) => {
+      packagingRadios.forEach(function (radio) {
         if (radio.checked) {
           packagingPrice = parseInt(radio.getAttribute("data-price") || 0, 10);
           packagingName = radio.getAttribute("data-name") || "Hardbox";
         }
       });
 
-      // Sum of selected items
       let itemsTotal = 0;
       const selectedItemNames = [];
-      itemCheckboxes.forEach((cb) => {
+      itemCheckboxes.forEach(function (cb) {
         if (cb.checked) {
           itemsTotal += parseInt(cb.getAttribute("data-price") || 0, 10);
           selectedItemNames.push(cb.getAttribute("data-name"));
         }
       });
 
-      const quantity = Math.max(1, parseInt(quantityInput?.value || 1, 10));
+      const quantity = Math.max(1, parseInt(quantityInput ? quantityInput.value : 1, 10) || 1);
       const unitPrice = packagingPrice + itemsTotal;
       const grandTotal = unitPrice * quantity;
 
-      // Format IDR
-      const formatIDR = (num) => {
+      const formatIDR = function (num) {
         return "Rp " + num.toLocaleString("id-ID");
       };
 
       if (unitPriceEl) unitPriceEl.textContent = formatIDR(unitPrice);
       if (totalEstimateEl) totalEstimateEl.textContent = formatIDR(grandTotal);
 
-      // Generate WhatsApp Link
       if (waCustomBtn) {
         const itemsListStr = selectedItemNames.length > 0 ? selectedItemNames.join(", ") : "Belum memilih isi";
-        const messageText = 
-`Halo Parcel Lebaran, saya ingin konsultasi pemesanan Parcel Custom Lebaran:
-- Wadah: ${packagingName}
-- Isi Pilihan: ${itemsListStr}
-- Jumlah Pesanan: ${quantity} paket
-- Estimasi Biaya: ${formatIDR(grandTotal)} (${formatIDR(unitPrice)}/paket)
+        const messageText = "Halo Parcel Lebaran, saya ingin konsultasi pemesanan Parcel Custom Lebaran:\n" +
+          "- Wadah: " + packagingName + "\n" +
+          "- Isi Pilihan: " + itemsListStr + "\n" +
+          "- Jumlah Pesanan: " + quantity + " paket\n" +
+          "- Estimasi Biaya: " + formatIDR(grandTotal) + " (" + formatIDR(unitPrice) + "/paket)\n\n" +
+          "Mohon info ketersediaan dan detail penawaran. Terima kasih!";
 
-Mohon info ketersediaan dan detail penawaran. Terima kasih!`;
-
-        const waUrl = `https://wa.me/6282131087971?text=${encodeURIComponent(messageText)}`;
-        waCustomBtn.setAttribute("href", waUrl);
+        waCustomBtn.setAttribute("href", "https://wa.me/6282131087971?text=" + encodeURIComponent(messageText));
       }
     }
 
-    packagingRadios.forEach((el) => el.addEventListener("change", updateCustomCalculation));
-    itemCheckboxes.forEach((el) => el.addEventListener("change", updateCustomCalculation));
+    packagingRadios.forEach(function (el) { el.addEventListener("change", updateCustomCalculation); });
+    itemCheckboxes.forEach(function (el) { el.addEventListener("change", updateCustomCalculation); });
     if (quantityInput) {
       quantityInput.addEventListener("input", updateCustomCalculation);
     }
 
-    // Initial calculation
     updateCustomCalculation();
   }
 
@@ -156,61 +137,46 @@ Mohon info ketersediaan dan detail penawaran. Terima kasih!`;
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const name = document.getElementById("contactName")?.value.trim() || "";
-      const phone = document.getElementById("contactPhone")?.value.trim() || "";
-      const packageChoice = document.getElementById("contactPackage")?.value || "";
-      const qty = document.getElementById("contactQty")?.value.trim() || "1";
-      const notes = document.getElementById("contactNotes")?.value.trim() || "";
+      const nameInput = document.getElementById("contactName");
+      const phoneInput = document.getElementById("contactPhone");
+      const packageInput = document.getElementById("contactPackage");
+      const qtyInput = document.getElementById("contactQty");
+      const notesInput = document.getElementById("contactNotes");
+
+      const name = nameInput ? nameInput.value.trim() : "";
+      const phone = phoneInput ? phoneInput.value.trim() : "";
+      const packageChoice = packageInput ? packageInput.value : "";
+      const qty = (qtyInput && qtyInput.value.trim()) ? qtyInput.value.trim() : "1";
+      const notes = (notesInput && notesInput.value.trim()) ? notesInput.value.trim() : "-";
 
       if (!name || !phone) {
         alert("Mohon lengkapi nama dan nomor WhatsApp Anda.");
         return;
       }
 
-      const waMsg = 
-`Halo Parcel Lebaran, saya ingin bertanya dan memesan parcel:
-- Nama: ${name}
-- No. WhatsApp: ${phone}
-- Pilihan Paket: ${packageChoice}
-- Perkiraan Jumlah: ${qty} paket
-- Catatan / Kebutuhan Khusus: ${notes ? notes : "-"}
+      const waMsg = "Halo Parcel Lebaran, saya ingin bertanya dan memesan parcel:\n" +
+        "- Nama: " + name + "\n" +
+        "- No. WhatsApp: " + phone + "\n" +
+        "- Pilihan Paket: " + packageChoice + "\n" +
+        "- Perkiraan Jumlah: " + qty + " paket\n" +
+        "- Catatan / Kebutuhan Khusus: " + notes + "\n\n" +
+        "Mohon informasi lebih lanjut. Terima kasih!";
 
-Mohon informasi lebih lanjut. Terima kasih!`;
-
-      const targetUrl = `https://wa.me/6282131087971?text=${encodeURIComponent(waMsg)}`;
-      window.open(targetUrl, "_blank", "noopener,noreferrer");
+      window.open("https://wa.me/6282131087971?text=" + encodeURIComponent(waMsg), "_blank", "noopener,noreferrer");
     });
   }
 
-  // 6. Smooth Scroll for Table of Contents (TOC) with Sticky Navbar Offset
+  // 6. Smooth Scroll for Table of Contents using CSS scroll-margin (Zero JS reflow)
   const tocLinks = document.querySelectorAll(".article-toc a[href^='#']");
   if (tocLinks.length > 0) {
-    // Cache navbar height once to avoid forced reflow on each click
-    const nav = document.querySelector(".site-navbar");
-    let cachedNavHeight = nav ? nav.offsetHeight : 70;
-
-    // Update cached height on resize
-    window.addEventListener("resize", () => {
-      cachedNavHeight = nav ? nav.offsetHeight : 70;
-    }, { passive: true });
-
-    tocLinks.forEach((link) => {
+    tocLinks.forEach(function (link) {
       link.addEventListener("click", function (e) {
         const targetId = this.getAttribute("href");
         if (targetId && targetId !== "#") {
           const targetEl = document.querySelector(targetId);
           if (targetEl) {
             e.preventDefault();
-            const navOffset = cachedNavHeight + 18;
-            const elementPosition = targetEl.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - navOffset;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: "smooth"
-            });
-
-            // Update URL hash smoothly
+            targetEl.scrollIntoView({ behavior: "smooth" });
             try {
               history.pushState(null, null, targetId);
             } catch (err) {
