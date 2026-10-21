@@ -8,10 +8,10 @@
    1. Design Tokens & CSS Variables
    ========================================================================== */
 :root {
-  /* Brand Palette */
+  /* Brand Palette (WCAG AA Compliant Contrast >= 4.5:1) */
   --sky-500: #69bceb;
-  --sky-700: #278cc8;
-  --sky-800: #1b6da0;
+  --sky-700: #1b6da0;
+  --sky-800: #14547c;
   --navy-900: #153b5b;
   --navy-800: #1c4b72;
   --navy-950: #0d263b;
@@ -19,10 +19,10 @@
   --ice-100: #e2f2fb;
   --white: #ffffff;
   --gold-500: #d9b56d;
-  --gold-600: #c19b4f;
+  --gold-600: #9e7626;
   --gold-100: #fcf6e8;
-  --text: #253746;
-  --muted: #607586;
+  --text: #213240;
+  --muted: #4a6275;
   --border: #dceaf2;
   --success: #237a57;
   --danger: #b42318;
@@ -116,6 +116,11 @@ img {
   outline: 3px solid var(--sky-700);
   outline-offset: 3px;
   border-radius: 4px;
+}
+
+/* Accessibility: Ensure high-contrast muted text (WCAG AA >= 4.5:1) */
+.text-muted {
+  color: var(--muted) !important;
 }
 
 /* ==========================================================================
@@ -564,6 +569,7 @@ img {
 .hero-img-card img {
   width: 100%;
   height: auto;
+  aspect-ratio: 800 / 446;
   display: block;
   object-fit: cover;
 }
@@ -572,6 +578,7 @@ img {
   position: absolute;
   bottom: 20px;
   left: -15px;
+  contain: layout style;
   background-color: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
@@ -654,12 +661,16 @@ img {
     line-height: 1.25;
   }
   .hero-float-badge {
-    position: static !important;
-    margin-top: 0.75rem;
-    border-radius: var(--radius-md);
-    padding: 10px 14px;
-    justify-content: center;
-    box-shadow: var(--shadow-sm);
+    position: absolute !important;
+    bottom: 12px !important;
+    left: 12px !important;
+    right: 12px !important;
+    margin-top: 0 !important;
+    padding: 8px 12px !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(21, 59, 91, 0.12);
+    justify-content: flex-start;
   }
 }
 

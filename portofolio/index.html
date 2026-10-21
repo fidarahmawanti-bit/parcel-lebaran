@@ -63,8 +63,7 @@
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-    <!-- Google Fonts â€” async -->
+  <!-- Google Fonts â€” async -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
@@ -83,7 +82,7 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.min.css">
 
   <!-- JSON-LD Structured Data (Schema.org Graph) -->
   <script type="application/ld+json">
@@ -140,7 +139,7 @@
           style="object-fit: cover;">
         <span class="brand-text"
           style="font-size: 1.25rem; letter-spacing: -0.5px; color: #153B5B; font-weight: 800;">PARCEL <span
-            style="color: #278CC8; font-weight: 700;">LEBARAN</span></span>
+            style="color: #1b6da0; font-weight: 700;">LEBARAN</span></span>
       </a>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
@@ -194,7 +193,9 @@
     </div>
   </nav>
 
-  <!-- ==================== PAGE HEADER ==================== -->
+  
+  <main id="main-content">
+<!-- ==================== PAGE HEADER ==================== -->
   <header class="page-header-simple">
     <div class="container">
       <nav aria-label="breadcrumb">
@@ -405,6 +406,8 @@
   </section>
 
   <!-- ==================== FOOTER ==================== -->
+  </main>
+
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
@@ -422,7 +425,7 @@
           </p>
         </div>
         <div class="col-6 col-lg-2">
-          <h5>Navigasi</h5>
+          <p class="footer-heading fw-bold text-white mb-3">Navigasi</p>
           <ul class="footer-links small">
             <li><a href="../index.html">Beranda</a></li>
             <li><a href="../tentang/index.html">Tentang Kami</a></li>
@@ -433,7 +436,7 @@
           </ul>
         </div>
         <div class="col-6 col-lg-2">
-          <h5>Kategori</h5>
+          <p class="footer-heading fw-bold text-white mb-3">Kategori</p>
           <ul class="footer-links small">
             <li><a href="../paket/parcel-premium/index.html">Parcel Premium</a></li>
             <li><a href="../paket/parcel-ekonomis/index.html">Parcel Ekonomis</a></li>
@@ -485,7 +488,7 @@
   </a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/main.min.js"></script>
 </body>
 
 </html>

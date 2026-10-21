@@ -5,18 +5,31 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Sticky Navbar Scroll State
+  // 1. Sticky Navbar Scroll State (Optimized with requestAnimationFrame to prevent forced reflow)
   const navbar = document.querySelector(".site-navbar");
   if (navbar) {
+    let isScrolled = false;
+    let ticking = false;
+
+    const updateNavbar = () => {
+      const scrolled = window.scrollY > 30;
+      if (scrolled !== isScrolled) {
+        isScrolled = scrolled;
+        navbar.classList.toggle("scrolled", scrolled);
+      }
+      ticking = false;
+    };
+
     const handleScroll = () => {
-      if (window.scrollY > 30) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
+      if (!ticking) {
+        requestAnimationFrame(updateNavbar);
+        ticking = true;
       }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    // Defer initial check to requestAnimationFrame so DOMContentLoaded completes without reflow
+    requestAnimationFrame(updateNavbar);
   }
 
   // 2. Package Listing Filter
