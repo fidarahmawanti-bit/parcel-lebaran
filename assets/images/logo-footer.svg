@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" fill="none">
+  <!-- Brand Icon -->
+  <g transform="translate(4, 6)">
+    <!-- Hamper Box Base -->
+    <rect x="8" y="16" width="36" height="32" rx="6" fill="#133856" stroke="#69BCEB" stroke-width="2"/>
+    <!-- Lid / Ribbon -->
+    <path d="M4 16H48C50 16 51 14 49 12L45 8C44 7 42 7 41 7H11C10 7 8 7 7 8L3 12C1 14 2 16 4 16Z" fill="#38BDF8"/>
+    <!-- Vertical Ribbon -->
+    <rect x="23" y="16" width="6" height="32" fill="#EAB308"/>
+    <!-- Golden Bow Top -->
+    <path d="M26 7C22 2 15 2 18 7C21 12 26 7 26 7Z" fill="#FBBF24"/>
+    <path d="M26 7C30 2 37 2 34 7C31 12 26 7 26 7Z" fill="#FBBF24"/>
+    <!-- Crescent Moon Accent -->
+    <path d="M38 18C36 17 35 15 36 13C37 11 39 10 41 10C37 10 33 13 33 17C33 21 37 24 41 24C39 24 37 23 36 21C35 19 36 18 38 18Z" fill="#FBBF24"/>
+  </g>
+  
+  <!-- Text Parcel Lebaran -->
+  <text x="64" y="41" font-family="'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF" letter-spacing="-0.5">PARCEL <tspan fill="#69BCEB" font-weight="700">LEBARAN</tspan></text>
+</svg>

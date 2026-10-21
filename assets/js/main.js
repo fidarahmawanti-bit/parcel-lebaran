@@ -1,5 +1,5 @@
 /**
- * Nirmala Parcel Lebaran — Vanilla JavaScript Logic
+ * Parcel Lebaran — Vanilla JavaScript Logic
  * Features: Navbar Scroll State, Package Filters, Custom Parcel Calculator,
  * WhatsApp Link Generators, Form Handling, and Keyboard Accessibility.
  */
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
       if (waCustomBtn) {
         const itemsListStr = selectedItemNames.length > 0 ? selectedItemNames.join(", ") : "Belum memilih isi";
         const messageText = 
-`Halo Nirmala Parcel, saya ingin konsultasi pemesanan Parcel Custom Lebaran:
+`Halo Parcel Lebaran, saya ingin konsultasi pemesanan Parcel Custom Lebaran:
 - Wadah: ${packagingName}
 - Isi Pilihan: ${itemsListStr}
 - Jumlah Pesanan: ${quantity} paket
@@ -155,7 +155,7 @@ Mohon info ketersediaan dan detail penawaran. Terima kasih!`;
       }
 
       const waMsg = 
-`Halo Nirmala Parcel, saya ingin bertanya dan memesan parcel:
+`Halo Parcel Lebaran, saya ingin bertanya dan memesan parcel:
 - Nama: ${name}
 - No. WhatsApp: ${phone}
 - Pilihan Paket: ${packageChoice}
