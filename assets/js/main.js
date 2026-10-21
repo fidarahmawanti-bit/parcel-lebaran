@@ -172,6 +172,15 @@ Mohon informasi lebih lanjut. Terima kasih!`;
   // 6. Smooth Scroll for Table of Contents (TOC) with Sticky Navbar Offset
   const tocLinks = document.querySelectorAll(".article-toc a[href^='#']");
   if (tocLinks.length > 0) {
+    // Cache navbar height once to avoid forced reflow on each click
+    const nav = document.querySelector(".site-navbar");
+    let cachedNavHeight = nav ? nav.offsetHeight : 70;
+
+    // Update cached height on resize
+    window.addEventListener("resize", () => {
+      cachedNavHeight = nav ? nav.offsetHeight : 70;
+    }, { passive: true });
+
     tocLinks.forEach((link) => {
       link.addEventListener("click", function (e) {
         const targetId = this.getAttribute("href");
@@ -179,8 +188,7 @@ Mohon informasi lebih lanjut. Terima kasih!`;
           const targetEl = document.querySelector(targetId);
           if (targetEl) {
             e.preventDefault();
-            const nav = document.querySelector(".site-navbar");
-            const navOffset = nav ? nav.offsetHeight + 18 : 90;
+            const navOffset = cachedNavHeight + 18;
             const elementPosition = targetEl.getBoundingClientRect().top;
             const offsetPosition = elementPosition + window.pageYOffset - navOffset;
 
