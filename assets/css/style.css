@@ -2265,3 +2265,345 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   19. Mobile Proportional Fixes — Halaman Inner (Tentang, Portofolio, Blog, Kontak)
+   ========================================================================== */
+
+/* --- Page Header Simple: h1 & lead on mobile --- */
+@media (max-width: 767.98px) {
+  .page-header-simple {
+    padding: 1.75rem 0 1.25rem;
+  }
+  .page-header-simple h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    line-height: 1.22;
+    margin-bottom: 0.65rem !important;
+  }
+  .page-header-simple .lead {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 0 !important;
+  }
+  .custom-breadcrumb {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .page-header-simple {
+    padding: 1.4rem 0 1rem;
+  }
+  .page-header-simple h1 {
+    font-size: clamp(1.25rem, 6vw, 1.6rem);
+    line-height: 1.22;
+    margin-bottom: 0.55rem !important;
+  }
+  .page-header-simple .lead {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  .custom-breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* --- Tentang Kami Page --- */
+@media (max-width: 767.98px) {
+  /* Brand story section */
+  .hero-img-card {
+    margin-top: 0.5rem;
+  }
+  /* 4 Pilar Komitmen */
+  .feature-box {
+    padding: 1.25rem;
+  }
+  .feature-icon-circle {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+    margin-bottom: 0.85rem;
+  }
+  .feature-box h3.h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .feature-box {
+    padding: 1.1rem;
+  }
+  .feature-icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .feature-box h3.h5 {
+    font-size: 0.95rem;
+  }
+  /* Step cards on tentang */
+  .step-card {
+    padding: 1.25rem 1rem;
+  }
+  .step-num {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    margin-bottom: 0.85rem;
+  }
+}
+
+/* --- Portofolio Page --- */
+@media (max-width: 767.98px) {
+  .filter-tabs {
+    gap: 6px;
+    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    font-size: 0.82rem;
+    padding: 0.38rem 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .portfolio-content {
+    padding: 1rem 1.1rem;
+  }
+  .portfolio-content h2.h5 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem !important;
+  }
+  .portfolio-content p.small {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+  .portfolio-badge {
+    font-size: 0.7rem;
+    padding: 0.28em 0.7em;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .filter-btn {
+    font-size: 0.78rem;
+    padding: 0.32rem 0.85rem;
+  }
+  .portfolio-content {
+    padding: 0.9rem 1rem;
+  }
+}
+
+/* --- Blog & Panduan Page --- */
+@media (max-width: 767.98px) {
+  /* Featured article banner */
+  .blog-featured-banner {
+    padding: 1.25rem !important;
+  }
+  .blog-featured-banner h2.h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    margin-bottom: 0.65rem !important;
+  }
+  .blog-featured-banner p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1rem !important;
+  }
+  /* The featured article inside .p-4.p-lg-5 */
+  .p-4.p-lg-5.bg-light.rounded-4 {
+    padding: 1.25rem !important;
+  }
+  .p-4.p-lg-5.bg-light.rounded-4 h2.h2 {
+    font-size: 1.2rem !important;
+    line-height: 1.3;
+  }
+  /* Blog cards */
+  .blog-card-body {
+    padding: 1rem;
+  }
+  .blog-card-body h3.h5 {
+    font-size: 0.92rem;
+    line-height: 1.35;
+  }
+  .section-header h2.h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .blog-card-body {
+    padding: 0.9rem;
+  }
+  .blog-card-body h3.h5 {
+    font-size: 0.88rem;
+  }
+}
+
+/* --- Kontak Page --- */
+@media (max-width: 767.98px) {
+  /* Contact info cards */
+  .p-4.bg-light.rounded-4.border.mb-4 {
+    padding: 1.25rem !important;
+  }
+  .p-4.bg-light.rounded-4.border.mb-4 h2.h4 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem !important;
+  }
+  .p-4.bg-light.rounded-4.border.mb-4 strong {
+    font-size: 0.88rem;
+  }
+  .p-4.bg-light.rounded-4.border.mb-4 .fs-5.fw-bold {
+    font-size: 1rem !important;
+  }
+  /* Checklist card */
+  .p-4.bg-white.rounded-4.border {
+    padding: 1.25rem !important;
+  }
+  /* Contact form */
+  .p-4.p-lg-5.bg-white.rounded-4.border {
+    padding: 1.25rem !important;
+  }
+  .p-4.p-lg-5.bg-white.rounded-4.border h2.h4 {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem !important;
+  }
+  .p-4.p-lg-5.bg-white.rounded-4.border .small.mb-4 {
+    font-size: 0.82rem;
+    margin-bottom: 1.25rem !important;
+  }
+  /* Form element sizing */
+  .form-control,
+  .form-select {
+    font-size: 0.9rem;
+  }
+  /* WhatsApp icon button in contact info */
+  .rounded-circle.bg-success[style*="44px"],
+  .rounded-circle.bg-ice-100[style*="44px"] {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .p-4.bg-light.rounded-4.border.mb-4 {
+    padding: 1rem !important;
+  }
+  .p-4.bg-white.rounded-4.border {
+    padding: 1rem !important;
+  }
+  .p-4.p-lg-5.bg-white.rounded-4.border {
+    padding: 1rem !important;
+  }
+  /* Contact icon circles */
+  .rounded-circle[style*="44px"] {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px;
+    min-height: 36px;
+  }
+  .rounded-circle[style*="44px"] i {
+    font-size: 1rem !important;
+  }
+}
+
+/* --- Section-py padding mobile fix for inner pages --- */
+@media (max-width: 575.98px) {
+  .section-py {
+    padding-top: clamp(2rem, 5vw, 3rem);
+    padding-bottom: clamp(2rem, 5vw, 3rem);
+  }
+  .section-header {
+    margin-bottom: clamp(1.25rem, 4vw, 2rem);
+  }
+  .section-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Testimonial card mobile fix --- */
+@media (max-width: 575.98px) {
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+  .testimonial-text {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+  .testimonial-quote-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+/* --- Category cards on paket index mobile fix --- */
+@media (max-width: 575.98px) {
+  .category-card {
+    padding: 1.25rem;
+  }
+  .category-icon-box {
+    width: 46px;
+    height: 46px;
+    font-size: 1.4rem;
+    margin-bottom: 0.9rem;
+  }
+}
+
+/* --- Tentang: Proses Preparation Cards --- */
+@media (max-width: 575.98px) {
+  /* Blog featured article section paddings */
+  section .p-4.bg-light.rounded-4 {
+    padding: 1.1rem !important;
+  }
+  section .p-4.bg-light.rounded-4 h2 {
+    font-size: 1.1rem !important;
+    line-height: 1.28 !important;
+    margin-bottom: 0.6rem !important;
+  }
+  section .p-4.bg-light.rounded-4 p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin-bottom: 1rem !important;
+  }
+  /* Process step numbering */
+  .d-flex.align-items-center.gap-3.mb-3 .badge.rounded-circle {
+    font-size: 0.75rem !important;
+    padding: 0.35rem 0.45rem !important;
+  }
+  .d-flex.align-items-center.gap-3.mb-3 h3.h5 {
+    font-size: 0.92rem;
+  }
+}
+
+/* --- Kontak: Form row layout on mobile --- */
+@media (max-width: 575.98px) {
+  /* Submit button spacing */
+  #inquiryContactForm .col-12.mt-4 {
+    margin-top: 1rem !important;
+  }
+  /* Kontak info: contact item gaps */
+  .d-flex.align-items-start.gap-3 {
+    gap: 0.65rem !important;
+  }
+}
+
+/* --- Shared: Section h2 headings on mobile --- */
+@media (max-width: 575.98px) {
+  .section-header h2,
+  section .text-center.section-header h2 {
+    font-size: clamp(1.15rem, 5vw, 1.5rem);
+    line-height: 1.25;
+  }
+}
