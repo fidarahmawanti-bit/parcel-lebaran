@@ -1304,6 +1304,7 @@ img {
   font-size: 0.9rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 0.4rem !important;
@@ -1313,6 +1314,7 @@ img {
   font-size: 0.8rem !important;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   margin-bottom: 0.6rem !important;

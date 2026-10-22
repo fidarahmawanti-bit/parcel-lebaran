@@ -14,9 +14,9 @@
     content="paket eksekutif sapphire, parcel lebaran korporat, hampers lebaran b2b, hampers kantor lebaran, parcel perusahaan custom logo, vendor hampers bumn jakarta">
   <meta name="author" content="Parcel Lebaran">
   <meta name="publisher" content="Parcel Lebaran">
-  <link rel="canonical" href="https://parcellebaran.vercel.apppaket/parcel-korporat/">
-  <link rel="alternate" hreflang="id-ID" href="https://parcellebaran.vercel.apppaket/parcel-korporat/">
-  <link rel="alternate" hreflang="x-default" href="https://parcellebaran.vercel.apppaket/parcel-korporat/">
+  <link rel="canonical" href="https://parcellebaran.vercel.app/paket/parcel-korporat/">
+  <link rel="alternate" hreflang="id-ID" href="https://parcellebaran.vercel.app/paket/parcel-korporat/">
+  <link rel="alternate" hreflang="x-default" href="https://parcellebaran.vercel.app/paket/parcel-korporat/">
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
   <!-- AEO & AI Engine Optimization Meta -->
@@ -34,14 +34,14 @@
 
   <!-- Open Graph / Product Meta -->
   <meta property="og:type" content="product">
-  <meta property="og:url" content="https://parcellebaran.vercel.apppaket/parcel-korporat/">
+  <meta property="og:url" content="https://parcellebaran.vercel.app/paket/parcel-korporat/">
   <meta property="og:title"
     content="Paket Eksekutif Sapphire — Parcel Lebaran Korporat &amp; B2B 2026 — Parcel Lebaran">
   <meta property="og:description"
     content="Solusi hampers B2B elegan dengan branding logo perusahaan, invoice resmi &amp; faktur pajak, serta pengiriman multi-alamat terkoordinasi.">
-  <meta property="og:image" content="https://parcellebaran.vercel.appassets/images/parcel-korporat.webp">
-  <meta property="og:image:secure_url" content="https://parcellebaran.vercel.appassets/images/parcel-korporat.webp">
-  <meta property="og:image:type" content="image/svg+xml">
+  <meta property="og:image" content="https://parcellebaran.vercel.app/assets/images/parcel-korporat.webp">
+  <meta property="og:image:secure_url" content="https://parcellebaran.vercel.app/assets/images/parcel-korporat.webp">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Paket Parcel Lebaran Korporat Eksekutif Sapphire Parcel Lebaran">
@@ -56,7 +56,7 @@
   <meta name="twitter:title" content="Paket Eksekutif Sapphire — Hampers Lebaran Korporat B2B">
   <meta name="twitter:description"
     content="Free sleeve logo perusahaan, smart LED tumbler, faktur pajak resmi &amp; garansi aman.">
-  <meta name="twitter:image" content="https://parcellebaran.vercel.appassets/images/parcel-korporat.webp">
+  <meta name="twitter:image" content="https://parcellebaran.vercel.app/assets/images/parcel-korporat.webp">
   <meta name="twitter:image:alt" content="Paket Eksekutif Sapphire Parcel Lebaran Korporat">
 
   <!-- Favicon -->
@@ -105,9 +105,9 @@
     "@graph": [
       {
         "@type": "Product",
-        "@id": "https://parcellebaran.vercel.apppaket/parcel-korporat/#product",
+        "@id": "https://parcellebaran.vercel.app/paket/parcel-korporat/#product",
         "name": "Paket Eksekutif Sapphire — Parcel Lebaran Korporat B2B",
-        "image": "https://parcellebaran.vercel.appassets/images/parcel-korporat.webp",
+        "image": "https://parcellebaran.vercel.app/assets/images/parcel-korporat.webp",
         "description": "Hampers Lebaran korporasi & instansi dengan free custom sleeve logo perusahaan, smart LED thermo tumbler, kurma sukari canister, 3 toples cookies gourmet, dan kartu ucapan berlogo.",
         "sku": "NP-CORP-SAPPHIRE",
         "mpn": "SAPPHIRE-2026",
@@ -117,15 +117,24 @@
         },
         "offers": {
           "@type": "Offer",
-          "url": "https://parcellebaran.vercel.apppaket/parcel-korporat/",
+          "url": "https://parcellebaran.vercel.app/paket/parcel-korporat/",
           "priceCurrency": "IDR",
           "price": "650000",
           "priceValidUntil": "2027-05-01",
+          "validFrom": "2026-01-01",
           "itemCondition": "https://schema.org/NewCondition",
           "availability": "https://schema.org/InStock",
           "seller": {
             "@type": "Organization",
             "name": "Parcel Lebaran"
+          },
+          "hasMerchantReturnPolicy": {
+            "@type": "MerchantReturnPolicy",
+            "applicableCountry": "ID",
+            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+            "merchantReturnDays": 3,
+            "returnMethod": "https://schema.org/ReturnByMail",
+            "returnFees": "https://schema.org/FreeReturn"
           },
           "shippingDetails": {
             "@type": "OfferShippingDetails",
@@ -141,6 +150,12 @@
             },
             "deliveryTime": {
               "@type": "ShippingDeliveryTime",
+              "handlingTime": {
+                "@type": "QuantitativeValue",
+                "minValue": 3,
+                "maxValue": 5,
+                "unitCode": "DAY"
+              },
               "transitTime": {
                 "@type": "QuantitativeValue",
                 "minValue": 1,
@@ -159,7 +174,7 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://parcellebaran.vercel.apppaket/parcel-korporat/#breadcrumb",
+        "@id": "https://parcellebaran.vercel.app/paket/parcel-korporat/#breadcrumb",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -171,13 +186,13 @@
             "@type": "ListItem",
             "position": 2,
             "name": "Katalog Paket Parcel",
-            "item": "https://parcellebaran.vercel.apppaket/"
+            "item": "https://parcellebaran.vercel.app/paket/"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": "Parcel Korporat Eksekutif Sapphire",
-            "item": "https://parcellebaran.vercel.apppaket/parcel-korporat/"
+            "item": "https://parcellebaran.vercel.app/paket/parcel-korporat/"
           }
         ]
       }
@@ -251,187 +266,188 @@
     </div>
   </nav>
 
-  
+
   <main id="main-content">
-<!-- ==================== PAGE HEADER ==================== -->
-  <header class="page-header-simple">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb custom-breadcrumb mb-2">
-          <li class="breadcrumb-item"><a href="../../index.html">Beranda</a></li>
-          <li class="breadcrumb-item"><a href="../index.html">Paket Parcel</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Parcel Korporat (Eksekutif Sapphire)</li>
-        </ol>
-      </nav>
-      <h1 class="mb-1">Paket Eksekutif Sapphire — Hampers Korporat &amp; B2B</h1>
-      <p class="text-muted mb-0">Solusi pengadaan profesional untuk relasi bisnis, mitra kerja, instansi, dan dewan
-        pimpinan.</p>
-    </div>
-  </header>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-header-simple">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb custom-breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="../../index.html">Beranda</a></li>
+            <li class="breadcrumb-item"><a href="../index.html">Paket Parcel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Parcel Korporat (Eksekutif Sapphire)</li>
+          </ol>
+        </nav>
+        <h1 class="mb-1">Paket Eksekutif Sapphire — Hampers Korporat &amp; B2B</h1>
+        <p class="text-muted mb-0">Solusi pengadaan profesional untuk relasi bisnis, mitra kerja, instansi, dan dewan
+          pimpinan.</p>
+      </div>
+    </header>
 
-  <!-- ==================== PRODUCT DETAIL BODY ==================== -->
-  <section class="section-py">
-    <div class="container">
-      <div class="row g-4 g-lg-5">
+    <!-- ==================== PRODUCT DETAIL BODY ==================== -->
+    <section class="section-py">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
 
-        <!-- Left Column: Gallery -->
-        <div class="col-lg-6">
-          <div class="detail-gallery">
-            <div class="detail-main-img mb-3">
-              <img src="../../assets/images/parcel-korporat.webp" alt="Paket Eksekutif Sapphire Parcel Korporat"
-                width="600" height="450">
-            </div>
+          <!-- Left Column: Gallery -->
+          <div class="col-lg-6">
+            <div class="detail-gallery">
+              <div class="detail-main-img mb-3">
+                <img src="../../assets/images/parcel-korporat.webp" alt="Paket Eksekutif Sapphire Parcel Korporat"
+                  width="600" height="450">
+              </div>
 
-            <div class="row g-2 align-items-stretch">
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-printer text-primary"></i>
-                  <strong>Free Custom Sleeve</strong>
-                  <div class="feature-sub">Logo &amp; Brand Kantor</div>
+              <div class="row g-2 align-items-stretch">
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-printer text-primary"></i>
+                    <strong>Free Custom Sleeve</strong>
+                    <div class="feature-sub">Logo &amp; Brand Kantor</div>
+                  </div>
+                </div>
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-receipt text-success"></i>
+                    <strong>Faktur Pajak</strong>
+                    <div class="feature-sub">Invoice &amp; Kwitansi Resmi</div>
+                  </div>
+                </div>
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-geo-alt text-warning"></i>
+                    <strong>Multi-Address</strong>
+                    <div class="feature-sub">Kirim ke Alamat Rumah</div>
+                  </div>
                 </div>
               </div>
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-receipt text-success"></i>
-                  <strong>Faktur Pajak</strong>
-                  <div class="feature-sub">Invoice &amp; Kwitansi Resmi</div>
-                </div>
-              </div>
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-geo-alt text-warning"></i>
-                  <strong>Multi-Address</strong>
-                  <div class="feature-sub">Kirim ke Alamat Rumah</div>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
 
-        <!-- Right Column: Details & Corporate CTAs -->
-        <div class="col-lg-6">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <span class="badge bg-navy-900 text-white" style="background-color: var(--navy-900);">Kategori
-              Korporat</span>
-            <span class="badge bg-info text-dark">Min. Order 10 Paket</span>
-          </div>
-
-          <div class="display-6 fw-bold text-navy-900 mb-2">Rp 650.000 <span class="fs-6 text-muted fw-normal">/
-              paket</span></div>
-          <p class="text-muted mb-4">
-            Paket Eksekutif Sapphire dirancang khusus untuk memenuhi standar prestisius perusahaan. Memadukan kelezatan
-            kue gourmet dengan suvenir smart LED temperature flask praktis. Dilengkapi layanan gratis cetak sleeve
-            packaging berlogo dan kartu ucapan bertanda tangan pimpinan.
-          </p>
-
-          <!-- WhatsApp Corporate Action -->
-          <div class="p-3 bg-light rounded-4 border mb-4">
-            <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-2">
-              <div>
-                <span class="text-muted small">Konsultasi Pengadaan B2B:</span>
-                <div class="fw-bold text-navy-900">Minta Surat Penawaran Resmi</div>
-              </div>
-              <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20kami%20dari%20perusahaan%20%5B...%5D%20ingin%20meminta%20surat%20penawaran%20resmi%20untuk%20Paket%20Eksekutif%20Sapphire.%20Jumlah%20kebutuhan%3A%20%5B...%5D%20paket."
-                target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-lg">
-                <i class="bi bi-whatsapp"></i>
-                <span>Minta Penawaran (PDF)</span>
-              </a>
+          <!-- Right Column: Details & Corporate CTAs -->
+          <div class="col-lg-6">
+            <div class="d-flex align-items-center gap-2 mb-2">
+              <span class="badge bg-navy-900 text-white" style="background-color: var(--navy-900);">Kategori
+                Korporat</span>
+              <span class="badge bg-info text-dark">Min. Order 10 Paket</span>
             </div>
-            <small class="text-muted d-block">
-              <i class="bi bi-percent me-1"></i> Tersedia diskon bertingkat untuk pemesanan di atas 50 paket.
-            </small>
+
+            <div class="display-6 fw-bold text-navy-900 mb-2">Rp 650.000 <span class="fs-6 text-muted fw-normal">/
+                paket</span></div>
+            <p class="text-muted mb-4">
+              Paket Eksekutif Sapphire dirancang khusus untuk memenuhi standar prestisius perusahaan. Memadukan
+              kelezatan
+              kue gourmet dengan suvenir smart LED temperature flask praktis. Dilengkapi layanan gratis cetak sleeve
+              packaging berlogo dan kartu ucapan bertanda tangan pimpinan.
+            </p>
+
+            <!-- WhatsApp Corporate Action -->
+            <div class="p-3 bg-light rounded-4 border mb-4">
+              <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-2">
+                <div>
+                  <span class="text-muted small">Konsultasi Pengadaan B2B:</span>
+                  <div class="fw-bold text-navy-900">Minta Surat Penawaran Resmi</div>
+                </div>
+                <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20kami%20dari%20perusahaan%20%5B...%5D%20ingin%20meminta%20surat%20penawaran%20resmi%20untuk%20Paket%20Eksekutif%20Sapphire.%20Jumlah%20kebutuhan%3A%20%5B...%5D%20paket."
+                  target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-lg">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Minta Penawaran (PDF)</span>
+                </a>
+              </div>
+              <small class="text-muted d-block">
+                <i class="bi bi-percent me-1"></i> Tersedia diskon bertingkat untuk pemesanan di atas 50 paket.
+              </small>
+            </div>
+
+            <!-- Structured Contents List -->
+            <h2 class="h5 mb-3 text-navy-900">Rincian Lengkap Isi Paket</h2>
+            <ul class="contents-list mb-4">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Free Sleeve Packaging Custom Logo Perusahaan</strong> — Cetak full-color art carton 260g
+                  laminasi doff membungkus hardbox.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Smart LED Temperature Vacuum Flask 500ml</strong> — Tumbler vacuum stainless steel SUS 304
+                  dengan display suhu sentuh LED.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Kurma Sukari Al-Qassim Canister (250g)</strong> — Kurma kualitas premium dalam kaleng kedap
+                  udara eksklusif.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Gourmet Almond Crunch Cookies Toples (300g)</strong> — Kue kering renyah bertabur potongan
+                  kacang almond panggang.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Nastar Nanas Klasik Butter Toples (300g)</strong> — Nastar lembut lezat berpadu aroma butter
+                  wangi.
+                </div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div>
+                  <strong>Kartu Ucapan Korporat &amp; Wax Seal Stamp</strong> — Custom logo direksi / nama manajemen
+                  perusahaan.
+                </div>
+              </li>
+            </ul>
+
+            <!-- Specs Table -->
+            <h2 class="h5 mb-3 text-navy-900">Spesifikasi Layanan B2B</h2>
+            <div class="table-responsive mb-4">
+              <table class="table spec-table">
+                <tbody>
+                  <tr>
+                    <th>Tipe Kemasan</th>
+                    <td>Rigid Flat-Box Magnetik (Navy Blue) + Custom Printed Corporate Sleeve</td>
+                  </tr>
+                  <tr>
+                    <th>Dimensi Box</th>
+                    <td>Panjang 38 cm x Lebar 28 cm x Tinggi 12 cm</td>
+                  </tr>
+                  <tr>
+                    <th>Berat Total</th>
+                    <td>± 2,8 kg per paket</td>
+                  </tr>
+                  <tr>
+                    <th>Minimum Pemesanan</th>
+                    <td>10 paket (untuk fasilitas free custom sleeve branding)</td>
+                  </tr>
+                  <tr>
+                    <th>Waktu Pengerjaan</th>
+                    <td>3–5 hari kerja setelah persetujuan preview digital mockup</td>
+                  </tr>
+                  <tr>
+                    <th>Dokumen Finansial</th>
+                    <td>Faktur Pajak, Invoice Resmi, &amp; Kwitansi Cap Basah</td>
+                  </tr>
+                  <tr>
+                    <th>Layanan Distribusi</th>
+                    <td>Kirim massal ke 1 kantor cabang atau multi-alamat ke rumah staf</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
           </div>
-
-          <!-- Structured Contents List -->
-          <h2 class="h5 mb-3 text-navy-900">Rincian Lengkap Isi Paket</h2>
-          <ul class="contents-list mb-4">
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Free Sleeve Packaging Custom Logo Perusahaan</strong> — Cetak full-color art carton 260g
-                laminasi doff membungkus hardbox.
-              </div>
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Smart LED Temperature Vacuum Flask 500ml</strong> — Tumbler vacuum stainless steel SUS 304
-                dengan display suhu sentuh LED.
-              </div>
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Kurma Sukari Al-Qassim Canister (250g)</strong> — Kurma kualitas premium dalam kaleng kedap
-                udara eksklusif.
-              </div>
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Gourmet Almond Crunch Cookies Toples (300g)</strong> — Kue kering renyah bertabur potongan
-                kacang almond panggang.
-              </div>
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Nastar Nanas Klasik Butter Toples (300g)</strong> — Nastar lembut lezat berpadu aroma butter
-                wangi.
-              </div>
-            </li>
-            <li>
-              <i class="bi bi-check-circle-fill"></i>
-              <div>
-                <strong>Kartu Ucapan Korporat &amp; Wax Seal Stamp</strong> — Custom logo direksi / nama manajemen
-                perusahaan.
-              </div>
-            </li>
-          </ul>
-
-          <!-- Specs Table -->
-          <h2 class="h5 mb-3 text-navy-900">Spesifikasi Layanan B2B</h2>
-          <div class="table-responsive mb-4">
-            <table class="table spec-table">
-              <tbody>
-                <tr>
-                  <th>Tipe Kemasan</th>
-                  <td>Rigid Flat-Box Magnetik (Navy Blue) + Custom Printed Corporate Sleeve</td>
-                </tr>
-                <tr>
-                  <th>Dimensi Box</th>
-                  <td>Panjang 38 cm x Lebar 28 cm x Tinggi 12 cm</td>
-                </tr>
-                <tr>
-                  <th>Berat Total</th>
-                  <td>± 2,8 kg per paket</td>
-                </tr>
-                <tr>
-                  <th>Minimum Pemesanan</th>
-                  <td>10 paket (untuk fasilitas free custom sleeve branding)</td>
-                </tr>
-                <tr>
-                  <th>Waktu Pengerjaan</th>
-                  <td>3–5 hari kerja setelah persetujuan preview digital mockup</td>
-                </tr>
-                <tr>
-                  <th>Dokumen Finansial</th>
-                  <td>Faktur Pajak, Invoice Resmi, &amp; Kwitansi Cap Basah</td>
-                </tr>
-                <tr>
-                  <th>Layanan Distribusi</th>
-                  <td>Kirim massal ke 1 kantor cabang atau multi-alamat ke rumah staf</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER ==================== -->
   </main>
 
   <footer class="site-footer">
