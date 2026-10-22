@@ -2,73 +2,91 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://parcellebaran.vercel.app/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/tentang/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/tentang.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/paket/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/paket.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/paket/parcel-premium/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/parcel-premium.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/paket/parcel-ekonomis/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/parcel-ekonomis.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/paket/parcel-korporat/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/parcel-korporat.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/paket/parcel-custom/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/parcel-custom.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/portofolio/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/portofolio.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/blog/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/blog.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/blog/panduan-memilih-parcel-lebaran/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/panduan-memilih-parcel-lebaran.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/kontak/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/perbedaan-parcel-ekonomis-premium-korporat.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://parcellebaran.vercel.app/checklist-pengadaan-parcel-perusahaan.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://parcellebaran.vercel.app/cara-membuat-parcel-custom.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://parcellebaran.vercel.app/kontak.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://parcellebaran.vercel.app/kebijakan-privasi/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://parcellebaran.vercel.app/kebijakan-privasi.html</loc>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
