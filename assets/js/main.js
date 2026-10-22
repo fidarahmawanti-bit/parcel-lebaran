@@ -192,14 +192,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const backToTopBtn = document.getElementById("backToTop");
   if (backToTopBtn) {
     let bttTicking = false;
+    const toggleBackToTop = function () {
+      if (window.scrollY > 150) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    };
+
+    // Check initial scroll state
+    toggleBackToTop();
+
     window.addEventListener("scroll", function () {
       if (!bttTicking) {
         window.requestAnimationFrame(function () {
-          if (window.scrollY > 300) {
-            backToTopBtn.classList.add("show");
-          } else {
-            backToTopBtn.classList.remove("show");
-          }
+          toggleBackToTop();
           bttTicking = false;
         });
         bttTicking = true;
