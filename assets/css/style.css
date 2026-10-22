@@ -1199,6 +1199,12 @@ img {
   flex-grow: 1;
 }
 
+.portfolio-img-link {
+  display: block;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
 /* Portfolio Badge Variants */
 .portfolio-badge {
   display: inline-flex;
