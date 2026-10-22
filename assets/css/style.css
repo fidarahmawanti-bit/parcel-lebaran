@@ -1639,18 +1639,25 @@ img {
 .footer-contact-item {
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   margin-bottom: 0.85rem;
 }
 
 .footer-contact-item i {
   color: var(--sky-500);
-  font-size: 1.15rem;
-  margin-top: 2px;
+  font-size: 1.25rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  width: 1.15rem;
-  text-align: center;
-  line-height: 1.4;
+  line-height: 1;
+  margin-top: 1px;
+}
+
+.footer-contact-item div {
+  line-height: 1.5;
 }
 
 .footer-bottom {
