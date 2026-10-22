@@ -61,36 +61,23 @@
   <meta name="theme-color" content="#153B5B">
   <meta name="color-scheme" content="light">
 
-  <!-- Performance: Preconnect to critical CDN and Fonts origins -->
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <!-- Performance: Preconnect to Google Fonts origins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Performance: Preload LCP hero image with accurate responsive sizes -->
-  <link rel="preload" as="image" href="assets/images/hero-parcel-sm.webp"
-    imagesrcset="assets/images/hero-parcel-sm.webp 480w, assets/images/hero-parcel.webp 800w"
-    imagesizes="(max-width: 576px) 100vw, (max-width: 991px) 720px, 532px" fetchpriority="high">
+  <!-- Performance: Preload LCP hero image with media queries for mobile and desktop -->
+  <link rel="preload" as="image" href="assets/images/hero-parcel-sm.webp" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-parcel.webp" media="(min-width: 768px)" fetchpriority="high">
 
-  <!-- Font Display Swap for Bootstrap Icons (Eliminate FOIT & pass font-display audit) -->
-  <style>
-    @font-face {
-      font-family: 'bootstrap-icons';
-      font-style: normal;
-      font-weight: 400;
-      src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?dd67030699838ea613ee6dbda90effa6') format('woff2');
-      font-display: swap;
-    }
-  </style>
-
-  <!-- Core Layout Stylesheets (Synchronous for 0.000 CLS & Zero Layout Thrashing) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <!-- Core Layout Stylesheets (First-Party Local for Zero CDN Handshake & 0.000 CLS) -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.min.css">
 
-  <!-- Bootstrap Icons CSS — Asynchronous Non-blocking -->
-  <link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" as="style"
+  <!-- Bootstrap Icons CSS (Local Purged 3.4 KiB with font-display: swap) -->
+  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
   </noscript>
 
   <!-- Google Fonts: Plus Jakarta Sans — Non-blocking Print-swap Technique -->
@@ -598,11 +585,12 @@
           <div class="col-lg-6">
             <div class="hero-visual-wrapper">
               <div class="hero-img-card">
-                <img src="assets/images/hero-parcel-sm.webp"
-                  srcset="assets/images/hero-parcel-sm.webp 480w, assets/images/hero-parcel.webp 800w"
-                  sizes="(max-width: 576px) 100vw, (max-width: 991px) 680px, 532px"
-                  alt="Koleksi Parcel Lebaran dan Hampers Idulfitri Eksklusif 2026" width="800" height="446"
-                  fetchpriority="high" decoding="sync">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/hero-parcel-sm.webp" width="480" height="267" type="image/webp">
+                  <img src="assets/images/hero-parcel.webp"
+                    alt="Koleksi Parcel Lebaran dan Hampers Idulfitri Eksklusif 2026" width="800" height="446"
+                    fetchpriority="high" decoding="sync">
+                </picture>
               </div>
               <div class="hero-float-badge">
                 <div class="hero-float-icon">
@@ -789,11 +777,12 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-premium">Premium VIP</span>
-                <img src="assets/images/parcel-premium-sm.webp"
-                  srcset="assets/images/parcel-premium-sm.webp 400w, assets/images/parcel-premium.webp 600w"
-                  sizes="(max-width: 576px) 388px, (max-width: 991px) 360px, 280px"
-                  alt="Hampers Lebaran Paket Al-Karim Kemasan Premium" class="package-card-img" width="600" height="448"
-                  loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-premium-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/parcel-premium.webp"
+                    alt="Hampers Lebaran Paket Al-Karim Kemasan Premium" class="package-card-img" width="600" height="448"
+                    loading="lazy">
+                </picture>
               </div>
               <div class="package-card-body">
                 <h3 class="package-card-title">Paket Al-Karim</h3>
@@ -827,11 +816,12 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-ekonomis">Favorit Keluarga</span>
-                <img src="assets/images/parcel-ekonomis-sm.webp"
-                  srcset="assets/images/parcel-ekonomis-sm.webp 400w, assets/images/parcel-ekonomis.webp 600w"
-                  sizes="(max-width: 576px) 388px, (max-width: 991px) 360px, 280px"
-                  alt="Hampers Lebaran Paket Fitrah Ekonomis" class="package-card-img" width="600" height="448"
-                  loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-ekonomis-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/parcel-ekonomis.webp"
+                    alt="Hampers Lebaran Paket Fitrah Ekonomis" class="package-card-img" width="600" height="448"
+                    loading="lazy">
+                </picture>
               </div>
               <div class="package-card-body">
                 <h3 class="package-card-title">Paket Fitrah</h3>
@@ -864,11 +854,12 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-korporat">Korporasi &amp; B2B</span>
-                <img src="assets/images/parcel-korporat-sm.webp"
-                  srcset="assets/images/parcel-korporat-sm.webp 400w, assets/images/parcel-korporat.webp 600w"
-                  sizes="(max-width: 576px) 388px, (max-width: 991px) 360px, 280px"
-                  alt="Hampers Paket Eksekutif Sapphire untuk Korporat" class="package-card-img" width="600"
-                  height="448" loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-korporat-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/parcel-korporat.webp"
+                    alt="Hampers Paket Eksekutif Sapphire untuk Korporat" class="package-card-img" width="600"
+                    height="448" loading="lazy">
+                </picture>
               </div>
               <div class="package-card-body">
                 <h3 class="package-card-title">Eksekutif Sapphire</h3>
@@ -901,11 +892,12 @@
             <div class="package-card">
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-custom">Bebas Custom</span>
-                <img src="assets/images/parcel-custom-sm.webp"
-                  srcset="assets/images/parcel-custom-sm.webp 400w, assets/images/parcel-custom.webp 600w"
-                  sizes="(max-width: 576px) 388px, (max-width: 991px) 360px, 280px"
-                  alt="Hampers Paket Mahabbah Custom Sesuai Anggaran" class="package-card-img" width="600" height="448"
-                  loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-custom-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/parcel-custom.webp"
+                    alt="Hampers Paket Mahabbah Custom Sesuai Anggaran" class="package-card-img" width="600" height="448"
+                    loading="lazy">
+                </picture>
               </div>
               <div class="package-card-body">
                 <h3 class="package-card-title">Mahabbah Custom</h3>
@@ -1064,11 +1056,12 @@
 
           <div class="col-lg-6">
             <div class="p-4 bg-light rounded-4 border border-light-subtle shadow-sm text-center">
-              <img src="assets/images/parcel-korporat-sm.webp"
-                srcset="assets/images/parcel-korporat-sm.webp 400w, assets/images/parcel-korporat.webp 600w"
-                sizes="(max-width: 576px) 100vw, (max-width: 991px) 600px, 500px"
-                alt="Koleksi Hampers Korporat dengan Branding Logo Perusahaan" class="img-fluid rounded-3 mb-3"
-                width="600" height="448" style="aspect-ratio: 600 / 448; object-fit: cover;" loading="lazy">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/images/parcel-korporat-sm.webp" width="400" height="298" type="image/webp">
+                <img src="assets/images/parcel-korporat.webp"
+                  alt="Koleksi Hampers Korporat dengan Branding Logo Perusahaan" class="img-fluid rounded-3 mb-3"
+                  width="600" height="448" style="aspect-ratio: 600 / 448; object-fit: cover;" loading="lazy">
+              </picture>
               <div class="fw-bold text-navy-900">Telah Dipercaya Puluhan Perusahaan Terkemuka</div>
               <small class="text-muted">Perbankan, BUMN, Firma Hukum, Agensi Digital &amp; Start-up</small>
             </div>
@@ -1100,10 +1093,11 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <div class="portfolio-img-wrap">
-                <img src="assets/images/portofolio-1-sm.webp"
-                  srcset="assets/images/portofolio-1-sm.webp 400w, assets/images/portofolio-1.webp 600w"
-                  sizes="(max-width: 768px) 100vw, 400px" alt="Dokumentasi 250 Box Hampers Bank Finansial Nusantara"
-                  class="portfolio-img" width="600" height="448" loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/portofolio-1-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/portofolio-1.webp" alt="Dokumentasi 250 Box Hampers Bank Finansial Nusantara"
+                    class="portfolio-img" width="600" height="448" loading="lazy">
+                </picture>
               </div>
               <div class="portfolio-content">
                 <span class="portfolio-badge badge-korporasi"><i class="bi bi-building"></i> Korporasi</span>
@@ -1117,10 +1111,11 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <div class="portfolio-img-wrap">
-                <img src="assets/images/portofolio-2-sm.webp"
-                  srcset="assets/images/portofolio-2-sm.webp 400w, assets/images/portofolio-2.webp 600w"
-                  sizes="(max-width: 768px) 100vw, 400px" alt="Dokumentasi Hantaran Silaturahmi Keluarga"
-                  class="portfolio-img" width="600" height="448" loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/portofolio-2-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/portofolio-2.webp" alt="Dokumentasi Hantaran Silaturahmi Keluarga"
+                    class="portfolio-img" width="600" height="448" loading="lazy">
+                </picture>
               </div>
               <div class="portfolio-content">
                 <span class="portfolio-badge badge-personal"><i class="bi bi-people-fill"></i> Personal &amp;
@@ -1135,10 +1130,11 @@
           <div class="col-md-4">
             <div class="portfolio-card">
               <div class="portfolio-img-wrap">
-                <img src="assets/images/portofolio-3-sm.webp"
-                  srcset="assets/images/portofolio-3-sm.webp 400w, assets/images/portofolio-3.webp 600w"
-                  sizes="(max-width: 768px) 100vw, 400px" alt="Dokumentasi Custom Box Akrilik Direksi BUMN"
-                  class="portfolio-img" width="600" height="448" loading="lazy">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/images/portofolio-3-sm.webp" width="400" height="298" type="image/webp">
+                  <img src="assets/images/portofolio-3.webp" alt="Dokumentasi Custom Box Akrilik Direksi BUMN"
+                    class="portfolio-img" width="600" height="448" loading="lazy">
+                </picture>
               </div>
               <div class="portfolio-content">
                 <span class="portfolio-badge badge-vip"><i class="bi bi-star-fill"></i> Custom VIP</span>
@@ -1515,8 +1511,8 @@
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- Bootstrap 5.3 Bundle JS — deferred (non-blocking) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+  <!-- Bootstrap 5.3 Bundle JS — local deferred (non-blocking) -->
+  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
   <!-- Custom Minified JS — deferred -->
   <script src="assets/js/main.min.js" defer></script>
 </body>
