@@ -1608,6 +1608,56 @@ img {
 }
 
 /* ==========================================================================
+   Back to Top Button
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 84px;
+  right: 24px;
+  z-index: 1030;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--navy-900);
+  color: var(--white) !important;
+  border: 1.5px solid rgba(105, 188, 235, 0.4);
+  box-shadow: 0 4px 14px rgba(21, 59, 91, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  padding: 0;
+  text-decoration: none;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--sky-700);
+  border-color: var(--sky-500);
+  color: var(--white) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(27, 109, 160, 0.35);
+}
+
+.back-to-top:active {
+  transform: translateY(0) scale(0.95);
+}
+
+.back-to-top i {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+/* ==========================================================================
    15. Footer
    ========================================================================== */
 .site-footer {
@@ -1731,6 +1781,8 @@ img {
   border-radius: var(--radius-pill);
   transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
 }
 
 .filter-btn:hover {
@@ -2283,6 +2335,12 @@ img {
     width: 48px;
     height: 48px;
     justify-content: center;
+  }
+  .back-to-top {
+    bottom: 82px;
+    right: 26px;
+    width: 44px;
+    height: 44px;
   }
 }
 

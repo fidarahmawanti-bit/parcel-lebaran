@@ -187,4 +187,31 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+
+  // 7. Back to Top Button Logic
+  const backToTopBtn = document.getElementById("backToTop");
+  if (backToTopBtn) {
+    let bttTicking = false;
+    window.addEventListener("scroll", function () {
+      if (!bttTicking) {
+        window.requestAnimationFrame(function () {
+          if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+          } else {
+            backToTopBtn.classList.remove("show");
+          }
+          bttTicking = false;
+        });
+        bttTicking = true;
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  }
 });
