@@ -130,7 +130,7 @@ img {
   background-color: var(--white);
   border-bottom: 1px solid var(--border);
   padding: 0.85rem 0;
-  transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
   z-index: 1030;
 }
 
@@ -252,7 +252,7 @@ img {
   font-size: 0.95rem;
   padding: 0.72rem 1.45rem;
   border-radius: var(--radius-pill);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast), color var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
   cursor: pointer;
   border: 2px solid transparent;
   white-space: nowrap;
@@ -756,7 +756,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   background: var(--white);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
 .package-card:hover {
@@ -900,7 +900,7 @@ img {
   height: 100%;
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
 .category-card:hover {
@@ -1418,7 +1418,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   box-shadow: 0 2px 6px rgba(21, 59, 91, 0.04);
-  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
   box-sizing: border-box;
 }
 
@@ -1592,7 +1592,7 @@ img {
   box-shadow: 0 8px 24px rgba(18, 140, 126, 0.4);
   font-weight: 700;
   font-size: 0.95rem;
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
   /* Ensure text-decoration reset */
   text-decoration: none;
 }
@@ -1629,7 +1629,7 @@ img {
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity 0.25s ease, transform 0.25s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   padding: 0;
   outline: none;
   text-decoration: none;
