@@ -1645,8 +1645,12 @@ img {
 
 .footer-contact-item i {
   color: var(--sky-500);
-  font-size: 1.1rem;
-  margin-top: 3px;
+  font-size: 1.15rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+  width: 1.15rem;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .footer-bottom {
