@@ -4,25 +4,48 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Sticky Navbar Scroll State (Passive scroll listener, zero forced reflow on load)
+  // 1. Unified Passive Scroll Controller (Batched Read & Write, zero forced reflow)
   const navbar = document.querySelector(".site-navbar");
-  if (navbar) {
-    let isScrolled = false;
+  const backToTopBtn = document.getElementById("backToTop");
+
+  if (navbar || backToTopBtn) {
     let ticking = false;
+    let lastNavbarState = false;
+    let lastBttState = false;
 
     window.addEventListener("scroll", function () {
       if (!ticking) {
         window.requestAnimationFrame(function () {
-          const scrolled = window.scrollY > 30;
-          if (scrolled !== isScrolled) {
-            isScrolled = scrolled;
-            navbar.classList.toggle("scrolled", scrolled);
+          // Batch Read: single geometry query per animation frame
+          const y = window.scrollY || window.pageYOffset || 0;
+          const isNavbarScrolled = y > 30;
+          const isBttShow = y > 200;
+
+          // Batch Write: only update DOM when state actually changes
+          if (navbar && isNavbarScrolled !== lastNavbarState) {
+            lastNavbarState = isNavbarScrolled;
+            navbar.classList.toggle("scrolled", isNavbarScrolled);
           }
+          if (backToTopBtn && isBttShow !== lastBttState) {
+            lastBttState = isBttShow;
+            backToTopBtn.classList.toggle("show", isBttShow);
+          }
+
           ticking = false;
         });
         ticking = true;
       }
     }, { passive: true });
+
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    }
   }
 
   // 2. Package Listing Filter
@@ -184,40 +207,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           }
         }
-      });
-    });
-  }
-
-  // 7. Back to Top Button Logic
-  const backToTopBtn = document.getElementById("backToTop");
-  if (backToTopBtn) {
-    let bttTicking = false;
-    const toggleBackToTop = function () {
-      if (window.scrollY > 150) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
-      }
-    };
-
-    // Check initial scroll state
-    toggleBackToTop();
-
-    window.addEventListener("scroll", function () {
-      if (!bttTicking) {
-        window.requestAnimationFrame(function () {
-          toggleBackToTop();
-          bttTicking = false;
-        });
-        bttTicking = true;
-      }
-    }, { passive: true });
-
-    backToTopBtn.addEventListener("click", function (e) {
-      e.preventDefault();
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
       });
     });
   }
