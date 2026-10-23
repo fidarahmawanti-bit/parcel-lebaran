@@ -1923,24 +1923,43 @@ img {
 .contents-list {
   list-style: none;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
 .contents-list li {
-  padding: 0.65rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 0.85rem 1.1rem;
+  background-color: var(--ice-50);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start;
+  gap: 12px;
   font-size: 0.92rem;
+  line-height: 1.55;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
-.contents-list li:last-child {
-  border-bottom: none;
+.contents-list li:hover {
+  background-color: var(--white);
+  border-color: var(--sky-500);
+  transform: translateX(3px);
+  box-shadow: 0 4px 14px rgba(21, 59, 91, 0.06);
 }
 
 .contents-list li i {
   color: var(--success);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contents-list li strong {
+  color: var(--navy-900);
+  font-weight: 700;
 }
 
 /* ==========================================================================
