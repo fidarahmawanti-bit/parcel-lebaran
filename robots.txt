@@ -1,11 +1,55 @@
-# robots.txt — Parcel Lebaran (2026-2027 Standard)
+# robots.txt — Parcel Lebaran (https://www.parcellebaran.web.id/)
+# Dioptimalkan untuk Googlebot, Google Image Search, Bing, dan AI Answer Engines
+
+# Aturan Umum untuk Semua Web Crawler
 User-agent: *
 Allow: /
-Disallow: /404.html
+Allow: /assets/
 Disallow: /404
+Disallow: /404.html
+Disallow: /*.md$
+
+# Googlebot (Google Search Crawler - Mobile & Desktop)
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Disallow: /404
+Disallow: /404.html
+Disallow: /*.md$
+
+# Googlebot-Image (Google Image Search untuk Katalog Parcel & Hampers)
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+
+# Google Extended & AI Search (Google Gemini & AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bingbot & Copilot
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+Disallow: /404
+Disallow: /404.html
+Disallow: /*.md$
 
 # AI & Answer Engine Bots (AEO & GEO Optimization)
 User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -14,11 +58,8 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
-Allow: /
-
 User-agent: Applebot
 Allow: /
 
-# Sitemap Index
+# Lokasi Peta Situs (Sitemap XML)
 Sitemap: https://www.parcellebaran.web.id/sitemap.xml
