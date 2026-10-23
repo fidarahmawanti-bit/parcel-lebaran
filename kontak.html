@@ -62,13 +62,21 @@
   <meta name="theme-color" content="#153B5B">
   <meta name="color-scheme" content="light">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"></noscript>
-  
+  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  </noscript>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -172,8 +180,7 @@
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/"
-        aria-label="Beranda Parcel Lebaran">
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/" aria-label="Beranda Parcel Lebaran">
         <img src="assets/images/logo-sm.webp" alt="Parcel Lebaran" width="40" height="40" class="rounded-circle"
           style="object-fit: cover;">
         <span class="brand-text"
@@ -283,7 +290,7 @@
                 <div>
                   <div class="contact-channel-title">Jam Operasional Layanan</div>
                   <div class="contact-channel-val" style="font-size: 1.05rem;">
-                    Senin – Minggu: 08.00 – 21.00 WIB
+                    Senin – Sabtu: 08.00 – 16.00 WIB
                   </div>
                   <div class="contact-channel-desc">Tetap melayani konsultasi saat hari libur nasional</div>
                 </div>
@@ -299,15 +306,18 @@
                   <div class="contact-channel-val" style="font-size: 1rem;">
                     Jakarta Selatan
                   </div>
-                  <div class="contact-channel-desc">Jl. Melati Raya No. 18, Jakarta Selatan (Layanan visit by appointment untuk preview sampel korporat)</div>
+                  <div class="contact-channel-desc">Jl. Band. Palmerah No. D3-35B, Cemorokandang, Kec. Kedungkandang,
+                    Kota Malang, Jawa Timur 65138</div>
                 </div>
               </div>
             </div>
 
             <!-- Checklist Yang Perlu Disiapkan -->
             <div class="p-4 bg-white rounded-4 border shadow-sm">
-              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-check2-square text-primary me-2"></i>Checklist Sebelum Memesan</h3>
-              <p class="text-muted small mb-3">Agar pesanan dapat diproses lebih cepat oleh tim admin kami, siapkan informasi berikut:</p>
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-check2-square text-primary me-2"></i>Checklist Sebelum
+                Memesan</h3>
+              <p class="text-muted small mb-3">Agar pesanan dapat diproses lebih cepat oleh tim admin kami, siapkan
+                informasi berikut:</p>
               <ul class="text-muted small ps-3 mb-0 d-flex flex-column gap-2">
                 <li><strong>Pilihan paket</strong> atau estimasi target anggaran per box (jika custom).</li>
                 <li><strong>Perkiraan jumlah box</strong> yang dibutuhkan untuk alokasi produksi.</li>
@@ -320,34 +330,47 @@
 
           <!-- Right: Online Inquiry Form (Generates formatted WA message) -->
           <div class="col-lg-7">
-            <div class="p-4 p-lg-5 bg-white rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">
+            <div
+              class="p-4 p-lg-5 bg-white rounded-4 border shadow-sm h-100 d-flex flex-column justify-content-between">
               <div>
                 <h2 class="h4 text-navy-900 mb-2">Kirim Pesan / Formulir Tanya Cepat</h2>
                 <p class="text-muted small mb-4">
-                  Isi data di bawah ini. Sistem kami akan otomatis merangkum pesan dan membuka percakapan WhatsApp resmi kami dengan format yang rapi.
+                  Isi data di bawah ini. Sistem kami akan otomatis merangkum pesan dan membuka percakapan WhatsApp resmi
+                  kami dengan format yang rapi.
                 </p>
 
                 <form id="inquiryContactForm">
                   <div class="row g-3">
                     <div class="col-md-6">
-                      <label for="contactName" class="form-label small fw-bold text-navy-900">Nama Lengkap / PIC <span class="text-danger">*</span></label>
-                      <input type="text" class="form-control" id="contactName" placeholder="Contoh: Bpk. Hendra" required>
+                      <label for="contactName" class="form-label small fw-bold text-navy-900">Nama Lengkap / PIC <span
+                          class="text-danger">*</span></label>
+                      <input type="text" class="form-control" id="contactName" placeholder="Contoh: Bpk. Hendra"
+                        required>
                     </div>
 
                     <div class="col-md-6">
-                      <label for="contactPhone" class="form-label small fw-bold text-navy-900">Nomor WhatsApp Aktif <span class="text-danger">*</span></label>
-                      <input type="tel" class="form-control" id="contactPhone" placeholder="Contoh: 08123456789" required>
+                      <label for="contactPhone" class="form-label small fw-bold text-navy-900">Nomor WhatsApp Aktif
+                        <span class="text-danger">*</span></label>
+                      <input type="tel" class="form-control" id="contactPhone" placeholder="Contoh: 08123456789"
+                        required>
                     </div>
 
                     <div class="col-md-8">
-                      <label for="contactPackage" class="form-label small fw-bold text-navy-900">Pilihan Paket yang Diminati</label>
+                      <label for="contactPackage" class="form-label small fw-bold text-navy-900">Pilihan Paket yang
+                        Diminati</label>
                       <select class="form-select" id="contactPackage">
-                        <option value="Paket Al-Karim (Premium - Rp 850.000)" selected>Paket Al-Karim (Premium - Rp 850.000)</option>
-                        <option value="Paket An-Nur Luxury (Super VIP - Rp 1.250.000)">Paket An-Nur Luxury (Super VIP - Rp 1.250.000)</option>
-                        <option value="Paket Fitrah (Ekonomis - Rp 450.000)">Paket Fitrah (Ekonomis - Rp 450.000)</option>
-                        <option value="Paket Barokah (Ekonomis Mini - Rp 275.000)">Paket Barokah (Ekonomis Mini - Rp 275.000)</option>
-                        <option value="Paket Eksekutif Sapphire (Korporat - Rp 650.000)">Paket Eksekutif Sapphire (Korporat - Rp 650.000)</option>
-                        <option value="Paket Royal Corporate VIP (Korporat - Rp 1.500.000)">Paket Royal Corporate VIP (Korporat - Rp 1.500.000)</option>
+                        <option value="Paket Al-Karim (Premium - Rp 850.000)" selected>Paket Al-Karim (Premium - Rp
+                          850.000)</option>
+                        <option value="Paket An-Nur Luxury (Super VIP - Rp 1.250.000)">Paket An-Nur Luxury (Super VIP -
+                          Rp 1.250.000)</option>
+                        <option value="Paket Fitrah (Ekonomis - Rp 450.000)">Paket Fitrah (Ekonomis - Rp 450.000)
+                        </option>
+                        <option value="Paket Barokah (Ekonomis Mini - Rp 275.000)">Paket Barokah (Ekonomis Mini - Rp
+                          275.000)</option>
+                        <option value="Paket Eksekutif Sapphire (Korporat - Rp 650.000)">Paket Eksekutif Sapphire
+                          (Korporat - Rp 650.000)</option>
+                        <option value="Paket Royal Corporate VIP (Korporat - Rp 1.500.000)">Paket Royal Corporate VIP
+                          (Korporat - Rp 1.500.000)</option>
                         <option value="Parcel Custom Sesuai Budget">Parcel Custom (Sesuai Budget)</option>
                         <option value="Konsultasi Umum">Konsultasi Umum Seputar Pengiriman</option>
                       </select>
@@ -362,7 +385,8 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="contactNotes" class="form-label small fw-bold text-navy-900">Catatan Khusus / Kota Tujuan / Permintaan Logo</label>
+                      <label for="contactNotes" class="form-label small fw-bold text-navy-900">Catatan Khusus / Kota
+                        Tujuan / Permintaan Logo</label>
                       <textarea class="form-control" id="contactNotes" rows="4"
                         placeholder="Tuliskan kota tujuan pengiriman, perkiraan tanggal dibutuhkan, atau kebutuhan branding logo perusahaan..."></textarea>
                     </div>
@@ -374,7 +398,8 @@
                       </button>
                       <div class="text-center mt-2">
                         <small class="text-muted">
-                          <i class="bi bi-shield-check me-1 text-success"></i> Data Anda aman dan langsung tersambung ke WhatsApp admin resmi.
+                          <i class="bi bi-shield-check me-1 text-success"></i> Data Anda aman dan langsung tersambung ke
+                          WhatsApp admin resmi.
                         </small>
                       </div>
                     </div>
@@ -439,7 +464,7 @@
           <div class="footer-contact-item small">
             <i class="bi bi-clock"></i>
             <div>
-              <strong>Jam Operasional:</strong> Senin – Minggu (08.00 – 21.00 WIB)
+              <strong>Jam Operasional:</strong> Senin – Sabtu: 08.00 – 16.00 WIB
             </div>
           </div>
         </div>
@@ -469,7 +494,8 @@
   </a>
 
   <!-- Back to Top Button -->
-  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <i class="bi bi-arrow-up"></i>
   </button>
 

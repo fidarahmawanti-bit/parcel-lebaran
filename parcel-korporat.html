@@ -80,8 +80,7 @@
 
   <!-- Bootstrap 5.3 CSS -->
   <!-- Bootstrap 5.3 CSS -render-blocking -->
-  <link rel="preload" href="assets/css/bootstrap.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   </noscript>
@@ -90,10 +89,13 @@
   <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
     onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
-    <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"></noscript>
+    <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+    </noscript>
   </noscript>
-  
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -205,8 +207,7 @@
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/"
-        aria-label="Beranda Parcel Lebaran">
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/" aria-label="Beranda Parcel Lebaran">
         <img src="assets/images/logo-sm.webp" alt="Parcel Lebaran" width="40" height="40" class="rounded-circle"
           style="object-fit: cover;">
         <span class="brand-text"
@@ -293,8 +294,10 @@
             <div class="detail-gallery">
               <div class="detail-main-img mb-3">
                 <picture>
-                  <source media="(max-width: 767px)" srcset="assets/images/parcel-korporat-sm.webp" width="400" height="298" type="image/webp">
-                  <img src="assets/images/parcel-korporat.webp" alt="Paket Eksekutif Sapphire Parcel Korporat" width="600" height="450">
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-korporat-sm.webp" width="400"
+                    height="298" type="image/webp">
+                  <img src="assets/images/parcel-korporat.webp" alt="Paket Eksekutif Sapphire Parcel Korporat"
+                    width="600" height="450">
                 </picture>
               </div>
 
@@ -511,7 +514,7 @@
           <div class="footer-contact-item small">
             <i class="bi bi-clock"></i>
             <div>
-              <strong>Jam Operasional:</strong> Senin – Minggu (08.00 – 21.00 WIB)
+              <strong>Jam Operasional:</strong> Senin – Sabtu (08.00 – 16.00 WIB)
             </div>
           </div>
         </div>
@@ -541,7 +544,8 @@
   </a>
 
   <!-- Back to Top Button -->
-  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <i class="bi bi-arrow-up"></i>
   </button>
 

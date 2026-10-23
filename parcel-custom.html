@@ -64,13 +64,21 @@
   <meta name="theme-color" content="#153B5B">
   <meta name="color-scheme" content="light">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"></noscript>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  </noscript>
 
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="assets/css/bootstrap-icons.min.css"></noscript>
-  
+  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
+    onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  </noscript>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.min.css">
 
@@ -146,8 +154,7 @@
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/"
-        aria-label="Beranda Parcel Lebaran">
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/" aria-label="Beranda Parcel Lebaran">
         <img src="assets/images/logo-sm.webp" alt="Parcel Lebaran" width="40" height="40" class="rounded-circle"
           style="object-fit: cover;">
         <span class="brand-text"
@@ -206,268 +213,270 @@
     </div>
   </nav>
 
-  
+
   <main id="main-content">
-<!-- ==================== PAGE HEADER ==================== -->
-  <header class="page-header-simple">
-    <div class="container">
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb custom-breadcrumb mb-2">
-          <li class="breadcrumb-item"><a href="/">Beranda</a></li>
-          <li class="breadcrumb-item"><a href="paket">Paket Parcel</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Parcel Custom (Simulasi)</li>
-        </ol>
-      </nav>
-      <h1 class="mb-1">Parcel Lebaran Custom — Rancang Sesuai Budget</h1>
-      <p class="text-muted mb-0">Sesuaikan kemasan wadah, jenis kue kering, dan suvenir pelengkap dengan kalkulator
-        estimasi biaya interaktif.</p>
-    </div>
-  </header>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <header class="page-header-simple">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb custom-breadcrumb mb-2">
+            <li class="breadcrumb-item"><a href="/">Beranda</a></li>
+            <li class="breadcrumb-item"><a href="paket">Paket Parcel</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Parcel Custom (Simulasi)</li>
+          </ol>
+        </nav>
+        <h1 class="mb-1">Parcel Lebaran Custom — Rancang Sesuai Budget</h1>
+        <p class="text-muted mb-0">Sesuaikan kemasan wadah, jenis kue kering, dan suvenir pelengkap dengan kalkulator
+          estimasi biaya interaktif.</p>
+      </div>
+    </header>
 
-  <!-- ==================== SIMULASI KALKULATOR INTERAKTIF ==================== -->
-  <section class="section-py">
-    <div class="container">
-      <div class="row g-4 g-lg-5">
+    <!-- ==================== SIMULASI KALKULATOR INTERAKTIF ==================== -->
+    <section class="section-py">
+      <div class="container">
+        <div class="row g-4 g-lg-5">
 
-        <!-- Left: Interactive Builder Form -->
-        <div class="col-lg-7">
-          <form id="customParcelCalculator" class="calculator-card" onsubmit="return false;">
+          <!-- Left: Interactive Builder Form -->
+          <div class="col-lg-7">
+            <form id="customParcelCalculator" class="calculator-card" onsubmit="return false;">
 
-            <!-- Step 1: Pilihan Wadah -->
-            <div class="mb-4">
-              <div class="d-flex align-items-center gap-2 mb-3">
-                <span class="badge bg-primary rounded-circle p-2">1</span>
-                <h2 class="h5 mb-0 text-navy-900">Pilih Jenis Wadah &amp; Kemasan</h2>
-              </div>
-
-              <div class="row g-2">
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="radio" name="packaging" value="hardbox" data-name="Hardbox Signature Navy Gold"
-                      data-price="120000" checked class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Hardbox Signature Navy</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Rigid box + Foil (Rp 120.000)</div>
-                    </div>
-                  </label>
+              <!-- Step 1: Pilihan Wadah -->
+              <div class="mb-4">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-primary rounded-circle p-2">1</span>
+                  <h2 class="h5 mb-0 text-navy-900">Pilih Jenis Wadah &amp; Kemasan</h2>
                 </div>
 
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="radio" name="packaging" value="rotan" data-name="Keranjang Rotan Anyam Cantik"
-                      data-price="85000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Keranjang Rotan Halus</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Anyaman tradisional (Rp 85.000)</div>
-                    </div>
-                  </label>
-                </div>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="radio" name="packaging" value="hardbox" data-name="Hardbox Signature Navy Gold"
+                        data-price="120000" checked class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Hardbox Signature Navy</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Rigid box + Foil (Rp 120.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="radio" name="packaging" value="akrilik" data-name="Box Akrilik Mewah Transparan"
-                      data-price="165000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Box Akrilik Mewah</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Transparan Modern (Rp 165.000)</div>
-                    </div>
-                  </label>
-                </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="radio" name="packaging" value="rotan" data-name="Keranjang Rotan Anyam Cantik"
+                        data-price="85000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Keranjang Rotan Halus</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Anyaman tradisional (Rp 85.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="radio" name="packaging" value="crate" data-name="Peti Kayu Pinus Wood Crate"
-                      data-price="110000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Peti Kayu Pinus (Crate)</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Rustic Aesthetic (Rp 110.000)</div>
-                    </div>
-                  </label>
-                </div>
-              </div>
-            </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="radio" name="packaging" value="akrilik" data-name="Box Akrilik Mewah Transparan"
+                        data-price="165000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Box Akrilik Mewah</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Transparan Modern (Rp 165.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-            <!-- Step 2: Pilihan Isi Kue & Suvenir -->
-            <div class="mb-4">
-              <div class="d-flex align-items-center gap-2 mb-3">
-                <span class="badge bg-primary rounded-circle p-2">2</span>
-                <h2 class="h5 mb-0 text-navy-900">Pilih Isi Kue Kering &amp; Pelengkap (Bisa Pilih Beberapa)</h2>
-              </div>
-
-              <div class="row g-2">
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="nastar-wisman" data-name="Nastar Wisman Kaca"
-                      data-price="135000" checked class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Nastar Wisman (Toples Kaca)</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Butter premium 350g (+Rp 135.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="kastengel-edam" data-name="Kastengel Edam Kaca"
-                      data-price="135000" checked class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Kastengel Edam (Toples Kaca)</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Keju tua Belanda 350g (+Rp 135.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="putri-salju" data-name="Putri Salju Mete"
-                      data-price="85000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Putri Salju Kacang Mete</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Toples segel 250g (+Rp 85.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="sparkling-juice" data-name="Sparkling White Grape"
-                      data-price="115000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Sparkling Grape Juice 750ml</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Minuman segar non-alkohol (+Rp 115.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="artisan-tea" data-name="Artisan Tea Tin"
-                      data-price="75000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Artisan Chamomile Tea Tin</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Kaleng kedap udara (+Rp 75.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="kurma-sukari" data-name="Kurma Sukari Canister"
-                      data-price="65000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Kurma Sukari Canister</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Kurma madu lembut 250g (+Rp 65.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="diffuser" data-name="Reed Diffuser Aromaterapi"
-                      data-price="95000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Reed Diffuser Aromaterapi 50ml</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Wewangian relaksasi rumah (+Rp 95.000)</div>
-                    </div>
-                  </label>
-                </div>
-
-                <div class="col-sm-6">
-                  <label class="calc-option-box d-flex align-items-center">
-                    <input type="checkbox" name="items" value="sajadah" data-name="Sajadah Sutra Turki"
-                      data-price="125000" class="form-check-input mt-0 me-2">
-                    <div>
-                      <div class="fw-bold small text-navy-900">Sajadah Sutra Turki Travel</div>
-                      <div class="text-muted" style="font-size: 0.78rem;">Bahan silk lembut elegan (+Rp 125.000)</div>
-                    </div>
-                  </label>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="radio" name="packaging" value="crate" data-name="Peti Kayu Pinus Wood Crate"
+                        data-price="110000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Peti Kayu Pinus (Crate)</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Rustic Aesthetic (Rp 110.000)</div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Step 3: Jumlah Paket -->
-            <div class="mb-3">
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="badge bg-primary rounded-circle p-2">3</span>
-                <label for="orderQuantity" class="fw-bold text-navy-900 mb-0">Rencana Jumlah Pesanan (Paket)</label>
-              </div>
-              <div style="max-width: 180px;">
-                <input type="number" id="orderQuantity" class="form-control" value="1" min="1" max="1000">
-              </div>
-            </div>
+              <!-- Step 2: Pilihan Isi Kue & Suvenir -->
+              <div class="mb-4">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                  <span class="badge bg-primary rounded-circle p-2">2</span>
+                  <h2 class="h5 mb-0 text-navy-900">Pilih Isi Kue Kering &amp; Pelengkap (Bisa Pilih Beberapa)</h2>
+                </div>
 
-          </form>
-        </div>
+                <div class="row g-2">
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="nastar-wisman" data-name="Nastar Wisman Kaca"
+                        data-price="135000" checked class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Nastar Wisman (Toples Kaca)</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Butter premium 350g (+Rp 135.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-        <!-- Right: Realtime Estimate Card -->
-        <div class="col-lg-5">
-          <div class="sticky-top" style="top: 100px;">
-            <div class="p-4 bg-white rounded-4 border shadow-sm">
-              <div class="section-eyebrow mb-2">
-                <i class="bi bi-calculator"></i>
-                <span>Ringkasan Estimasi</span>
-              </div>
-              <h3 class="h4 text-navy-900 mb-3">Estimasi Biaya Custom</h3>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="kastengel-edam" data-name="Kastengel Edam Kaca"
+                        data-price="135000" checked class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Kastengel Edam (Toples Kaca)</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Keju tua Belanda 350g (+Rp 135.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-              <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
-                <span class="text-muted small">Harga per Paket:</span>
-                <span id="unitPriceDisplay" class="fw-bold text-navy-900 fs-5">Rp 390.000</span>
-              </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="putri-salju" data-name="Putri Salju Mete"
+                        data-price="85000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Putri Salju Kacang Mete</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Toples segel 250g (+Rp 85.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-              <div class="d-flex justify-content-between align-items-center py-3 mb-3 border-bottom">
-                <span class="fw-bold text-navy-900">Total Estimasi Keseluruhan:</span>
-                <span id="totalEstimateDisplay" class="display-6 fw-bold text-primary">Rp 390.000</span>
-              </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="sparkling-juice" data-name="Sparkling White Grape"
+                        data-price="115000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Sparkling Grape Juice 750ml</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Minuman segar non-alkohol (+Rp 115.000)
+                        </div>
+                      </div>
+                    </label>
+                  </div>
 
-              <div class="small text-muted mb-4">
-                <i class="bi bi-check-circle text-success me-1"></i> Termasuk kartu ucapan &amp; pita satin cantik.<br>
-                <i class="bi bi-info-circle text-primary me-1"></i> Angka ini adalah estimasi awal. Admin kami akan
-                memastikan ketersediaan wadah dan stok toples saat Anda menghubungi.
-              </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="artisan-tea" data-name="Artisan Tea Tin"
+                        data-price="75000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Artisan Chamomile Tea Tin</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Kaleng kedap udara (+Rp 75.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-              <a href="#" id="waCustomOrderBtn" target="_blank" rel="noopener noreferrer"
-                class="btn-custom btn-whatsapp-custom btn-custom-lg w-100">
-                <i class="bi bi-whatsapp"></i>
-                <span>Konsultasikan via WhatsApp</span>
-              </a>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="kurma-sukari" data-name="Kurma Sukari Canister"
+                        data-price="65000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Kurma Sukari Canister</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Kurma madu lembut 250g (+Rp 65.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-              <div class="text-center mt-3">
-                <small class="text-muted">Pesan WhatsApp otomatis terisi dengan rincian pilihan di atas.</small>
-              </div>
-            </div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="diffuser" data-name="Reed Diffuser Aromaterapi"
+                        data-price="95000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Reed Diffuser Aromaterapi 50ml</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Wewangian relaksasi rumah (+Rp 95.000)</div>
+                      </div>
+                    </label>
+                  </div>
 
-            <!-- 3 Feature Highlights (Sejajar) -->
-            <div class="row g-2 align-items-stretch mt-3">
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-sliders text-primary"></i>
-                  <strong>Bebas Racik</strong>
-                  <div class="feature-sub">Sesuai Budget</div>
+                  <div class="col-sm-6">
+                    <label class="calc-option-box d-flex align-items-center">
+                      <input type="checkbox" name="items" value="sajadah" data-name="Sajadah Sutra Turki"
+                        data-price="125000" class="form-check-input mt-0 me-2">
+                      <div>
+                        <div class="fw-bold small text-navy-900">Sajadah Sutra Turki Travel</div>
+                        <div class="text-muted" style="font-size: 0.78rem;">Bahan silk lembut elegan (+Rp 125.000)</div>
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-box-seam text-success"></i>
-                  <strong>4 Opsi Wadah</strong>
-                  <div class="feature-sub">Box/Rotan/Kayu</div>
+
+              <!-- Step 3: Jumlah Paket -->
+              <div class="mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                  <span class="badge bg-primary rounded-circle p-2">3</span>
+                  <label for="orderQuantity" class="fw-bold text-navy-900 mb-0">Rencana Jumlah Pesanan (Paket)</label>
+                </div>
+                <div style="max-width: 180px;">
+                  <input type="number" id="orderQuantity" class="form-control" value="1" min="1" max="1000">
                 </div>
               </div>
-              <div class="col-4 d-flex">
-                <div class="detail-feature-card">
-                  <i class="bi bi-headset text-warning"></i>
-                  <strong>Free Konsul</strong>
-                  <div class="feature-sub">Bantuan Cepat</div>
+
+            </form>
+          </div>
+
+          <!-- Right: Realtime Estimate Card -->
+          <div class="col-lg-5">
+            <div class="sticky-top" style="top: 100px;">
+              <div class="p-4 bg-white rounded-4 border shadow-sm">
+                <div class="section-eyebrow mb-2">
+                  <i class="bi bi-calculator"></i>
+                  <span>Ringkasan Estimasi</span>
+                </div>
+                <h3 class="h4 text-navy-900 mb-3">Estimasi Biaya Custom</h3>
+
+                <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                  <span class="text-muted small">Harga per Paket:</span>
+                  <span id="unitPriceDisplay" class="fw-bold text-navy-900 fs-5">Rp 390.000</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center py-3 mb-3 border-bottom">
+                  <span class="fw-bold text-navy-900">Total Estimasi Keseluruhan:</span>
+                  <span id="totalEstimateDisplay" class="display-6 fw-bold text-primary">Rp 390.000</span>
+                </div>
+
+                <div class="small text-muted mb-4">
+                  <i class="bi bi-check-circle text-success me-1"></i> Termasuk kartu ucapan &amp; pita satin
+                  cantik.<br>
+                  <i class="bi bi-info-circle text-primary me-1"></i> Angka ini adalah estimasi awal. Admin kami akan
+                  memastikan ketersediaan wadah dan stok toples saat Anda menghubungi.
+                </div>
+
+                <a href="#" id="waCustomOrderBtn" target="_blank" rel="noopener noreferrer"
+                  class="btn-custom btn-whatsapp-custom btn-custom-lg w-100">
+                  <i class="bi bi-whatsapp"></i>
+                  <span>Konsultasikan via WhatsApp</span>
+                </a>
+
+                <div class="text-center mt-3">
+                  <small class="text-muted">Pesan WhatsApp otomatis terisi dengan rincian pilihan di atas.</small>
+                </div>
+              </div>
+
+              <!-- 3 Feature Highlights (Sejajar) -->
+              <div class="row g-2 align-items-stretch mt-3">
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-sliders text-primary"></i>
+                    <strong>Bebas Racik</strong>
+                    <div class="feature-sub">Sesuai Budget</div>
+                  </div>
+                </div>
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-box-seam text-success"></i>
+                    <strong>4 Opsi Wadah</strong>
+                    <div class="feature-sub">Box/Rotan/Kayu</div>
+                  </div>
+                </div>
+                <div class="col-4 d-flex">
+                  <div class="detail-feature-card">
+                    <i class="bi bi-headset text-warning"></i>
+                    <strong>Free Konsul</strong>
+                    <div class="feature-sub">Bantuan Cepat</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== FOOTER ==================== -->
   </main>
 
   <footer class="site-footer">
@@ -518,7 +527,7 @@
           <div class="footer-contact-item small">
             <i class="bi bi-clock"></i>
             <div>
-              <strong>Jam Operasional:</strong> Senin – Minggu (08.00 – 21.00 WIB)
+              <strong>Jam Operasional:</strong> Senin – Sabtu (08.00 – 16.00 WIB)
             </div>
           </div>
         </div>
@@ -548,7 +557,8 @@
   </a>
 
   <!-- Back to Top Button -->
-  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <button type="button" id="backToTop" class="back-to-top" aria-label="Kembali ke atas"
+    onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     <i class="bi bi-arrow-up"></i>
   </button>
 
