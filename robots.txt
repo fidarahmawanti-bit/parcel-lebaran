@@ -21,4 +21,4 @@ User-agent: Applebot
 Allow: /
 
 # Sitemap Index
-Sitemap: https://parcellebaran.vercel.app/sitemap.xml
+Sitemap: https://www.parcellebaran.web.id/sitemap.xml
