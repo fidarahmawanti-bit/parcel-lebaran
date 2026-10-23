@@ -1787,7 +1787,7 @@ img {
 
 @media (max-width: 767.98px) {
   .article-table {
-    min-width: 580px;
+    min-width: 620px;
     table-layout: auto;
   }
 }
