@@ -1577,17 +1577,36 @@ img {
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text);
-  max-width: 780px;
+  width: 100%;
 }
 
 .article-content h2 {
-  margin-top: 2.2rem;
+  margin-top: 2.4rem;
   margin-bottom: 1rem;
+  font-weight: 800;
+  color: var(--navy-900);
 }
 
 .article-content h3 {
-  margin-top: 1.8rem;
+  margin-top: 1.85rem;
   margin-bottom: 0.85rem;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.article-content p {
+  margin-bottom: 1.35rem;
+}
+
+.article-content ul,
+.article-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.35rem;
+}
+
+.article-content li {
+  margin-bottom: 0.45rem;
+  line-height: 1.7;
 }
 
 .article-toc {
