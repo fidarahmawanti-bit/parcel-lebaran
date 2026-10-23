@@ -54,7 +54,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -70,7 +70,7 @@ body {
   line-height: 1.68;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -136,15 +136,21 @@ img {
    3. Navigation Bar
    ========================================================================== */
 .site-navbar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  width: 100%;
   background-color: var(--white);
   border-bottom: 1px solid var(--border);
   padding: 0.85rem 0;
-  transition: transform var(--transition-fast), opacity var(--transition-fast);
+  transition: box-shadow var(--transition-fast), padding var(--transition-fast), background-color var(--transition-fast);
   z-index: 1030;
 }
 
 .site-navbar.scrolled {
-  box-shadow: 0 4px 20px rgba(21, 59, 91, 0.08);
+  box-shadow: 0 4px 20px rgba(21, 59, 91, 0.1);
   padding: 0.65rem 0;
 }
 
@@ -164,6 +170,17 @@ img {
   max-height: 42px;
   object-fit: cover;
   display: block;
+}
+
+@media (max-width: 991.98px) {
+  .site-navbar .navbar-collapse {
+    max-height: calc(100vh - 75px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    background-color: var(--white);
+    padding: 0.75rem 0.5rem 1rem;
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
 }
 
 @media (max-width: 575.98px) {
