@@ -155,6 +155,25 @@
     .nav-link { display: block; padding: .5rem .95rem; color: var(--text); font-weight: 500; border-radius: var(--radius-sm); text-decoration: none; }
     .nav-link.active { color: var(--navy-900); font-weight: 700; }
     .collapse:not(.show) { display: none; }
+    .dropdown-menu { min-width: 280px; border: 1px solid var(--border); border-radius: var(--radius-md); box-shadow: 0 16px 36px -4px rgba(21, 59, 91, 0.14), 0 4px 12px rgba(21, 59, 91, 0.05); padding: .5rem; background-color: var(--white); list-style: none; margin: .4rem 0 0 0; }
+    .dropdown-menu li { list-style: none; margin: 0; padding: 0; }
+    .dropdown-divider { height: 1px !important; margin: .4rem .5rem !important; padding: 0 !important; background-color: var(--border) !important; border: 0 !important; opacity: 1 !important; }
+    .dropdown-item { display: flex !important; align-items: center !important; justify-content: space-between !important; gap: 12px; color: var(--navy-900) !important; font-weight: 600 !important; font-size: .92rem !important; padding: .65rem .85rem !important; margin: 2px 0 !important; border-radius: var(--radius-sm); text-decoration: none !important; background-color: transparent; line-height: 1.35 !important; transition: all var(--transition-fast) !important; }
+    .dropdown-item:hover, .dropdown-item:focus { background-color: var(--ice-50) !important; color: var(--sky-700) !important; transform: translateX(3px); }
+    .dropdown-item.active { background-color: var(--ice-100) !important; color: var(--sky-800) !important; font-weight: 700 !important; }
+    .dropdown-item-left { display: inline-flex; align-items: center; gap: 10px; }
+    .dropdown-item-left i { font-size: 1.05rem; width: 1.3rem; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .dropdown-item .icon-all { color: var(--sky-700); }
+    .dropdown-item .icon-vip { color: var(--gold-600); }
+    .dropdown-item .icon-eko { color: var(--sky-700); }
+    .dropdown-item .icon-b2b { color: var(--navy-900); }
+    .dropdown-item .icon-cst { color: var(--success); }
+    .dropdown-item-badge { font-size: .68rem; font-weight: 700; padding: 2px 8px; border-radius: var(--radius-pill); letter-spacing: .03em; text-transform: uppercase; flex-shrink: 0; line-height: 1.3; }
+    .badge-all { background-color: var(--ice-100); color: var(--sky-800); }
+    .badge-vip { background-color: var(--gold-100); color: #785410; border: 1px solid rgba(217,181,109,.45); }
+    .badge-eko { background-color: #eff8fd; color: #1b6da0; border: 1px solid rgba(105,188,235,.45); }
+    .badge-b2b { background-color: #e8eff5; color: #153b5b; border: 1px solid rgba(21,59,91,.25); }
+    .badge-cst { background-color: #edf7f0; color: var(--success); border: 1px solid rgba(35,122,87,.3); }
     @media (min-width: 992px) {
       .navbar-expand-lg { flex-wrap: nowrap; justify-content: flex-start; }
       .navbar-expand-lg .navbar-collapse { display: flex !important; flex-basis: auto; align-items: center; justify-content: space-between; }
@@ -650,15 +669,53 @@
               aria-expanded="false">
               Paket Parcel
             </a>
-            <ul class="dropdown-menu" aria-labelledby="paketDropdown">
-              <li><a class="dropdown-item" href="paket">Semua Paket</a></li>
+                                    <ul class="dropdown-menu" aria-labelledby="paketDropdown">
               <li>
-                <hr class="dropdown-divider">
+                <a class="dropdown-item" href="paket">
+                  <span class="dropdown-item-left">
+                    <i class="bi bi-grid-fill icon-all"></i>
+                    <span>Semua Paket</span>
+                  </span>
+                  <span class="dropdown-item-badge badge-all">Katalog</span>
+                </a>
               </li>
-              <li><a class="dropdown-item" href="parcel-premium">Parcel Premium (VIP)</a></li>
-              <li><a class="dropdown-item" href="parcel-ekonomis">Parcel Ekonomis</a></li>
-              <li><a class="dropdown-item" href="parcel-korporat">Parcel Korporat (B2B)</a></li>
-              <li><a class="dropdown-item" href="parcel-custom">Parcel Custom</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li>
+                <a class="dropdown-item" href="parcel-premium">
+                  <span class="dropdown-item-left">
+                    <i class="bi bi-gem icon-vip"></i>
+                    <span>Parcel Premium</span>
+                  </span>
+                  <span class="dropdown-item-badge badge-vip">VIP</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="parcel-ekonomis">
+                  <span class="dropdown-item-left">
+                    <i class="bi bi-tag-fill icon-eko"></i>
+                    <span>Parcel Ekonomis</span>
+                  </span>
+                  <span class="dropdown-item-badge badge-eko">Hemat</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="parcel-korporat">
+                  <span class="dropdown-item-left">
+                    <i class="bi bi-buildings icon-b2b"></i>
+                    <span>Parcel Korporat</span>
+                  </span>
+                  <span class="dropdown-item-badge badge-b2b">B2B</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="parcel-custom">
+                  <span class="dropdown-item-left">
+                    <i class="bi bi-palette icon-cst"></i>
+                    <span>Parcel Custom</span>
+                  </span>
+                  <span class="dropdown-item-badge badge-cst">Custom</span>
+                </a>
+              </li>
             </ul>
           </li>
           <li class="nav-item">
