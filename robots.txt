@@ -2,6 +2,7 @@
 User-agent: *
 Allow: /
 Disallow: /404.html
+Disallow: /404
 
 # AI & Answer Engine Bots (AEO & GEO Optimization)
 User-agent: GPTBot
@@ -19,7 +20,5 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-User-agent: Bingbot
-Allow: /
-
+# Sitemap Index
 Sitemap: https://parcellebaran.vercel.app/sitemap.xml

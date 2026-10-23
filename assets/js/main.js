@@ -1,7 +1,14 @@
-/**
- * Parcel Lebaran — High-Performance Vanilla JavaScript Logic
- * Zero-layout-shift, zero-forced-reflow, passive listeners.
- */
+// Clean URL address bar normalizer (removes .html from browser URL bar instantly)
+(function () {
+  if (typeof window !== "undefined" && window.location && window.location.protocol !== "file:") {
+    var pathname = window.location.pathname;
+    if (pathname.endsWith(".html")) {
+      var clean = pathname.replace(/\.html$/, "");
+      if (clean === "/index") clean = "/";
+      window.history.replaceState(null, "", clean + window.location.search + window.location.hash);
+    }
+  }
+})();
 
 document.addEventListener("DOMContentLoaded", function () {
   // 1. Unified Passive Scroll Controller (Batched Read & Write, zero forced reflow)
@@ -208,6 +215,9 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
       });
+    });
+  }
+
   // 7. Ultra-lightweight Vanilla Bootstrap Collapse & Dropdown Replacement (Zero dependency, zero long task)
   document.addEventListener("click", function (e) {
     // A. Collapse Toggle (Navbar toggler & FAQ Accordion)
@@ -294,4 +304,31 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+
+  // Offline / file:// protocol compatibility for clean URLs
+  if (window.location.protocol === "file:") {
+    const knownPages = [
+      "tentang", "paket", "parcel-premium", "parcel-ekonomis", "parcel-korporat",
+      "parcel-custom", "portofolio", "blog", "kontak", "panduan-memilih-parcel-lebaran",
+      "perbedaan-parcel-ekonomis-premium-korporat", "checklist-pengadaan-parcel-perusahaan",
+      "cara-membuat-parcel-custom", "kebijakan-privasi", "404"
+    ];
+    document.querySelectorAll("a[href]").forEach(function (a) {
+      const href = a.getAttribute("href");
+      if (!href || href.startsWith("http") || href.startsWith("#") || href.startsWith("mailto:") || href.startsWith("tel:") || href.startsWith("javascript:")) {
+        return;
+      }
+      if (href === "/" || href === "/index.html") {
+        a.setAttribute("href", "index.html");
+      } else {
+        const hashIdx = href.indexOf("#");
+        const path = hashIdx !== -1 ? href.slice(0, hashIdx) : href;
+        const hash = hashIdx !== -1 ? href.slice(hashIdx) : "";
+        const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+        if (knownPages.includes(cleanPath)) {
+          a.setAttribute("href", cleanPath + ".html" + hash);
+        }
+      }
+    });
+  }
 });
