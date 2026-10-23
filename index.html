@@ -101,20 +101,10 @@
     .collapse:not(.show){display:none}
   </style>
 
-  <!-- Core Layout Stylesheets (Non-blocking Preload with Onload Swap) -->
-  <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/style.min.css">
-  </noscript>
-
-  <!-- Bootstrap Icons CSS (Local Purged 3.4 KiB with font-display: swap) -->
-  <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
-  </noscript>
+  <!-- Core Layout Stylesheets -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/style.min.css">
 
   <!-- Google Fonts: Plus Jakarta Sans — Non-blocking Print-swap Technique -->
   <link rel="stylesheet"
