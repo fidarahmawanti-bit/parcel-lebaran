@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -70,9 +70,43 @@
     fetchpriority="high">
   <link rel="preload" as="image" href="assets/images/hero-parcel.webp" media="(min-width: 768px)" fetchpriority="high">
 
-  <!-- Core Layout Stylesheets (First-Party Local for Zero CDN Handshake & 0.000 CLS) -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.min.css">
+  <!-- Critical Inline CSS for Instant First Paint & 0.000 CLS -->
+  <style>
+    :root{--sky-500:#69bceb;--sky-700:#1b6da0;--sky-800:#14547c;--navy-900:#153b5b;--ice-50:#eff8fd;--white:#ffffff;--gold-500:#d9b56d;--text:#213240;--muted:#4a6275;--border:#dceaf2;--font-main:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-pill:9999px;--transition-fast:180ms ease}
+    *,::after,::before{box-sizing:border-box}
+    body{margin:0;font-family:var(--font-main);color:var(--text);background-color:var(--white);line-height:1.68;overflow-x:hidden}
+    .site-navbar{background-color:var(--white);border-bottom:1px solid var(--border);padding:.85rem 0;position:sticky;top:0;z-index:1030}
+    .navbar-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.35rem;color:var(--navy-900);text-decoration:none}
+    .brand-badge{font-size:.7rem;font-weight:600;background-color:var(--ice-50);color:var(--sky-700);border:1px solid var(--border);padding:2px 8px;border-radius:var(--radius-pill)}
+    .parcel-hero{padding-top:clamp(2rem,4.5vw,4.25rem);padding-bottom:clamp(2.5rem,5vw,5rem);background:linear-gradient(180deg,#fff 0%,var(--ice-50) 100%);position:relative;overflow:hidden}
+    .hero-content h1{font-size:clamp(1.75rem,3.4vw,2.85rem);line-height:1.2;margin-bottom:1rem;color:var(--navy-900);font-weight:700}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:var(--radius-pill);background-color:var(--white);border:1px solid var(--border);color:var(--navy-900);font-size:.82rem;font-weight:600;margin-bottom:1.1rem}
+    .hero-img-card{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);background-color:var(--white)}
+    .hero-img-card img{width:100%;height:auto;aspect-ratio:800 / 446;display:block;object-fit:cover}
+    .hero-float-badge{position:absolute;bottom:20px;left:-15px;background-color:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);padding:12px 18px;display:flex;align-items:center;gap:12px;z-index:3}
+    .trust-strip{background-color:var(--white);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.5rem 0}
+    .btn-custom{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.72rem 1.45rem;border-radius:var(--radius-pill);text-decoration:none;border:2px solid transparent}
+    .btn-primary-custom{background-color:var(--sky-700);color:var(--white)!important}
+    .btn-whatsapp-custom{background-color:#128c7e;color:var(--white)!important}
+    .container{width:100%;padding-right:calc(var(--bs-gutter-x, 1.5rem)*.5);padding-left:calc(var(--bs-gutter-x, 1.5rem)*.5);margin-right:auto;margin-left:auto}
+    @media(min-width:576px){.container{max-width:540px}}
+    @media(min-width:768px){.container{max-width:720px}}
+    @media(min-width:992px){.container{max-width:960px}}
+    @media(min-width:1200px){.container{max-width:1140px}}
+    @media(min-width:1400px){.container{max-width:1320px}}
+    .row{display:flex;flex-wrap:wrap;margin-right:calc(var(--bs-gutter-x, 1.5rem)*-.5);margin-left:calc(var(--bs-gutter-x, 1.5rem)*-.5)}
+    .col-lg-6{flex:0 0 auto;width:100%}
+    @media(min-width:992px){.col-lg-6{width:50%}}
+    .collapse:not(.show){display:none}
+  </style>
+
+  <!-- Core Layout Stylesheets (Non-blocking Preload with Onload Swap) -->
+  <link rel="preload" href="assets/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/css/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </noscript>
 
   <!-- Bootstrap Icons CSS (Local Purged 3.4 KiB with font-display: swap) -->
   <link rel="preload" href="assets/css/bootstrap-icons.min.css" as="style"
@@ -589,7 +623,7 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="assets/images/hero-parcel-sm.webp" width="480" height="267"
                     type="image/webp">
-                  <img src="assets/images/hero-parcel-sm.webp"
+                  <img src="assets/images/hero-parcel.webp"
                     alt="Koleksi Parcel Lebaran dan Hampers Idulfitri Eksklusif 2026" width="800" height="446"
                     fetchpriority="high" decoding="sync">
                 </picture>
@@ -772,7 +806,9 @@
               <div class="package-card-img-wrapper">
                 <span class="package-card-badge badge-premium">Premium VIP</span>
                 <picture>
-                  <img src="assets/images/parcel-premiumb.webp" alt="Hampers Lebaran Paket Al-Karim Kemasan Premium"
+                  <source media="(max-width: 767px)" srcset="assets/images/parcel-premiumb.webp" width="400"
+                    height="298" type="image/webp">
+                  <img src="assets/images/parcel-premium.webp" alt="Hampers Lebaran Paket Al-Karim Kemasan Premium"
                     class="package-card-img" width="600" height="448" loading="lazy">
                 </picture>
               </div>
@@ -1507,9 +1543,7 @@
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <!-- Bootstrap 5.3 Bundle JS — local deferred (non-blocking) -->
-  <script src="assets/js/bootstrap.bundle.min.js" defer></script>
-  <!-- Custom Minified JS — deferred -->
+  <!-- Custom Minified JS — deferred (Zero dependency, high performance) -->
   <script src="assets/js/main.min.js" defer></script>
 </body>
 

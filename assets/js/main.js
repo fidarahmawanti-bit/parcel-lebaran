@@ -208,6 +208,90 @@ document.addEventListener("DOMContentLoaded", function () {
           }
         }
       });
-    });
-  }
+  // 7. Ultra-lightweight Vanilla Bootstrap Collapse & Dropdown Replacement (Zero dependency, zero long task)
+  document.addEventListener("click", function (e) {
+    // A. Collapse Toggle (Navbar toggler & FAQ Accordion)
+    const collapseToggle = e.target.closest('[data-bs-toggle="collapse"]');
+    if (collapseToggle) {
+      e.preventDefault();
+      const selector = collapseToggle.getAttribute("data-bs-target") || collapseToggle.getAttribute("href");
+      const targetEl = selector ? document.querySelector(selector) : null;
+      if (targetEl) {
+        const isCurrentlyShown = targetEl.classList.contains("show");
+        if (isCurrentlyShown) {
+          targetEl.classList.remove("show");
+          collapseToggle.classList.add("collapsed");
+          collapseToggle.setAttribute("aria-expanded", "false");
+        } else {
+          // Check accordion parent to close others
+          const parentSelector = targetEl.getAttribute("data-bs-parent");
+          if (parentSelector) {
+            const parent = document.querySelector(parentSelector);
+            if (parent) {
+              parent.querySelectorAll(".collapse.show").forEach(function (openEl) {
+                if (openEl !== targetEl) {
+                  openEl.classList.remove("show");
+                  const otherBtn = document.querySelector('[data-bs-target="#' + openEl.id + '"]') || document.querySelector('[href="#' + openEl.id + '"]');
+                  if (otherBtn) {
+                    otherBtn.classList.add("collapsed");
+                    otherBtn.setAttribute("aria-expanded", "false");
+                  }
+                }
+              });
+            }
+          }
+          targetEl.classList.add("show");
+          collapseToggle.classList.remove("collapsed");
+          collapseToggle.setAttribute("aria-expanded", "true");
+        }
+      }
+      return;
+    }
+
+    // B. Dropdown Toggle
+    const dropdownToggle = e.target.closest('[data-bs-toggle="dropdown"]');
+    if (dropdownToggle) {
+      e.preventDefault();
+      const parentDropdown = dropdownToggle.closest(".dropdown");
+      if (parentDropdown) {
+        const menu = parentDropdown.querySelector(".dropdown-menu");
+        if (menu) {
+          const isShown = menu.classList.contains("show");
+          document.querySelectorAll(".dropdown-menu.show").forEach(function (m) {
+            m.classList.remove("show");
+            const btn = m.closest(".dropdown") ? m.closest(".dropdown").querySelector('[data-bs-toggle="dropdown"]') : null;
+            if (btn) btn.setAttribute("aria-expanded", "false");
+          });
+          if (!isShown) {
+            menu.classList.add("show");
+            dropdownToggle.setAttribute("aria-expanded", "true");
+          }
+        }
+      }
+      return;
+    }
+
+    // C. Click outside dropdown -> Close open dropdowns
+    if (!e.target.closest(".dropdown")) {
+      document.querySelectorAll(".dropdown-menu.show").forEach(function (m) {
+        m.classList.remove("show");
+        const btn = m.closest(".dropdown") ? m.closest(".dropdown").querySelector('[data-bs-toggle="dropdown"]') : null;
+        if (btn) btn.setAttribute("aria-expanded", "false");
+      });
+    }
+
+    // D. Auto close mobile navbar when clicking nav-link
+    const navLink = e.target.closest(".site-navbar .navbar-nav .nav-link:not(.dropdown-toggle)");
+    if (navLink) {
+      const mobileNav = document.getElementById("navbarContent");
+      if (mobileNav && mobileNav.classList.contains("show")) {
+        mobileNav.classList.remove("show");
+        const toggler = document.querySelector(".navbar-toggler");
+        if (toggler) {
+          toggler.classList.add("collapsed");
+          toggler.setAttribute("aria-expanded", "false");
+        }
+      }
+    }
+  });
 });
