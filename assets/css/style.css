@@ -224,6 +224,7 @@ img {
   font-weight: 500;
   padding: 0.5rem 0.95rem;
   border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast) !important;
 }
 
 .navbar-nav .nav-link:hover,
@@ -277,7 +278,7 @@ img {
   text-decoration: none !important;
   background-color: transparent;
   line-height: 1.35 !important;
-  transition: all var(--transition-fast) !important;
+  transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-fast) !important;
 }
 
 .dropdown-item:hover,
@@ -2292,12 +2293,17 @@ img {
   background-color: var(--white);
 }
 
+.accordion-button {
+  transition: color var(--transition-fast), background-color var(--transition-fast) !important;
+}
+
 .custom-accordion .accordion-button {
   font-weight: 700;
   color: var(--navy-900);
   background-color: var(--white);
   padding: 1.15rem 1.4rem;
   box-shadow: none !important;
+  transition: color var(--transition-fast), background-color var(--transition-fast) !important;
 }
 
 .custom-accordion .accordion-button:not(.collapsed) {
@@ -2331,6 +2337,7 @@ img {
   font-weight: 700;
   font-size: 0.95rem;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
+  contain: layout style;
   /* Ensure text-decoration reset */
   text-decoration: none;
 }
@@ -2752,6 +2759,7 @@ img {
   background-color: var(--white);
   box-shadow: none;
   padding: 1rem 1.25rem;
+  transition: color var(--transition-fast), background-color var(--transition-fast) !important;
 }
 
 .article-faq-accordion .accordion-button:not(.collapsed) {
