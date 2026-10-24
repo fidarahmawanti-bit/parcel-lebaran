@@ -1,5 +1,6 @@
+@charset "UTF-8";
 /**
- * Parcel Lebaran — Main Stylesheet
+ * Parcel Lebaran - Main Stylesheet
  * Stack: HTML5 + Bootstrap 5.3 + Vanilla CSS
  * Visual Direction: Sky Blue Premium, Warm, Clean, Modern, Trustworthy
  */
@@ -1344,7 +1345,7 @@ img {
 
 .custom-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   color: var(--muted);
-  content: "›";
+  content: "\203A";
   font-size: 1.1rem;
   line-height: 1;
 }
@@ -1679,13 +1680,13 @@ img {
 }
 
 .article-table-card::before {
-  content: "⇄ Geser tabel ke samping untuk melihat rincian lengkap";
+  content: "\0021C4  Geser tabel ke samping untuk melihat rincian lengkap";
   display: none;
 }
 
 @media (max-width: 767.98px) {
   .article-table-card::before {
-    content: "⇄ Geser tabel ke samping untuk melihat rincian lengkap";
+    content: "\0021C4  Geser tabel ke samping untuk melihat rincian lengkap";
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2620,7 +2621,7 @@ img {
 }
 
 .article-toc li a::before {
-  content: "•";
+  content: "\2022";
   color: var(--sky-700);
   font-size: 1.1rem;
   margin-right: 0.5rem;
@@ -3170,7 +3171,7 @@ img {
 }
 
 /* ==========================================================================
-   19. Mobile Proportional Fixes — Halaman Inner (Tentang, Portofolio, Blog, Kontak)
+   19. Mobile Proportional Fixes - Halaman Inner (Tentang, Portofolio, Blog, Kontak)
    ========================================================================== */
 
 /* --- Page Header Simple: h1 & lead on mobile --- */

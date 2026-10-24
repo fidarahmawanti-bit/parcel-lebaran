@@ -3,6 +3,15 @@ DirectoryIndex index.html
 # Prevent directory listings
 Options -Indexes
 
+# Force UTF-8 character encoding for all text assets
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js .json .xml
+  AddType "text/html; charset=UTF-8" .html
+  AddType "text/css; charset=UTF-8" .css
+  AddType "application/javascript; charset=UTF-8" .js
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
