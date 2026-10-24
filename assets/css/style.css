@@ -2953,6 +2953,18 @@ img {
 }
 .author-bio-avatar {
   flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.author-bio-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  border: 3px solid var(--white);
+  box-shadow: 0 6px 18px rgba(21, 59, 91, 0.2);
 }
 .author-avatar-placeholder {
   width: 80px;
@@ -2965,6 +2977,7 @@ img {
   font-size: 2.25rem;
   color: var(--white);
   box-shadow: 0 6px 18px rgba(21, 59, 91, 0.25);
+  border: 3px solid var(--white);
 }
 .author-bio-info {
   flex: 1;
