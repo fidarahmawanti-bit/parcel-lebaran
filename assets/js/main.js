@@ -1,15 +1,3 @@
-// Clean URL address bar normalizer (removes .html from browser URL bar instantly)
-(function () {
-  if (typeof window !== "undefined" && window.location && window.location.protocol !== "file:") {
-    var pathname = window.location.pathname;
-    if (pathname.endsWith(".html")) {
-      var clean = pathname.replace(/\.html$/, "");
-      if (clean === "/index") clean = "/";
-      window.history.replaceState(null, "", clean + window.location.search + window.location.hash);
-    }
-  }
-})();
-
 document.addEventListener("DOMContentLoaded", function () {
   // 1. Zero-Reflow Scroll Controller using IntersectionObserver (Eliminates layout thrashing)
   const navbar = document.querySelector(".site-navbar");
@@ -302,8 +290,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Offline / file:// protocol compatibility for clean URLs
-  if (window.location.protocol === "file:") {
+  // Local development / file:// protocol compatibility for clean URLs
+  if (window.location.protocol === "file:" || window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
     const knownPages = [
       "tentang", "paket", "parcel-premium", "parcel-ekonomis", "parcel-korporat",
       "parcel-custom", "portofolio", "blog", "kontak", "panduan-memilih-parcel-lebaran",
