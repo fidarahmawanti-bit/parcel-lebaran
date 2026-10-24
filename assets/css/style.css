@@ -22,7 +22,7 @@
   --gold-600: #785410;
   --gold-100: #fcf6e8;
   --text: #213240;
-  --muted: #4a6275;
+  --muted: #385065;
   --border: #dceaf2;
   --success: #237a57;
   --danger: #b42318;
@@ -340,8 +340,8 @@ img {
 
 .badge-eko {
   background-color: #eff8fd;
-  color: #1b6da0;
-  border: 1px solid rgba(105, 188, 235, 0.45);
+  color: #14547c;
+  border: 1px solid rgba(20, 84, 124, 0.45);
 }
 
 .badge-b2b {
@@ -352,8 +352,8 @@ img {
 
 .badge-cst {
   background-color: #edf7f0;
-  color: var(--success);
-  border: 1px solid rgba(35, 122, 87, 0.3);
+  color: #1e6b4c;
+  border: 1px solid rgba(30, 107, 76, 0.35);
 }
 
 @media (max-width: 991.98px) {

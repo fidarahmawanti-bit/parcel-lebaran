@@ -11,38 +11,47 @@
 })();
 
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Unified Passive Scroll Controller (Batched Read & Write, zero forced reflow)
+  // 1. Zero-Reflow Scroll Controller using IntersectionObserver (Eliminates layout thrashing)
   const navbar = document.querySelector(".site-navbar");
   const backToTopBtn = document.getElementById("backToTop");
 
   if (navbar || backToTopBtn) {
-    let ticking = false;
-    let lastNavbarState = false;
-    let lastBttState = false;
+    if ("IntersectionObserver" in window) {
+      // Sentinel for navbar scrolled class
+      const navSentinel = document.createElement("div");
+      navSentinel.id = "perf-nav-sentinel";
+      navSentinel.setAttribute("aria-hidden", "true");
+      navSentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:35px;pointer-events:none;opacity:0;z-index:-1;";
+      document.body.prepend(navSentinel);
 
-    window.addEventListener("scroll", function () {
-      if (!ticking) {
-        window.requestAnimationFrame(function () {
-          // Batch Read: single geometry query per animation frame
-          const y = window.scrollY || window.pageYOffset || 0;
-          const isNavbarScrolled = y > 30;
-          const isBttShow = y > 200;
+      const navObserver = new IntersectionObserver(function (entries) {
+        if (navbar) {
+          navbar.classList.toggle("scrolled", !entries[0].isIntersecting);
+        }
+      }, { rootMargin: "0px", threshold: 0 });
+      navObserver.observe(navSentinel);
 
-          // Batch Write: only update DOM when state actually changes
-          if (navbar && isNavbarScrolled !== lastNavbarState) {
-            lastNavbarState = isNavbarScrolled;
-            navbar.classList.toggle("scrolled", isNavbarScrolled);
-          }
-          if (backToTopBtn && isBttShow !== lastBttState) {
-            lastBttState = isBttShow;
-            backToTopBtn.classList.toggle("show", isBttShow);
-          }
+      // Sentinel for back to top button
+      if (backToTopBtn) {
+        const bttSentinel = document.createElement("div");
+        bttSentinel.id = "perf-btt-sentinel";
+        bttSentinel.setAttribute("aria-hidden", "true");
+        bttSentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:250px;pointer-events:none;opacity:0;z-index:-1;";
+        document.body.prepend(bttSentinel);
 
-          ticking = false;
-        });
-        ticking = true;
+        const bttObserver = new IntersectionObserver(function (entries) {
+          backToTopBtn.classList.toggle("show", !entries[0].isIntersecting);
+        }, { rootMargin: "0px", threshold: 0 });
+        bttObserver.observe(bttSentinel);
       }
-    }, { passive: true });
+    } else {
+      // Passive fallback for legacy environments
+      window.addEventListener("scroll", function () {
+        const y = window.pageYOffset || 0;
+        if (navbar) navbar.classList.toggle("scrolled", y > 35);
+        if (backToTopBtn) backToTopBtn.classList.toggle("show", y > 250);
+      }, { passive: true });
+    }
 
     if (backToTopBtn) {
       backToTopBtn.addEventListener("click", function (e) {
