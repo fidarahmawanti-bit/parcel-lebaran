@@ -67,16 +67,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <!-- Performance: Preload LCP hero image with media queries for mobile and desktop -->
-  <link rel="preload" as="image" href="assets/images/hero-parcel-mobile.webp" media="(max-width: 575px)" type="image/webp"
-    fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero-parcel-mobile.webp" media="(max-width: 575px)"
+    type="image/webp" fetchpriority="high">
   <link rel="preload" as="image" href="assets/images/hero-parcel-sm.webp" media="(min-width: 576px)" type="image/webp"
     fetchpriority="high">
 
   <!-- Performance: Preload primary Plus Jakarta Sans font woff2 to eliminate FOUT and CLS -->
-  <link rel="preload" href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_vb.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload"
+    href="https://fonts.gstatic.com/s/plusjakartasans/v12/LDIoaomQNQcsA88c7O9yZ4KMCoOg4Ko20yygg_vb.woff2" as="font"
+    type="font/woff2" crossorigin>
 
   <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
   <!-- Core Stylesheets: Loaded directly to guarantee Zero Layout Shift (CLS = 0) and eliminate forced reflow -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -133,7 +136,7 @@
         ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
-          "name": "Katalog Paket Parcel Lebaran 2026",
+          "name": "Katalog Paket Lebaran 2026",
           "itemListElement": [
             {
               "@type": "Offer",
@@ -461,13 +464,16 @@
 
 <body>
   <!-- Performance: Zero-layout-shift sentinels for passive IntersectionObserver -->
-  <div id="perf-nav-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:35px;pointer-events:none;opacity:0;z-index:-1;"></div>
-  <div id="perf-btt-sentinel" aria-hidden="true" style="position:absolute;top:0;left:0;width:1px;height:250px;pointer-events:none;opacity:0;z-index:-1;"></div>
+  <div id="perf-nav-sentinel" aria-hidden="true"
+    style="position:absolute;top:0;left:0;width:1px;height:35px;pointer-events:none;opacity:0;z-index:-1;"></div>
+  <div id="perf-btt-sentinel" aria-hidden="true"
+    style="position:absolute;top:0;left:0;width:1px;height:250px;pointer-events:none;opacity:0;z-index:-1;"></div>
 
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html" aria-label="Beranda Parcel Lebaran">
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html"
+        aria-label="Beranda Parcel Lebaran">
         <img src="assets/images/logo-sm.webp" alt="Parcel Lebaran" width="40" height="40" class="rounded-circle"
           style="object-fit: cover;">
         <span class="brand-text"
@@ -491,7 +497,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="paketDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Paket Parcel
+              Paket
             </a>
             <ul class="dropdown-menu" aria-labelledby="paketDropdown">
               <li>
@@ -507,7 +513,7 @@
                 <hr class="dropdown-divider">
               </li>
               <li>
-                <a class="dropdown-item" href="parcel-premium.html">
+                <a class="dropdown-item" href="paket/parcel-premium.html">
                   <span class="dropdown-item-left">
                     <i class="bi bi-gem icon-vip"></i>
                     <span>Parcel Premium</span>
@@ -516,7 +522,7 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="parcel-ekonomis.html">
+                <a class="dropdown-item" href="paket/parcel-ekonomis.html">
                   <span class="dropdown-item-left">
                     <i class="bi bi-tag-fill icon-eko"></i>
                     <span>Parcel Ekonomis</span>
@@ -525,7 +531,7 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="parcel-korporat.html">
+                <a class="dropdown-item" href="paket/parcel-korporat.html">
                   <span class="dropdown-item-left">
                     <i class="bi bi-buildings icon-b2b"></i>
                     <span>Parcel Korporat</span>
@@ -534,7 +540,7 @@
                 </a>
               </li>
               <li>
-                <a class="dropdown-item" href="parcel-custom.html">
+                <a class="dropdown-item" href="paket/parcel-custom.html">
                   <span class="dropdown-item-left">
                     <i class="bi bi-palette icon-cst"></i>
                     <span>Parcel Custom</span>
@@ -618,8 +624,8 @@
             <div class="hero-visual-wrapper">
               <div class="hero-img-card">
                 <picture>
-                  <source media="(max-width: 575px)" srcset="assets/images/hero-parcel-mobile.webp" width="374" height="208"
-                    type="image/webp">
+                  <source media="(max-width: 575px)" srcset="assets/images/hero-parcel-mobile.webp" width="374"
+                    height="208" type="image/webp">
                   <source media="(min-width: 576px)" srcset="assets/images/hero-parcel-sm.webp" width="720" height="401"
                     type="image/webp">
                   <img src="assets/images/hero-parcel-sm.webp"
@@ -715,7 +721,7 @@
               <div class="mb-3">
                 <span class="category-price-badge badge-price-premium"><i class="bi bi-gem"></i> Mulai Rp 850.000</span>
               </div>
-              <a href="parcel-premium.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
+              <a href="paket/parcel-premium.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
                 Lihat Detail Premium
               </a>
             </div>
@@ -735,7 +741,7 @@
                 <span class="category-price-badge badge-price-ekonomis"><i class="bi bi-tag-fill"></i> Mulai Rp
                   275.000</span>
               </div>
-              <a href="parcel-ekonomis.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
+              <a href="paket/parcel-ekonomis.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
                 Lihat Detail Ekonomis
               </a>
             </div>
@@ -757,7 +763,7 @@
                 <span class="category-price-badge badge-price-korporat"><i class="bi bi-building"></i> Mulai Rp
                   650.000</span>
               </div>
-              <a href="parcel-korporat.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
+              <a href="paket/parcel-korporat.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
                 Lihat Penawaran B2B
               </a>
             </div>
@@ -778,7 +784,7 @@
                 <span class="category-price-badge badge-price-custom"><i class="bi bi-sliders"></i> Sesuai
                   Anggaran</span>
               </div>
-              <a href="parcel-custom.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
+              <a href="paket/parcel-custom.html" class="btn-custom btn-outline-custom btn-custom-sm w-100">
                 Simulasi Custom
               </a>
             </div>
@@ -795,7 +801,7 @@
             <i class="bi bi-check2-circle"></i>
             <span>Paling Diminati</span>
           </div>
-          <h2>Koleksi Paket Parcel Lebaran</h2>
+          <h2>Koleksi Paket Lebaran</h2>
         </div>
 
         <div class="row g-4">
@@ -807,7 +813,8 @@
                 <picture>
                   <source media="(max-width: 575px)" srcset="assets/images/parcel-premium-mobile.webp" width="373"
                     height="280" type="image/webp">
-                  <img src="assets/images/parcel-premium-sm.webp" alt="Kemasan hardbox navy gold berisi kue nastar kastengel toples kaca dan sparkling juice"
+                  <img src="assets/images/parcel-premium-sm.webp"
+                    alt="Kemasan hardbox navy gold berisi kue nastar kastengel toples kaca dan sparkling juice"
                     class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
                 </picture>
               </div>
@@ -830,7 +837,8 @@
                     <span class="package-price-label">Harga Paket</span>
                     <span class="package-price">Rp 850.000</span>
                   </div>
-                  <a href="parcel-premium.html" class="btn-custom btn-primary-custom btn-custom-sm" aria-label="Detail Paket Al-Karim Premium VIP">
+                  <a href="paket/parcel-premium.html" class="btn-custom btn-primary-custom btn-custom-sm"
+                    aria-label="Detail Paket Al-Karim Premium VIP">
                     Detail
                   </a>
                 </div>
@@ -846,8 +854,9 @@
                 <picture>
                   <source media="(max-width: 575px)" srcset="assets/images/parcel-ekonomis-mobile.webp" width="373"
                     height="280" type="image/webp">
-                  <img src="assets/images/parcel-ekonomis-sm.webp" alt="Keranjang rotan anyam dengan toples nastar putri salju dan sirup buah"
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
+                  <img src="assets/images/parcel-ekonomis-sm.webp"
+                    alt="Keranjang rotan anyam dengan toples nastar putri salju dan sirup buah" class="package-card-img"
+                    width="560" height="420" loading="lazy" decoding="async">
                 </picture>
               </div>
               <div class="package-card-body">
@@ -868,7 +877,8 @@
                     <span class="package-price-label">Harga Paket</span>
                     <span class="package-price">Rp 450.000</span>
                   </div>
-                  <a href="parcel-ekonomis.html" class="btn-custom btn-primary-custom btn-custom-sm" aria-label="Detail Paket Fitrah Ekonomis">
+                  <a href="paket/parcel-ekonomis.html" class="btn-custom btn-primary-custom btn-custom-sm"
+                    aria-label="Detail Paket Fitrah Ekonomis">
                     Detail
                   </a>
                 </div>
@@ -884,8 +894,9 @@
                 <picture>
                   <source media="(max-width: 575px)" srcset="assets/images/parcel-korporat-mobile.webp" width="373"
                     height="280" type="image/webp">
-                  <img src="assets/images/parcel-korporat-sm.webp" alt="Hardbox hitam eksklusif dengan tumbler LED dan kue almond"
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
+                  <img src="assets/images/parcel-korporat-sm.webp"
+                    alt="Hardbox hitam eksklusif dengan tumbler LED dan kue almond" class="package-card-img" width="560"
+                    height="420" loading="lazy" decoding="async">
                 </picture>
               </div>
               <div class="package-card-body">
@@ -906,7 +917,8 @@
                     <span class="package-price-label">Mulai (Min. 10 box)</span>
                     <span class="package-price">Rp 650.000</span>
                   </div>
-                  <a href="parcel-korporat.html" class="btn-custom btn-primary-custom btn-custom-sm" aria-label="Detail Paket Eksekutif Sapphire Korporat">
+                  <a href="paket/parcel-korporat.html" class="btn-custom btn-primary-custom btn-custom-sm"
+                    aria-label="Detail Paket Eksekutif Sapphire Korporat">
                     Detail
                   </a>
                 </div>
@@ -923,8 +935,8 @@
                   <source media="(max-width: 575px)" srcset="assets/images/parcel-custom-mobile.webp" width="373"
                     height="280" type="image/webp">
                   <img src="assets/images/parcel-custom-sm.webp"
-                    alt="Pilihan kemasan rotan akrilik dan box kayu dengan kue kering custom" class="package-card-img" width="560"
-                    height="420" loading="lazy" decoding="async">
+                    alt="Pilihan kemasan rotan akrilik dan box kayu dengan kue kering custom" class="package-card-img"
+                    width="560" height="420" loading="lazy" decoding="async">
                 </picture>
               </div>
               <div class="package-card-body">
@@ -945,7 +957,8 @@
                     <span class="package-price-label">Mulai Dari</span>
                     <span class="package-price">Rp 350.000</span>
                   </div>
-                  <a href="parcel-custom.html" class="btn-custom btn-primary-custom btn-custom-sm" aria-label="Simulasi Paket Mahabbah Custom">
+                  <a href="paket/parcel-custom.html" class="btn-custom btn-primary-custom btn-custom-sm"
+                    aria-label="Simulasi Paket Mahabbah Custom">
                     Simulasi
                   </a>
                 </div>
@@ -1074,7 +1087,7 @@
             </div>
 
             <div class="d-flex flex-wrap gap-3 corporate-cta-wrap">
-              <a href="parcel-korporat.html" class="btn-custom btn-outline-custom">
+              <a href="paket/parcel-korporat.html" class="btn-custom btn-outline-custom">
                 <span>Detail Paket Korporat</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
@@ -1087,8 +1100,9 @@
                 <source media="(max-width: 575px)" srcset="assets/images/parcel-korporat-mobile.webp" width="373"
                   height="280" type="image/webp">
                 <img src="assets/images/parcel-korporat-sm.webp"
-                  alt="Kemasan box hampers korporat dengan branding custom logo instansi" class="img-fluid rounded-3 mb-3"
-                  width="560" height="420" style="aspect-ratio: 560 / 420; object-fit: cover;" loading="lazy">
+                  alt="Kemasan box hampers korporat dengan branding custom logo instansi"
+                  class="img-fluid rounded-3 mb-3" width="560" height="420"
+                  style="aspect-ratio: 560 / 420; object-fit: cover;" loading="lazy">
               </picture>
               <div class="fw-bold text-navy-900">Telah Dipercaya Puluhan Perusahaan Terkemuka</div>
               <small class="text-muted">Perbankan, BUMN, Firma Hukum, Agensi Digital &amp; Start-up</small>
@@ -1124,7 +1138,8 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="assets/images/portofolio-1-sm.webp" width="400"
                     height="298" type="image/webp">
-                  <img src="assets/images/portofolio-1.webp" alt="Hampers eksklusif dalam kotak biru tua dengan pita emas PT Bank Finansial Nusantara"
+                  <img src="assets/images/portofolio-1.webp"
+                    alt="Hampers eksklusif dalam kotak biru tua dengan pita emas PT Bank Finansial Nusantara"
                     class="portfolio-img" width="600" height="448" loading="lazy">
                 </picture>
               </div>
@@ -1143,8 +1158,9 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="assets/images/portofolio-2-sm.webp" width="400"
                     height="298" type="image/webp">
-                  <img src="assets/images/portofolio-2.webp" alt="Hantaran keranjang rotan anyam berhias pita satin sky blue"
-                    class="portfolio-img" width="600" height="448" loading="lazy">
+                  <img src="assets/images/portofolio-2.webp"
+                    alt="Hantaran keranjang rotan anyam berhias pita satin sky blue" class="portfolio-img" width="600"
+                    height="448" loading="lazy">
                 </picture>
               </div>
               <div class="portfolio-content">
@@ -1163,8 +1179,9 @@
                 <picture>
                   <source media="(max-width: 767px)" srcset="assets/images/portofolio-3-sm.webp" width="400"
                     height="298" type="image/webp">
-                  <img src="assets/images/portofolio-3.webp" alt="Box akrilik premium dengan sajadah sutra dan cangkir keramik artisan"
-                    class="portfolio-img" width="600" height="448" loading="lazy">
+                  <img src="assets/images/portofolio-3.webp"
+                    alt="Box akrilik premium dengan sajadah sutra dan cangkir keramik artisan" class="portfolio-img"
+                    width="600" height="448" loading="lazy">
                 </picture>
               </div>
               <div class="portfolio-content">
@@ -1475,10 +1492,10 @@
         <div class="col-6 col-lg-2">
           <p class="footer-heading fw-bold text-white mb-3">Kategori</p>
           <ul class="footer-links small">
-            <li><a href="parcel-premium.html">Parcel Premium (VIP)</a></li>
-            <li><a href="parcel-ekonomis.html">Parcel Ekonomis</a></li>
-            <li><a href="parcel-korporat.html">Parcel Korporat</a></li>
-            <li><a href="parcel-custom.html">Parcel Custom</a></li>
+            <li><a href="paket/parcel-premium.html">Parcel Premium (VIP)</a></li>
+            <li><a href="paket/parcel-ekonomis.html">Parcel Ekonomis</a></li>
+            <li><a href="paket/parcel-korporat.html">Parcel Korporat</a></li>
+            <li><a href="paket/parcel-custom.html">Parcel Custom</a></li>
             <li><a href="kebijakan-privasi.html#syarat">Syarat Pemesanan</a></li>
           </ul>
         </div>

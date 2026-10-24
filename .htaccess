@@ -1,14 +1,20 @@
 DirectoryIndex index.html
 
+# Prevent directory listings
+Options -Indexes
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Pass through existing files and directories directly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
-  RewriteCond %{REQUEST_FILENAME} -d
+  # Route directory-level requests /paket and /blog to their respective landing pages
+  RewriteRule ^paket/?$ paket.html [L]
+  RewriteRule ^blog/?$ blog.html [L]
+
+  # Pass through existing files directly
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Clean URL support: internally rewrite clean path to .html
+  # Clean URL support: internally rewrite clean path to .html if it exists
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]
 </IfModule>

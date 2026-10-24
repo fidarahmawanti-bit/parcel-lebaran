@@ -127,7 +127,7 @@
 
 ### 6.3 Listing Paket
 - Breadcrumb.
-- H1 “Paket Parcel Lebaran”.
+- H1 “Paket Lebaran”.
 - Intro singkat.
 - Filter kategori/anggaran hanya jika benar-benar fungsional.
 - Grid kartu paket.
