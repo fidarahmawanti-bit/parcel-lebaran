@@ -6,15 +6,21 @@ Options -Indexes
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Route directory-level requests /paket and /blog to their respective landing pages
+  # 1. Landing pages /paket and /blog
   RewriteRule ^paket/?$ paket.html [L]
   RewriteRule ^blog/?$ blog.html [L]
 
-  # Pass through existing files directly
+  # 2. Backward compatibility: route legacy root package URLs to paket/
+  RewriteRule ^(parcel-premium|parcel-ekonomis|parcel-korporat|parcel-custom)(\.html)?$ paket/$1.html [L]
+
+  # 3. Backward compatibility: route legacy root blog URLs to blog/
+  RewriteRule ^(panduan-memilih-parcel-lebaran|perbedaan-parcel-ekonomis-premium-korporat|checklist-pengadaan-parcel-perusahaan|cara-membuat-parcel-custom)(\.html)?$ blog/$1.html [L]
+
+  # 4. Pass through existing files directly
   RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # Clean URL support: internally rewrite clean path to .html if it exists
+  # 5. Clean URL support: internally rewrite clean path to .html if it exists
   RewriteCond %{REQUEST_FILENAME}.html -f
   RewriteRule ^(.*)$ $1.html [L]
 </IfModule>

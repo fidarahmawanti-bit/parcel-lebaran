@@ -1,4 +1,16 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/(parcel-premium|parcel-ekonomis|parcel-korporat|parcel-custom)",
+      "destination": "/paket/:1",
+      "permanent": true
+    },
+    {
+      "source": "/(panduan-memilih-parcel-lebaran|perbedaan-parcel-ekonomis-premium-korporat|checklist-pengadaan-parcel-perusahaan|cara-membuat-parcel-custom)",
+      "destination": "/blog/:1",
+      "permanent": true
+    }
+  ]
 }
