@@ -26,8 +26,8 @@
   --border: #dceaf2;
   --success: #237a57;
   --danger: #b42318;
-  --whatsapp: #128c7e;
-  --whatsapp-dark: #075e54;
+  --whatsapp: #0d7a42;
+  --whatsapp-dark: #09592f;
 
   /* Typography */
   --font-main: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -108,7 +108,6 @@ p {
 a {
   color: var(--sky-700);
   text-decoration: none;
-  transition: color var(--transition-fast);
 }
 
 a:hover {
@@ -144,14 +143,14 @@ img {
   width: 100%;
   background-color: var(--white);
   border-bottom: 1px solid var(--border);
-  padding: 0.85rem 0;
-  transition: box-shadow var(--transition-fast), padding var(--transition-fast), background-color var(--transition-fast);
+  padding: 0.75rem 0;
+  transition: box-shadow var(--transition-fast), background-color var(--transition-fast);
   z-index: 1030;
 }
 
 .site-navbar.scrolled {
   box-shadow: 0 4px 20px rgba(21, 59, 91, 0.1);
-  padding: 0.65rem 0;
+  padding: 0.75rem 0;
 }
 
 .navbar-brand {
@@ -225,7 +224,6 @@ img {
   font-weight: 500;
   padding: 0.5rem 0.95rem;
   border-radius: var(--radius-sm);
-  transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .navbar-nav .nav-link:hover,
@@ -471,17 +469,17 @@ img {
 
 /* WhatsApp CTA Button */
 .btn-whatsapp-custom {
-  background-color: var(--whatsapp);
-  color: var(--white) !important;
-  border-color: var(--whatsapp);
+  background-color: #0d7a42 !important;
+  color: #ffffff !important;
+  border-color: #0d7a42 !important;
 }
 
 .btn-whatsapp-custom:hover {
-  background-color: var(--whatsapp-dark);
-  border-color: var(--whatsapp-dark);
-  color: var(--white) !important;
+  background-color: #09592f !important;
+  border-color: #09592f !important;
+  color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 6px 18px rgba(13, 122, 66, 0.4);
 }
 
 /* Gold Button Accent */
@@ -2300,7 +2298,6 @@ img {
   background-color: var(--white);
   padding: 1.15rem 1.4rem;
   box-shadow: none !important;
-  transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .custom-accordion .accordion-button:not(.collapsed) {
@@ -2419,7 +2416,6 @@ img {
 
 .site-footer a {
   color: #c9d8e5;
-  transition: color var(--transition-fast);
 }
 
 .site-footer a:hover {
@@ -2489,7 +2485,6 @@ img {
   color: #9cb5cb;
   text-decoration: none;
   font-size: 0.85rem;
-  transition: color var(--transition-fast);
 }
 
 .footer-legal-links a:hover {

@@ -17,28 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (navbar || backToTopBtn) {
     if ("IntersectionObserver" in window) {
-      // Sentinel for navbar scrolled class
-      const navSentinel = document.createElement("div");
-      navSentinel.id = "perf-nav-sentinel";
-      navSentinel.setAttribute("aria-hidden", "true");
-      navSentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:35px;pointer-events:none;opacity:0;z-index:-1;";
-      document.body.prepend(navSentinel);
-
-      const navObserver = new IntersectionObserver(function (entries) {
-        if (navbar) {
+      const navSentinel = document.getElementById("perf-nav-sentinel");
+      if (navSentinel && navbar) {
+        const navObserver = new IntersectionObserver(function (entries) {
           navbar.classList.toggle("scrolled", !entries[0].isIntersecting);
-        }
-      }, { rootMargin: "0px", threshold: 0 });
-      navObserver.observe(navSentinel);
+        }, { rootMargin: "0px", threshold: 0 });
+        navObserver.observe(navSentinel);
+      }
 
-      // Sentinel for back to top button
-      if (backToTopBtn) {
-        const bttSentinel = document.createElement("div");
-        bttSentinel.id = "perf-btt-sentinel";
-        bttSentinel.setAttribute("aria-hidden", "true");
-        bttSentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:250px;pointer-events:none;opacity:0;z-index:-1;";
-        document.body.prepend(bttSentinel);
-
+      const bttSentinel = document.getElementById("perf-btt-sentinel");
+      if (bttSentinel && backToTopBtn) {
         const bttObserver = new IntersectionObserver(function (entries) {
           backToTopBtn.classList.toggle("show", !entries[0].isIntersecting);
         }, { rootMargin: "0px", threshold: 0 });
