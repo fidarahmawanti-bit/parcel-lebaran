@@ -3596,6 +3596,7 @@ img {
   padding: 0;
   box-shadow: none;
   -moz-appearance: textfield;
+  appearance: textfield;
 }
 .quantity-stepper input.qty-input::-webkit-outer-spin-button,
 .quantity-stepper input.qty-input::-webkit-inner-spin-button {
