@@ -167,6 +167,30 @@ document.addEventListener("DOMContentLoaded", function () {
     itemCheckboxes.forEach(function (el) { el.addEventListener("change", updateCustomCalculation); });
     if (quantityInput) {
       quantityInput.addEventListener("input", updateCustomCalculation);
+      quantityInput.addEventListener("change", updateCustomCalculation);
+    }
+
+    const qtyMinusBtn = document.getElementById("qtyMinus");
+    const qtyPlusBtn = document.getElementById("qtyPlus");
+
+    if (qtyMinusBtn && quantityInput) {
+      qtyMinusBtn.addEventListener("click", function () {
+        const currentVal = parseInt(quantityInput.value, 10) || 1;
+        if (currentVal > 1) {
+          quantityInput.value = currentVal - 1;
+          updateCustomCalculation();
+        }
+      });
+    }
+
+    if (qtyPlusBtn && quantityInput) {
+      qtyPlusBtn.addEventListener("click", function () {
+        const currentVal = parseInt(quantityInput.value, 10) || 1;
+        if (currentVal < 1000) {
+          quantityInput.value = currentVal + 1;
+          updateCustomCalculation();
+        }
+      });
     }
 
     updateCustomCalculation();

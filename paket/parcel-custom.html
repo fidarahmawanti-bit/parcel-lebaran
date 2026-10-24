@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -435,13 +435,16 @@
               </div>
 
               <!-- Step 3: Jumlah Paket -->
-              <div class="mb-3">
+              <div class="mb-2">
                 <div class="d-flex align-items-center gap-2 mb-2">
                   <span class="badge bg-primary rounded-circle p-2">3</span>
-                  <label for="orderQuantity" class="fw-bold text-navy-900 mb-0">Rencana Jumlah Pesanan (Paket)</label>
+                  <label for="orderQuantity" class="fw-bold text-navy-900 mb-0">Rencana Jumlah Pesanan</label>
                 </div>
-                <div style="max-width: 180px;">
-                  <input type="number" id="orderQuantity" class="form-control" value="1" min="1" max="1000">
+                <div class="quantity-stepper">
+                  <button type="button" class="qty-btn" id="qtyMinus" aria-label="Kurangi jumlah pesanan">&minus;</button>
+                  <input type="number" id="orderQuantity" class="form-control qty-input" value="1" min="1" max="1000" aria-label="Jumlah paket">
+                  <button type="button" class="qty-btn" id="qtyPlus" aria-label="Tambah jumlah pesanan">&plus;</button>
+                  <span class="text-muted small fw-semibold px-2">Paket</span>
                 </div>
               </div>
 
@@ -451,7 +454,7 @@
           <!-- Right: Realtime Estimate Card -->
           <div class="col-lg-5">
             <div class="sticky-top" style="top: 100px;">
-              <div class="p-4 bg-white rounded-4 border shadow-sm">
+              <div class="p-3 p-sm-4 bg-white rounded-4 border shadow-sm estimate-summary-card">
                 <div class="section-eyebrow mb-2">
                   <i class="bi bi-calculator"></i>
                   <span>Ringkasan Estimasi</span>
@@ -460,12 +463,19 @@
 
                 <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
                   <span class="text-muted small">Harga per Paket:</span>
-                  <span id="unitPriceDisplay" class="fw-bold text-navy-900 fs-5">Rp 390.000</span>
+                  <span id="unitPriceDisplay" class="fw-bold text-navy-900 fs-5 text-nowrap">Rp 390.000</span>
                 </div>
 
-                <div class="d-flex justify-content-between align-items-center py-3 mb-3 border-bottom">
-                  <span class="fw-bold text-navy-900">Total Estimasi Keseluruhan:</span>
-                  <span id="totalEstimateDisplay" class="display-6 fw-bold text-primary">Rp 390.000</span>
+                <!-- Proportional Total Estimate Block -->
+                <div class="estimate-total-box">
+                  <div class="d-flex justify-content-between align-items-center mb-1">
+                    <span class="small text-muted fw-semibold">Total Estimasi Keseluruhan:</span>
+                    <span class="badge bg-primary-subtle text-primary small px-2 py-0-5">Real-time</span>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-1 mt-1">
+                    <span class="small text-muted d-none d-sm-inline" style="font-size: 0.78rem;">Subtotal × Jumlah</span>
+                    <span id="totalEstimateDisplay" class="estimate-grand-total ms-auto text-nowrap">Rp 390.000</span>
+                  </div>
                 </div>
 
                 <div class="small text-muted mb-4">

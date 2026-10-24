@@ -3432,6 +3432,187 @@ img {
   }
 }
 
+/* --- Parcel Custom & Interactive Calculator (Desktop & Mobile Proportions) --- */
+.calculator-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.calc-option-box {
+  display: flex;
+  align-items: center;
+  background-color: var(--ice-50);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0;
+}
+.calc-option-box:hover {
+  background-color: var(--ice-100);
+  border-color: var(--sky-500);
+  transform: translateY(-1px);
+}
+.calc-option-box:has(input:checked) {
+  background-color: #ebf5fc;
+  border-color: var(--sky-700);
+  box-shadow: 0 0 0 1px var(--sky-700);
+}
+.calc-option-box input.form-check-input {
+  flex-shrink: 0;
+  cursor: pointer;
+  width: 1.15em;
+  height: 1.15em;
+}
+
+/* Quantity Stepper Control */
+.quantity-stepper {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--ice-50);
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+}
+.quantity-stepper .qty-btn {
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  padding: 0;
+  line-height: 1;
+}
+.quantity-stepper .qty-btn:hover {
+  background-color: var(--sky-500);
+  color: var(--white);
+  border-color: var(--sky-500);
+}
+.quantity-stepper input.qty-input {
+  width: 65px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  border: none;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  -moz-appearance: textfield;
+}
+.quantity-stepper input.qty-input::-webkit-outer-spin-button,
+.quantity-stepper input.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Estimate Summary Card & Typography */
+.estimate-summary-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.estimate-total-box {
+  background: linear-gradient(135deg, #f0f7fc 0%, #e6f3fa 100%);
+  border: 1.5px solid var(--sky-200);
+  border-radius: 14px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+}
+
+.estimate-grand-total {
+  font-size: clamp(1.45rem, 5.5vw, 2.15rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: var(--sky-700);
+  letter-spacing: -0.02em;
+  white-space: nowrap !important;
+}
+
+.detail-feature-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.4rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s ease;
+  min-height: 78px;
+}
+.detail-feature-card i {
+  font-size: 1.25rem;
+  margin-bottom: 0.2rem;
+  line-height: 1;
+}
+.detail-feature-card strong {
+  font-size: 0.78rem;
+  line-height: 1.2;
+  color: var(--navy-900);
+  display: block;
+}
+.detail-feature-card .feature-sub {
+  font-size: 0.68rem;
+  color: var(--muted);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+@media (max-width: 767.98px) {
+  .calculator-card {
+    padding: 1.25rem !important;
+  }
+  .estimate-summary-card {
+    padding: 1.25rem !important;
+  }
+  .estimate-total-box {
+    padding: 0.9rem 1rem !important;
+  }
+  .calc-option-box {
+    padding: 0.65rem 0.75rem;
+  }
+  .calc-option-box .fw-bold.small {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .calculator-card {
+    padding: 1rem !important;
+  }
+  .estimate-summary-card {
+    padding: 1rem !important;
+  }
+  .estimate-total-box {
+    padding: 0.85rem 0.9rem !important;
+  }
+  .estimate-grand-total {
+    font-size: 1.45rem !important;
+  }
+}
+
 /* --- Section-py padding mobile fix for inner pages --- */
 @media (max-width: 575.98px) {
   .section-py {
