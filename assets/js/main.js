@@ -313,5 +313,6 @@ document.addEventListener("DOMContentLoaded", function () {
           toggler.setAttribute("aria-expanded", "false");
         }
       }
+    }
   });
 });
