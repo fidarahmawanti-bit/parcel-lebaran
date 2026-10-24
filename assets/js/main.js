@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 3. Portfolio Filter
   const portfolioFilterBtns = document.querySelectorAll("[data-portfolio-filter]");
-  const portfolioItems = document.querySelectorAll("[data-portfolio-category]");
+  const portfolioItems = document.querySelectorAll(".portfolio-card[data-portfolio-category]");
 
   if (portfolioFilterBtns.length > 0 && portfolioItems.length > 0) {
     portfolioFilterBtns.forEach(function (btn) {
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const itemCat = item.getAttribute("data-portfolio-category");
           const parentItem = item.closest(".portfolio-grid-item");
           if (parentItem) {
-            parentItem.style.display = (filterValue === "all" || itemCat === filterValue) ? "block" : "none";
+            parentItem.style.display = (filterValue === "all" || itemCat === filterValue) ? "" : "none";
           }
         });
       });

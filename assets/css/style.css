@@ -2527,6 +2527,9 @@ img {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  font-family: inherit;
+  line-height: inherit;
+  user-select: none;
 }
 
 .filter-btn:hover {
