@@ -3002,11 +3002,13 @@ img {
   border-radius: 50%;
   pointer-events: none;
 }
+.article-cta-inline h4,
 .article-cta-inline .h5 {
   color: var(--white) !important;
 }
-.article-cta-inline p {
-  color: rgba(255,255,255,0.75);
+.article-cta-inline p,
+.article-cta-inline p.text-muted {
+  color: rgba(255, 255, 255, 0.92) !important;
 }
 
 /* --- Author Bio Card --- */
