@@ -1638,6 +1638,30 @@ img {
   line-height: 1.7;
 }
 
+/* Link internal artikel blog berwarna biru jelas */
+.article-content a:not(.btn):not(.btn-custom):not(.badge):not(.article-table-badge),
+.article-content a:not(.btn):not(.btn-custom):not(.badge):not(.article-table-badge):visited,
+.article-content .text-primary,
+.faq-answer a,
+.callout-box a,
+.article-table-link {
+  color: #0b63c5 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(11, 99, 197, 0.45) !important;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+}
+
+.article-content a:not(.btn):not(.btn-custom):not(.badge):not(.article-table-badge):hover,
+.article-content .text-primary:hover,
+.faq-answer a:hover,
+.callout-box a:hover,
+.article-table-link:hover {
+  color: #084298 !important;
+  text-decoration-color: #084298 !important;
+}
+
 .article-toc {
   background-color: var(--ice-50);
   border: 1px solid var(--border);
@@ -2704,12 +2728,12 @@ img {
 }
 
 .baca-juga-box a {
-  color: var(--navy-900);
+  color: #0b63c5 !important;
   transition: color var(--transition-fast);
 }
 
 .baca-juga-box a:hover {
-  color: var(--sky-700);
+  color: #084298 !important;
 }
 
 /* Author Bio Card (Identitas Penulis) */
@@ -2865,23 +2889,30 @@ img {
   gap: 0.4rem;
 }
 .baca-juga-list li a {
-  color: var(--navy-900);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
+  color: #0b63c5 !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(11, 99, 197, 0.45) !important;
+  text-underline-offset: 3px;
+  font-size: 0.92rem;
+  font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: color var(--transition-fast), gap var(--transition-fast);
+  transition: color var(--transition-fast), gap var(--transition-fast), text-decoration-color var(--transition-fast);
 }
 .baca-juga-list li a:hover {
-  color: var(--sky-700);
+  color: #084298 !important;
+  text-decoration-color: #084298 !important;
   gap: 0.75rem;
 }
 .baca-juga-list li a i {
-  color: var(--sky-700);
+  color: #0b63c5 !important;
   font-size: 0.95rem;
   flex-shrink: 0;
+  transition: color var(--transition-fast);
+}
+.baca-juga-list li a:hover i {
+  color: #084298 !important;
 }
 
 /* --- FAQ Accordion --- */
