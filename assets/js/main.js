@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
+  function initApp() {
   // 1. Zero-Reflow Scroll Controller using IntersectionObserver (Eliminates layout thrashing)
   const navbar = document.querySelector(".site-navbar");
   const backToTopBtn = document.getElementById("backToTop");
@@ -64,34 +65,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 3. Portfolio Filter
   const portfolioFilterBtns = document.querySelectorAll("[data-portfolio-filter]");
-  const portfolioItems = document.querySelectorAll("[data-portfolio-category]");
+  const portfolioGridItems = document.querySelectorAll(".portfolio-grid-item");
 
-  if (portfolioFilterBtns.length > 0 && portfolioItems.length > 0) {
+  if (portfolioFilterBtns.length > 0 && portfolioGridItems.length > 0) {
     function applyPortfolioFilter(filterValue) {
       portfolioFilterBtns.forEach(function (b) {
-        if (b.getAttribute("data-portfolio-filter") === filterValue) {
-          b.classList.add("active");
-        } else {
-          b.classList.remove("active");
-        }
+        const isMatch = b.getAttribute("data-portfolio-filter") === filterValue;
+        b.classList.toggle("active", isMatch);
+        b.setAttribute("aria-selected", isMatch ? "true" : "false");
       });
 
-      portfolioItems.forEach(function (item) {
-        const itemCat = item.getAttribute("data-portfolio-category");
-        const parentItem = item.closest(".portfolio-grid-item");
-        if (parentItem) {
-          if (filterValue === "all" || itemCat === filterValue) {
-            parentItem.style.display = "block";
-            parentItem.style.opacity = "0";
-            parentItem.style.transform = "translateY(6px)";
-            requestAnimationFrame(function () {
-              parentItem.style.transition = "opacity 0.22s ease, transform 0.22s ease";
-              parentItem.style.opacity = "1";
-              parentItem.style.transform = "translateY(0)";
-            });
-          } else {
-            parentItem.style.display = "none";
-          }
+      portfolioGridItems.forEach(function (item) {
+        const card = item.querySelector("[data-portfolio-category]");
+        const itemCat = item.getAttribute("data-portfolio-category") || (card ? card.getAttribute("data-portfolio-category") : "");
+        const shouldShow = (filterValue === "all" || itemCat === filterValue);
+
+        if (shouldShow) {
+          item.style.display = "";
+          item.classList.remove("fade-in");
+          void item.offsetWidth;
+          item.classList.add("fade-in");
+        } else {
+          item.style.display = "none";
+          item.classList.remove("fade-in");
         }
       });
     }
@@ -99,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     portfolioFilterBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
-        const filterValue = this.getAttribute("data-portfolio-filter");
+        const filterValue = this.getAttribute("data-portfolio-filter") || "all";
         applyPortfolioFilter(filterValue);
       });
     });
@@ -339,4 +335,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApp);
+} else {
+  initApp();
+}
+})();

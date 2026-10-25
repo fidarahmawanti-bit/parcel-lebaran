@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -260,7 +260,7 @@
         <div class="row g-4" id="portfolioGridContainer">
 
           <!-- Item 1: Korporat Bank -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="korporat">
             <div class="portfolio-card" data-portfolio-category="korporat">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-korporat.html" class="portfolio-img-link" aria-label="Lihat Paket Korporat">
@@ -292,7 +292,7 @@
           </div>
 
           <!-- Item 2: Keluarga -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="personal">
             <div class="portfolio-card" data-portfolio-category="personal">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-ekonomis.html" class="portfolio-img-link" aria-label="Lihat Paket Ekonomis">
@@ -325,7 +325,7 @@
           </div>
 
           <!-- Item 3: Custom VIP Akrilik -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="custom">
             <div class="portfolio-card" data-portfolio-category="custom">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-custom.html" class="portfolio-img-link" aria-label="Lihat Paket Custom">
@@ -358,7 +358,7 @@
           </div>
 
           <!-- Item 4: Korporat Agensi Digital -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="korporat">
             <div class="portfolio-card" data-portfolio-category="korporat">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-korporat.html" class="portfolio-img-link" aria-label="Lihat Paket Korporat">
@@ -390,7 +390,7 @@
           </div>
 
           <!-- Item 5: Personal Mertua -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="personal">
             <div class="portfolio-card" data-portfolio-category="personal">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-premium.html" class="portfolio-img-link" aria-label="Lihat Paket Premium">
@@ -424,7 +424,7 @@
           </div>
 
           <!-- Item 6: Custom Rustic Crate -->
-          <div class="col-md-6 col-lg-4 portfolio-grid-item">
+          <div class="col-md-6 col-lg-4 portfolio-grid-item" data-portfolio-category="custom">
             <div class="portfolio-card" data-portfolio-category="custom">
               <div class="portfolio-img-wrap">
                 <a href="paket/parcel-custom.html" class="portfolio-img-link" aria-label="Lihat Paket Custom">
@@ -597,7 +597,65 @@
     <i class="bi bi-arrow-up"></i>
   </button>
 
-  <script src="assets/js/main.min.js"></script>
+  <!-- Portfolio Interactive Filter Script -->
+  <script>
+    (function () {
+      function setupPortfolioFilter() {
+        var filterBtns = document.querySelectorAll("[data-portfolio-filter]");
+        var gridItems = document.querySelectorAll(".portfolio-grid-item");
+        if (!filterBtns.length || !gridItems.length) return;
+
+        function applyFilter(filterVal) {
+          // Update active button styling
+          filterBtns.forEach(function (btn) {
+            var isMatch = btn.getAttribute("data-portfolio-filter") === filterVal;
+            btn.classList.toggle("active", isMatch);
+            btn.setAttribute("aria-selected", isMatch ? "true" : "false");
+          });
+
+          // Show / Hide matching portfolio cards with smooth fade-in
+          gridItems.forEach(function (item) {
+            var cat = item.getAttribute("data-portfolio-category") ||
+              (item.querySelector("[data-portfolio-category]") ? item.querySelector("[data-portfolio-category]").getAttribute("data-portfolio-category") : "");
+            
+            var shouldShow = (filterVal === "all" || cat === filterVal);
+            if (shouldShow) {
+              item.style.display = "";
+              item.classList.remove("fade-in");
+              void item.offsetWidth; // re-trigger animation
+              item.classList.add("fade-in");
+            } else {
+              item.style.display = "none";
+              item.classList.remove("fade-in");
+            }
+          });
+        }
+
+        // Attach click handlers
+        filterBtns.forEach(function (btn) {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            var filterVal = this.getAttribute("data-portfolio-filter") || "all";
+            applyFilter(filterVal);
+          });
+        });
+
+        // Hash link support (e.g. portofolio.html#korporat)
+        var hash = (window.location.hash || "").replace("#", "").toLowerCase();
+        if (hash && ["korporat", "personal", "custom"].indexOf(hash) !== -1) {
+          applyFilter(hash);
+        }
+      }
+
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", setupPortfolioFilter);
+      } else {
+        setupPortfolioFilter();
+      }
+    })();
+  </script>
+
+  <script src="assets/js/main.min.js?v=20261025"></script>
 </body>
 
 </html>

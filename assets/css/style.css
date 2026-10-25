@@ -2573,6 +2573,21 @@ img {
   color: var(--white);
 }
 
+@keyframes portfolioFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portfolio-grid-item.fade-in {
+  animation: portfolioFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 /* ==========================================================================
    16b. Article & Blog Detailed Styles (TOC, Figures, Captions)
    ========================================================================== */
