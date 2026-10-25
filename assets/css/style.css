@@ -2387,8 +2387,9 @@ img {
    ========================================================================== */
 .back-to-top {
   position: fixed;
-  bottom: 84px;
-  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  right: auto;
   z-index: 1050;
   width: 46px;
   height: 46px;
@@ -2404,7 +2405,7 @@ img {
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease, background-color var(--transition-fast), border-color var(--transition-fast);
   padding: 0;
   outline: none;
   text-decoration: none;
@@ -3158,11 +3159,12 @@ img {
   }
   .back-to-top {
     position: fixed !important;
-    bottom: 66px !important;
-    right: 16px !important;
-    width: 40px !important;
-    height: 40px !important;
-    min-width: 40px !important;
+    bottom: 20px !important;
+    left: 18px !important;
+    right: auto !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
     padding: 0 !important;
     border-radius: 50% !important;
     display: inline-flex !important;

@@ -1,34 +1,27 @@
 (function () {
   function initApp() {
-  // 1. Zero-Reflow Scroll Controller using IntersectionObserver (Eliminates layout thrashing)
+  // 1. Scroll Controller (Navbar & Back-to-Top Button across all pages)
   const navbar = document.querySelector(".site-navbar");
   const backToTopBtn = document.getElementById("backToTop");
 
   if (navbar || backToTopBtn) {
-    if ("IntersectionObserver" in window) {
-      const navSentinel = document.getElementById("perf-nav-sentinel");
-      if (navSentinel && navbar) {
-        const navObserver = new IntersectionObserver(function (entries) {
-          navbar.classList.toggle("scrolled", !entries[0].isIntersecting);
-        }, { rootMargin: "0px", threshold: 0 });
-        navObserver.observe(navSentinel);
-      }
+    let scrollTicking = false;
+    const updateScrollState = function () {
+      const y = window.pageYOffset || document.documentElement.scrollTop || 0;
+      if (navbar) navbar.classList.toggle("scrolled", y > 35);
+      if (backToTopBtn) backToTopBtn.classList.toggle("show", y > 250);
+      scrollTicking = false;
+    };
 
-      const bttSentinel = document.getElementById("perf-btt-sentinel");
-      if (bttSentinel && backToTopBtn) {
-        const bttObserver = new IntersectionObserver(function (entries) {
-          backToTopBtn.classList.toggle("show", !entries[0].isIntersecting);
-        }, { rootMargin: "0px", threshold: 0 });
-        bttObserver.observe(bttSentinel);
+    window.addEventListener("scroll", function () {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(updateScrollState);
+        scrollTicking = true;
       }
-    } else {
-      // Passive fallback for legacy environments
-      window.addEventListener("scroll", function () {
-        const y = window.pageYOffset || 0;
-        if (navbar) navbar.classList.toggle("scrolled", y > 35);
-        if (backToTopBtn) backToTopBtn.classList.toggle("show", y > 250);
-      }, { passive: true });
-    }
+    }, { passive: true });
+
+    // Initial check on page load
+    updateScrollState();
 
     if (backToTopBtn) {
       backToTopBtn.addEventListener("click", function (e) {
