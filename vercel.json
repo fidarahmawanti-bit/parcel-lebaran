@@ -2,15 +2,13 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    {
-      "source": "/(parcel-premium|parcel-ekonomis|parcel-korporat|parcel-custom)",
-      "destination": "/paket/:1",
-      "permanent": true
-    },
-    {
-      "source": "/(panduan-memilih-parcel-lebaran|perbedaan-parcel-ekonomis-premium-korporat|checklist-pengadaan-parcel-perusahaan|cara-membuat-parcel-custom)",
-      "destination": "/blog/:1",
-      "permanent": true
-    }
+    { "source": "/parcel-premium", "destination": "/paket/parcel-premium", "permanent": true },
+    { "source": "/parcel-ekonomis", "destination": "/paket/parcel-ekonomis", "permanent": true },
+    { "source": "/parcel-korporat", "destination": "/paket/parcel-korporat", "permanent": true },
+    { "source": "/parcel-custom", "destination": "/paket/parcel-custom", "permanent": true },
+    { "source": "/panduan-memilih-parcel-lebaran", "destination": "/blog/panduan-memilih-parcel-lebaran", "permanent": true },
+    { "source": "/perbedaan-parcel-ekonomis-premium-korporat", "destination": "/blog/perbedaan-parcel-ekonomis-premium-korporat", "permanent": true },
+    { "source": "/checklist-pengadaan-parcel-perusahaan", "destination": "/blog/checklist-pengadaan-parcel-perusahaan", "permanent": true },
+    { "source": "/cara-membuat-parcel-custom", "destination": "/blog/cara-membuat-parcel-custom", "permanent": true }
   ]
 }
