@@ -1,16 +1,17 @@
 # robots.txt — Parcel Lebaran (https://www.parcellebaran.web.id/)
 # Dioptimalkan untuk Googlebot, Google Image Search, Bing, dan AI Answer Engines
 
-# Aturan Umum untuk Semua Web Crawler
+# 1. Aturan Umum untuk Semua Web Crawler
 User-agent: *
 Allow: /
 Allow: /assets/
-Disallow: /404
-Disallow: /404.html
+# Jangan blokir /404 atau /404.html agar crawler dapat mendeteksi kode status HTTP 404 dan meta noindex
 Disallow: /*.md$
+Disallow: /vercel.json
 
-# Googlebot (Google Search Crawler - Mobile & Desktop)
+# 2. Googlebot & Google Search Console Inspection Tool
 User-agent: Googlebot
+User-agent: Google-InspectionTool
 Allow: /
 Allow: /assets/
 Allow: /*.css$
@@ -20,32 +21,34 @@ Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.svg$
-Disallow: /404
-Disallow: /404.html
+Allow: /*.woff$
+Allow: /*.woff2$
 Disallow: /*.md$
+Disallow: /vercel.json
 
-# Googlebot-Image (Google Image Search untuk Katalog Parcel & Hampers)
+# 3. Googlebot-Image (Katalog Gambar & Foto Parcel Lebaran)
 User-agent: Googlebot-Image
+Allow: /
 Allow: /assets/images/
 Allow: /*.webp$
 Allow: /*.png$
 Allow: /*.jpg$
 Allow: /*.jpeg$
 Allow: /*.svg$
+Disallow: /*.md$
 
-# Google Extended & AI Search (Google Gemini & AI Overviews)
+# 4. Google Extended (Google Gemini & AI Overviews)
 User-agent: Google-Extended
 Allow: /
 
-# Microsoft Bingbot & Copilot
+# 5. Microsoft Bingbot & Copilot
 User-agent: Bingbot
 Allow: /
 Allow: /assets/
-Disallow: /404
-Disallow: /404.html
 Disallow: /*.md$
+Disallow: /vercel.json
 
-# AI & Answer Engine Bots (AEO & GEO Optimization)
+# 6. AI & Answer Engine Bots (AEO & GEO Search)
 User-agent: GPTBot
 Allow: /
 
@@ -61,5 +64,5 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-# Lokasi Peta Situs (Sitemap XML)
+# 7. Lokasi Peta Situs Resmi (Sitemap XML)
 Sitemap: https://www.parcellebaran.web.id/sitemap.xml
