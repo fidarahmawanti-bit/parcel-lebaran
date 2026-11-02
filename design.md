@@ -1,7 +1,7 @@
 # Design System & UI Specification — Website Parcel Lebaran
 
 > **Versi:** 1.0  
-> **Tanggal:** 20 Oktober 2026  
+> **Tanggal:** 20 Oktober 2027  
 > **Stack:** HTML5 + Bootstrap 5.x + CSS murni + JavaScript vanilla  
 > **Arah visual:** Sky Blue Premium, hangat, bersih, modern, mudah dipercaya.
 

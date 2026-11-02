@@ -1,8 +1,8 @@
 # PRD — Website Parcel Lebaran
 
 > **Status:** Draft v1.0  
-> **Dokumen diperbarui:** 20 Oktober 2026  
-> **Target implementasi:** 2026–2027  
+> **Dokumen diperbarui:** 20 Oktober 2027  
+> **Target implementasi:** 2027–2027  
 > **Bahasa utama:** Bahasa Indonesia  
 > **Nama brand/domain:** Belum ditentukan; gunakan placeholder sampai informasi bisnis dikonfirmasi.
 
@@ -334,7 +334,7 @@ Pilihan sesuai kebutuhan:
 - `ImageObject` atau `VideoObject` jika relevan dan memenuhi pedoman.
 - `Person` untuk penulis/author jika ada identitas penulis yang nyata.
 
-Jangan pasang semua schema di semua halaman. Jangan menambahkan `FAQPage` dengan ekspektasi rich result FAQ di Google; dukungan rich result FAQ telah dihentikan pada 2026. FAQ tetap boleh ditulis untuk pengguna. Jangan membuat rating/review fiktif atau markup tersembunyi. Pastikan markup lolos validator dan sesuai konten tampak.
+Jangan pasang semua schema di semua halaman. Jangan menambahkan `FAQPage` dengan ekspektasi rich result FAQ di Google; dukungan rich result FAQ telah dihentikan pada 2027. FAQ tetap boleh ditulis untuk pengguna. Jangan membuat rating/review fiktif atau markup tersembunyi. Pastikan markup lolos validator dan sesuai konten tampak.
 
 ### 9.7 Sitemap, robots, dan indexing
 - `sitemap.xml`: hanya URL canonical yang ingin diindeks; gunakan `lastmod` hanya jika tanggal benar-benar mencerminkan perubahan signifikan.
