@@ -13,10 +13,6 @@
     { "source": "/rekomendasi-parcel-lebaran", "destination": "/blog/rekomendasi-parcel-lebaran", "permanent": true },
     { "source": "/ide-parcel-lebaran-unik-fungsional", "destination": "/blog/ide-parcel-lebaran-unik-fungsional", "permanent": true },
     { "source": "/harga-parcel-lebaran-sesuai-budget", "destination": "/blog/harga-parcel-lebaran-sesuai-budget", "permanent": true },
-    { "source": "/parcel-lebaran-untuk-perusahaan", "destination": "/blog/parcel-lebaran-untuk-perusahaan", "permanent": true },
-    { "source": "/vendor-parcel-lebaran-untuk-perusahaan", "destination": "/blog/parcel-lebaran-untuk-perusahaan", "permanent": true },
-    { "source": "/parcel-lebaran-custom-perusahaan", "destination": "/blog/ide-parcel-lebaran-unik-fungsional", "permanent": true },
-    { "source": "/pengadaan-parcel-lebaran-jumlah-besar", "destination": "/blog/harga-parcel-lebaran-sesuai-budget", "permanent": true },
-    { "source": "/hampers-lebaran-klien-mitra-bisnis", "destination": "/blog/rekomendasi-parcel-lebaran", "permanent": true }
+    { "source": "/parcel-lebaran-untuk-perusahaan", "destination": "/blog/parcel-lebaran-untuk-perusahaan", "permanent": true }
   ]
 }
