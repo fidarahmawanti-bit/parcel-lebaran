@@ -9,6 +9,10 @@
     { "source": "/panduan-memilih-parcel-lebaran", "destination": "/blog/panduan-memilih-parcel-lebaran", "permanent": true },
     { "source": "/perbedaan-parcel-ekonomis-premium-korporat", "destination": "/blog/perbedaan-parcel-ekonomis-premium-korporat", "permanent": true },
     { "source": "/checklist-pengadaan-parcel-perusahaan", "destination": "/blog/checklist-pengadaan-parcel-perusahaan", "permanent": true },
-    { "source": "/cara-membuat-parcel-custom", "destination": "/blog/cara-membuat-parcel-custom", "permanent": true }
+    { "source": "/cara-membuat-parcel-custom", "destination": "/blog/cara-membuat-parcel-custom", "permanent": true },
+    { "source": "/vendor-parcel-lebaran-untuk-perusahaan", "destination": "/blog/vendor-parcel-lebaran-untuk-perusahaan", "permanent": true },
+    { "source": "/parcel-lebaran-custom-perusahaan", "destination": "/blog/parcel-lebaran-custom-perusahaan", "permanent": true },
+    { "source": "/pengadaan-parcel-lebaran-jumlah-besar", "destination": "/blog/pengadaan-parcel-lebaran-jumlah-besar", "permanent": true },
+    { "source": "/hampers-lebaran-klien-mitra-bisnis", "destination": "/blog/hampers-lebaran-klien-mitra-bisnis", "permanent": true }
   ]
 }
