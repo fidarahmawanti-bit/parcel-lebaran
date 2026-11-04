@@ -5051,21 +5051,29 @@ textarea.form-control {
 .corporate-clients-block {
   width: 100%;
   overflow: hidden;
+  margin-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.corporate-clients-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.6rem;
+  background-color: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
 .corporate-clients-title {
-  font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+  font-size: clamp(0.78rem, 1.3vw, 0.88rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--navy-900);
-  margin-bottom: 0.25rem;
-}
-
-.corporate-clients-subtitle {
-  font-size: clamp(0.82rem, 1.3vw, 0.9rem);
-  color: var(--text-muted);
-  margin-bottom: 0;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .client-logo-marquee {
@@ -5074,7 +5082,7 @@ textarea.form-control {
   overflow: hidden;
   display: flex;
   user-select: none;
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
@@ -5096,24 +5104,31 @@ textarea.form-control {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 1.75rem;
-  height: 50px;
+  padding: 0 2rem;
+  height: 60px;
 }
 
-.client-logo-item img {
-  max-height: 38px;
-  max-width: 125px;
+.client-logo-item .logo-img {
   width: auto;
-  height: auto;
   object-fit: contain;
-  filter: grayscale(100%) opacity(0.65);
-  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.25s ease;
+  filter: none !important;
+  opacity: 1 !important;
+  transition: transform 0.25s ease;
 }
 
-.client-logo-item:hover img {
-  filter: grayscale(0%) opacity(1);
+.client-logo-item:hover .logo-img {
   transform: scale(1.08);
 }
+
+/* Optical Size Normalization: Equal visual height (~25px) for all logos */
+.logo-bca { height: 26px !important; }
+.logo-pertamina { height: 25px !important; }
+.logo-bankjatim { height: 28px !important; }
+.logo-bpjs { height: 32px !important; }
+.logo-bsi { height: 48px !important; }
+.logo-ojk { height: 53px !important; }
+.logo-bni { height: 76px !important; }
+.logo-ibsoftware { height: 110px !important; }
 
 @keyframes scrollClientLogos {
   0% {
@@ -5125,14 +5140,25 @@ textarea.form-control {
 }
 
 @media (max-width: 767.98px) {
+  .corporate-clients-block {
+    margin-top: 2.75rem;
+    padding-top: 1.75rem;
+  }
+  .corporate-clients-badge {
+    padding: 0.5rem 1.1rem;
+  }
   .client-logo-item {
     padding: 0 1.25rem;
-    height: 42px;
+    height: 50px;
   }
-  .client-logo-item img {
-    max-height: 30px;
-    max-width: 95px;
-  }
+  .logo-bca { height: 22px !important; }
+  .logo-pertamina { height: 21px !important; }
+  .logo-bankjatim { height: 24px !important; }
+  .logo-bpjs { height: 27px !important; }
+  .logo-bsi { height: 40px !important; }
+  .logo-ojk { height: 44px !important; }
+  .logo-bni { height: 64px !important; }
+  .logo-ibsoftware { height: 92px !important; }
   .client-logo-track {
     animation-duration: 20s;
   }
