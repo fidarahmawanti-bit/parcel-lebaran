@@ -1,116 +1,116 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.parcellebaran.web.id/</loc>
-    <lastmod>2027-10-24</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/tentang.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/tentang</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/paket</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket/parcel-premium.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/paket/parcel-premium</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket/parcel-ekonomis.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/paket/parcel-ekonomis</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket/parcel-korporat.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/paket/parcel-korporat</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket/parcel-custom.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/paket/parcel-custom</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/portofolio.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/portofolio</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/blog</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/panduan-memilih-parcel-lebaran.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/blog/panduan-memilih-parcel-lebaran</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/perbedaan-parcel-ekonomis-premium-korporat.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/blog/perbedaan-parcel-ekonomis-premium-korporat</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/checklist-pengadaan-parcel-perusahaan.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/blog/checklist-pengadaan-parcel-perusahaan</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/cara-membuat-parcel-custom.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/blog/cara-membuat-parcel-custom</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/rekomendasi-parcel-lebaran.html</loc>
+    <loc>https://www.parcellebaran.web.id/blog/rekomendasi-parcel-lebaran</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.parcellebaran.web.id/blog/ide-parcel-lebaran-unik-fungsional</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.parcellebaran.web.id/blog/harga-parcel-lebaran-sesuai-budget</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.parcellebaran.web.id/blog/parcel-lebaran-untuk-perusahaan</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.parcellebaran.web.id/kontak</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/blog/ide-parcel-lebaran-unik-fungsional.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.parcellebaran.web.id/blog/harga-parcel-lebaran-sesuai-budget.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.parcellebaran.web.id/blog/parcel-lebaran-untuk-perusahaan.html</loc>
-    <lastmod>2026-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://www.parcellebaran.web.id/kontak.html</loc>
-    <lastmod>2027-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.parcellebaran.web.id/kebijakan-privasi.html</loc>
-    <lastmod>2027-10-24</lastmod>
+    <loc>https://www.parcellebaran.web.id/kebijakan-privasi</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
