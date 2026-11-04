@@ -5173,3 +5173,18 @@ textarea.form-control {
     flex-wrap: wrap;
   }
 }
+/* Anchor link to FAQ multi-alamat */
+.link-faq-anchor {
+  color: var(--text-muted) !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+}
+.link-faq-anchor:hover {
+  color: var(--sky-700) !important;
+  text-decoration: underline !important;
+}
+#faq-multi-alamat {
+  scroll-margin-top: 100px;
+}

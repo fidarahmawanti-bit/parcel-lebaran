@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   function initApp() {
   // 1. Scroll Controller (Navbar & Back-to-Top Button across all pages)
   const navbar = document.querySelector(".site-navbar");
@@ -327,7 +327,70 @@
         }
       }
     }
+
+    // E. Auto open & scroll to FAQ item from anchor links (e.g. #faq-multi-alamat)
+    const faqAnchor = e.target.closest('a[href^="#faq-"]');
+    if (faqAnchor) {
+      const targetId = faqAnchor.getAttribute("href");
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        const btn = targetEl.querySelector(".accordion-button");
+        const collapseEl = targetEl.querySelector(".accordion-collapse");
+        if (btn && collapseEl) {
+          const parent = targetEl.closest(".accordion");
+          if (parent) {
+            parent.querySelectorAll(".collapse.show").forEach(function (openEl) {
+              if (openEl !== collapseEl) {
+                openEl.classList.remove("show");
+                const otherBtn = parent.querySelector('[data-bs-target="#' + openEl.id + '"]') || parent.querySelector('[href="#' + openEl.id + '"]');
+                if (otherBtn) {
+                  otherBtn.classList.add("collapsed");
+                  otherBtn.setAttribute("aria-expanded", "false");
+                }
+              }
+            });
+          }
+          collapseEl.classList.add("show");
+          btn.classList.remove("collapsed");
+          btn.setAttribute("aria-expanded", "true");
+        }
+        targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
+        try {
+          history.pushState(null, null, targetId);
+        } catch (err) {
+          window.location.hash = targetId;
+        }
+      }
+    }
   });
+
+  // Handle initial page load with #faq- hash
+  if (window.location.hash && window.location.hash.startsWith("#faq-")) {
+    const initialTarget = document.querySelector(window.location.hash);
+    if (initialTarget) {
+      setTimeout(function () {
+        const btn = initialTarget.querySelector(".accordion-button");
+        const collapseEl = initialTarget.querySelector(".accordion-collapse");
+        if (btn && collapseEl) {
+          const parent = initialTarget.closest(".accordion");
+          if (parent) {
+            parent.querySelectorAll(".collapse.show").forEach(function (openEl) {
+              if (openEl !== collapseEl) {
+                openEl.classList.remove("show");
+                const otherBtn = parent.querySelector('[data-bs-target="#' + openEl.id + '"]');
+                if (otherBtn) otherBtn.classList.add("collapsed");
+              }
+            });
+          }
+          collapseEl.classList.add("show");
+          btn.classList.remove("collapsed");
+          btn.setAttribute("aria-expanded", "true");
+        }
+        initialTarget.scrollIntoView({ behavior: "smooth", block: "center" });
+      }, 350);
+    }
+  }
 }
 
 if (document.readyState === "loading") {
