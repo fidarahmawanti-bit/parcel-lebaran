@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /**
  * Parcel Lebaran - Main Stylesheet
  * Stack: HTML5 + Bootstrap 5.3 + Vanilla CSS
@@ -969,7 +969,7 @@ img {
   color: var(--gold-500);
 }
 
-.package-card-badge.badge-ekonomis {
+.package-card-badge.badge-spesial, .package-card-badge.badge-ekonomis {
   background-color: var(--sky-700);
   color: var(--white);
 }
@@ -1153,7 +1153,7 @@ img {
   border: 1px solid var(--gold-500);
 }
 
-.badge-price-ekonomis {
+.badge-price-spesial, .badge-price-ekonomis {
   background-color: var(--ice-100);
   color: var(--sky-800);
   border: 1px solid var(--sky-500);
@@ -1879,7 +1879,7 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   letter-spacing: 0.02em;
 }
 
-.article-table-badge.badge-ekonomis {
+.article-table-badge.badge-spesial, .article-table-badge.badge-ekonomis {
   background-color: var(--ice-100);
   color: var(--sky-800);
   border: 1px solid var(--sky-500);
@@ -2091,7 +2091,7 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   color: var(--gold-500);
 }
 
-.detail-badge-ekonomis {
+.detail-badge-spesial, .detail-badge-ekonomis {
   background: linear-gradient(135deg, var(--sky-700) 0%, var(--sky-800) 100%) !important;
   color: #ffffff !important;
   border: 1px solid var(--sky-800);
