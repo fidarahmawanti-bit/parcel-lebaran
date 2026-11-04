@@ -15,9 +15,10 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # 1. Landing pages /paket and /blog
+  # 1. Landing pages /paket, /blog, and /portofolio
   RewriteRule ^paket/?$ paket.html [L]
   RewriteRule ^blog/?$ blog.html [L]
+  RewriteRule ^portofolio/?$ portofolio.html [L]
 
   # 2. Backward compatibility: route legacy root package URLs to paket/
   RewriteRule ^(parcel-premium|parcel-ekonomis|parcel-korporat|parcel-custom)(\.html)?$ paket/$1.html [L]
