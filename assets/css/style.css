@@ -5192,7 +5192,13 @@ textarea.form-control {
 /* ==================== PORTFOLIO DETAIL SHOWCASE (REFERENCE LAYOUT) ==================== */
 .portfolio-detail-wrapper {
   background-color: #f8fafc;
-  padding: 2.25rem 0 4.5rem;
+  padding: 1.75rem 0 4.5rem;
+}
+.portfolio-breadcrumb-nav {
+  margin-bottom: 0.75rem;
+}
+.portfolio-breadcrumb-nav .custom-breadcrumb {
+  margin-bottom: 0;
 }
 .portfolio-back-link {
   display: inline-flex;
@@ -5205,8 +5211,15 @@ textarea.form-control {
   margin-bottom: 1.5rem;
   transition: all 0.2s ease;
 }
+.portfolio-back-link svg {
+  flex-shrink: 0;
+  vertical-align: middle;
+  transition: transform 0.2s ease;
+}
 .portfolio-back-link:hover {
   color: #1b6da0;
+}
+.portfolio-back-link:hover svg {
   transform: translateX(-4px);
 }
 .portfolio-hero-card {
