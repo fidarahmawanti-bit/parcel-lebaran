@@ -43,13 +43,7 @@
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.parcellebaran.web.id/paket/parcel-lebaran-2027</loc>
-    <lastmod>2026-11-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.88</priority>
-  </url>
-  <url>
-    <loc>https://www.parcellebaran.web.id/parcel-lebaran/</loc>
+    <loc>https://www.parcellebaran.web.id/parcel-lebaran-2027</loc>
     <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
