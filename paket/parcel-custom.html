@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -9,9 +9,9 @@
   <title>Parcel Lebaran Custom — Simulasi &amp; Estimasi Biaya 2027 — Parcel Lebaran</title>
   <meta name="title" content="Parcel Lebaran Custom — Simulasi &amp; Estimasi Biaya 2027 — Parcel Lebaran">
   <meta name="description"
-    content="Rancang parcel Lebaran custom sesuai alokasi anggaran Anda. Bebas pilih wadah hardbox/rotan/akrilik, racikan kue favorit, suvenir sajadah &amp; hitung estimasi harga instan.">
+    content="Rancang parcel Lebaran custom sesuai alokasi anggaran Anda. Bebas pilih wadah hardbox/rotan/akrilik, racikan kue favorit, suvenir sajadah, brief builder interaktif &amp; hitung estimasi harga instan.">
   <meta name="keywords"
-    content="parcel lebaran custom, bikin parcel lebaran sendiri, pesan hampers custom jakarta, simulasi harga parcel lebaran, hampers lebaran request isi, custom parcel corporate">
+    content="parcel lebaran custom, bikin parcel lebaran sendiri, pesan hampers custom jakarta, simulasi harga parcel lebaran, hampers lebaran request isi, custom parcel corporate, kalkulator hpp parcel">
   <meta name="author" content="Parcel Lebaran">
   <meta name="publisher" content="Parcel Lebaran">
   <link rel="canonical" href="https://www.parcellebaran.web.id/paket/parcel-custom">
@@ -37,7 +37,7 @@
   <meta property="og:url" content="https://www.parcellebaran.web.id/paket/parcel-custom">
   <meta property="og:title" content="Parcel Lebaran Custom — Simulasi &amp; Estimasi Biaya 2027 — Parcel Lebaran">
   <meta property="og:description"
-    content="Simulasi paket custom Lebaran: Bebas pilih isi toples kue, wadah kemasan, &amp; suvenir sesuai anggaran via kalkulator instan.">
+    content="Simulasi paket custom Lebaran: Bebas pilih isi toples kue, wadah kemasan, &amp; suvenir sesuai anggaran via kalkulator instan dan form brief terstruktur.">
   <meta property="og:image" content="https://www.parcellebaran.web.id/assets/images/parcel-custom.webp">
   <meta property="og:image:secure_url" content="https://www.parcellebaran.web.id/assets/images/parcel-custom.webp">
   <meta property="og:image:type" content="image/svg+xml">
@@ -82,7 +82,250 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../assets/css/style.min.css">
 
-  <!-- JSON-LD Product & Breadcrumb Schema -->
+  <style>
+    /* Styling Ekstensi Fitur Integrasi Parcel Custom (Tema Resmi Navy & Sky Blue) */
+    .trust-badge-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      height: 100%;
+    }
+    .trust-badge-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(21, 59, 91, 0.08);
+    }
+    .trust-icon-box {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #eff8fd;
+      color: #1b6da0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    .answer-callout-box {
+      border-left: 4px solid #1b6da0;
+      background: #f8fafc;
+      padding: 20px 24px;
+      border-radius: 0 14px 14px 0;
+      margin: 24px 0;
+    }
+    .feature-list-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      height: 100%;
+      box-shadow: 0 4px 15px rgba(21, 59, 91, 0.04);
+    }
+    .custom-check-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .custom-check-list li {
+      position: relative;
+      padding: 8px 0 8px 28px;
+      font-size: 0.95rem;
+      color: #475569;
+    }
+    .custom-check-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1b6da0;
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+    .category-concept-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.25s ease;
+      height: 100%;
+    }
+    .category-concept-card:hover {
+      border-color: #1b6da0;
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(21, 59, 91, 0.08);
+    }
+    .category-concept-card .concept-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+    .catalog-filter-btn {
+      border: 1px solid #cbd5e1;
+      background: #ffffff;
+      color: #153B5B;
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-weight: 600;
+      font-size: 0.88rem;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .catalog-filter-btn:hover,
+    .catalog-filter-btn.active {
+      background: #153B5B;
+      color: #ffffff;
+      border-color: #153B5B;
+    }
+    .inspiration-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      background: #ffffff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 4px 15px rgba(21, 59, 91, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .inspiration-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(21, 59, 91, 0.09);
+    }
+    .inspiration-visual {
+      min-height: 140px;
+      background: linear-gradient(135deg, #eff8fd, #e2e8f0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .inspiration-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      gap: 10px;
+    }
+    .inspiration-badge {
+      display: inline-block;
+      background: #eff8fd;
+      color: #1b6da0;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      width: fit-content;
+    }
+    .inspiration-price {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #153B5B;
+    }
+    .process-step-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px 16px;
+      text-align: center;
+      height: 100%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+    }
+    .process-step-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #153B5B;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 12px;
+      font-size: 1.1rem;
+    }
+    .timeline-list {
+      border-left: 2px solid #cbd5e1;
+      margin: 20px 0 0 15px;
+      padding-left: 24px;
+    }
+    .timeline-point {
+      position: relative;
+      padding-bottom: 24px;
+    }
+    .timeline-point::before {
+      content: "";
+      position: absolute;
+      left: -31px;
+      top: 6px;
+      width: 12px;
+      height: 12px;
+      background: #1b6da0;
+      border: 3px solid #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px #1b6da0;
+    }
+    .hpp-calc-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 26px;
+      box-shadow: 0 6px 20px rgba(21, 59, 91, 0.05);
+    }
+    .hpp-formula-result {
+      background: linear-gradient(135deg, #153B5B, #1b6da0);
+      color: #ffffff;
+      padding: 22px;
+      border-radius: 14px;
+      margin: 18px 0;
+    }
+    .brief-contact-panel {
+      background: linear-gradient(145deg, #153B5B, #0f2c45);
+      color: #ffffff;
+      padding: 32px 28px;
+      border-radius: 20px;
+      height: 100%;
+    }
+    .brief-form-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: 0 10px 30px rgba(21, 59, 91, 0.06);
+    }
+    .related-card-link {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-decoration: none;
+      color: #153B5B;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .related-card-link:hover {
+      border-color: #1b6da0;
+      color: #1b6da0;
+      background: #eff8fd;
+      transform: translateX(4px);
+    }
+    .final-banner-cta {
+      background: linear-gradient(135deg, #153B5B 0%, #1b6da0 100%);
+      color: #ffffff;
+      border-radius: 22px;
+      padding: 48px 32px;
+      text-align: center;
+    }
+  </style>
+
+  <!-- JSON-LD Product, Breadcrumb & FAQPage Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -141,6 +384,116 @@
             "position": 3,
             "name": "Parcel Lebaran Custom",
             "item": "https://www.parcellebaran.web.id/paket/parcel-custom"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.parcellebaran.web.id/paket/parcel-custom#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Apakah isi dan wadah parcel custom bisa dikombinasikan di luar pilihan kalkulator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tentu saja bisa! Kalkulator simulasi wadah dan toples di halaman ini adalah estimasi awal untuk memudahkan perhitungan budget. Anda bebas me-request varian kue kering tertentu, produk suvenir khusus (seperti sajadah travel, mukena sutra, mug keramik, madu murni, atau lilin aromaterapi). Cukup hubungi admin WhatsApp kami untuk konsultasi racikan personal Anda."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah ada minimal nilai anggaran (budget) untuk membuat parcel custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kami sangat fleksibel melayani parcel custom mulai dari anggaran hemat Rp 250.000 hingga paket VIP luxury jutaan rupiah. Tim kurasi kami siap merekomendasikan racikan produk yang paling maksimal dan berkesan sesuai alokasi dana yang Anda siapkan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa lama proses pengerjaan dan perakitan paket custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Untuk pesanan satuan (1–5 paket), perakitan hanya membutuhkan waktu 1–2 hari kerja. Untuk pesanan custom jumlah banyak (di atas 20 paket dengan logo perusahaan atau grafir kayu), estimasi pengerjaan berkisar 3–5 hari kerja setelah preview desain disetujui."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah bisa memesan grafir nama penerima pada peti kayu atau segel wax?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ya, kami menyediakan layanan grafir laser nama penerima/perusahaan pada peti kayu pinus dan segel lilin tradisional (wax seal stamp) dengan inisial khusus untuk sentuhan personal yang sangat eksklusif dan bernilai seni tinggi."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana keamanan pengiriman untuk kombinasi wadah akrilik atau toples kaca?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Semua wadah akrilik dan toples kaca dibungkus busa die-cut presisi serta dilapisi bubble wrap double-layer di dalam kardus luar tebal. Kami sertakan Garansi Kirim Utuh 100% apabila ada toples atau akrilik yang mengalami kendala selama transit."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apakah seluruh isi parcel Lebaran bisa dibuat custom secara bebas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Pemesan dapat mengajukan daftar kebutuhan spesifik. Keputusan mengikuti ketersediaan produk, jumlah paket, jadwal pengerjaan, dan hasil penawaran resmi. Tidak semua bahan musiman selalu tersedia, namun kami siap memberikan alternatif setara."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Apa saja elemen yang dapat disesuaikan pada parcel Lebaran custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Penyesuaian dapat mencakup pilihan isi produk kue atau suvenir, susunan produk, warna atau model kemasan (hardbox, rotan, akrilik, kayu), kartu ucapan personal, hangtag, pita, dan logo identitas perusahaan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kapan desain dan spesifikasi parcel dianggap final?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Desain dan spesifikasi dianggap final setelah pemesan menyetujui versi mockup digital, dummy fisik (jika diperlukan), dan lembar spesifikasi tertulis yang menjadi acuan resmi produksi massal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana jika salah satu produk kue atau suvenir tidak tersedia di pasaran?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Kami menerapkan kontrol substitusi ketat: alternatif wajib dibandingkan berdasarkan ukuran, fungsi, komposisi rasa/kualitas, dan nilai harga. Penggantian komponen wajib mendapatkan persetujuan tertulis dari pemesan dan tidak pernah dilakukan sepihak."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Informasi apa yang perlu disiapkan untuk meminta penawaran resmi?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Siapkan jumlah paket yang dibutuhkan, batas anggaran per paket, konsep/tema penerima, kebutuhan logo perusahaan, alamat tujuan distribusi, tanggal penerimaan, serta daftar barang yang diinginkan atau pantangan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Berapa kisaran harga parcel Lebaran custom?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Harga sangat fleksibel bergantung pada jenis wadah, isi kue, jumlah paket, tingkat personalisasi, dan distribusi. Estimasi harga dapat dihitung langsung via kalkulator interaktif di halaman ini atau menggunakan Form Brief Builder."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kapan sebaiknya memesan kemasan custom khusus korporat?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Untuk kemasan custom cetak logo pabrikasi khusus, sangat disarankan memulai diskusi konsep 3–5 bulan sebelum Lebaran dan memfinalisasi cetak selambatnya H-2 bulan sebelum Idulfitri guna mengantisipasi antrean percetakan."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Bagaimana proteksi pengiriman parcel ke luar kota?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Setiap barang dibungkus terpisah dengan bubble wrap, rongga kosong diisi kertas cacah pelindung, menggunakan kardus gelombang luar berdinding ganda (metode double box), serta label Fragile tebal."
+            }
           }
         ]
       }
@@ -254,7 +607,6 @@
     </div>
   </nav>
 
-
   <main id="main-content">
     <!-- ==================== PAGE HEADER ==================== -->
     <header class="page-header-simple">
@@ -266,14 +618,109 @@
             <li class="breadcrumb-item active" aria-current="page">Parcel Custom (Simulasi)</li>
           </ol>
         </nav>
-        <h1 class="mb-1">Parcel Lebaran Custom — Rancang Sesuai Budget</h1>
+        <h1 class="mb-1">Parcel Lebaran Custom — Simulasi &amp; Rancang Sesuai Budget</h1>
         <p class="text-muted mb-0">Sesuaikan kemasan wadah, jenis kue kering, dan suvenir pelengkap dengan kalkulator estimasi biaya interaktif. Ingin melihat contoh pesanan custom yang telah selesai? Kunjungi dokumentasi <a href="../portofolio/box-akrilik-sajadah-sutra-direksi.html" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">Box Akrilik Direksi <i class="bi bi-box-arrow-up-right small"></i></a> dan <a href="../portofolio/peti-kayu-rustic-kopi-teh-nusantara.html" target="_blank" rel="noopener noreferrer" class="text-primary fw-semibold">Peti Kayu Rustic <i class="bi bi-box-arrow-up-right small"></i></a>.</p>
       </div>
     </header>
 
-    <!-- ==================== SIMULASI KALKULATOR INTERAKTIF ==================== -->
-    <section class="section-py">
+    <!-- ==================== TRUST POINTS HIGHLIGHT ==================== -->
+    <section class="py-3 bg-white border-bottom">
       <div class="container">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <div class="trust-badge-card">
+              <div class="trust-icon-box"><i class="bi bi-pencil-square"></i></div>
+              <div>
+                <strong class="d-block text-navy-900" style="font-size: 0.95rem;">Brief Kebutuhan Terarah</strong>
+                <span class="small text-muted">Sesuaikan budget, isi, dan kartu ucapan tanpa repot</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="trust-badge-card">
+              <div class="trust-icon-box"><i class="bi bi-file-earmark-check"></i></div>
+              <div>
+                <strong class="d-block text-navy-900" style="font-size: 0.95rem;">Spesifikasi Tertulis Resmi</strong>
+                <span class="small text-muted">Konfirmasi mockup, dimensi wadah &amp; isi sebelum produksi</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="trust-badge-card">
+              <div class="trust-icon-box"><i class="bi bi-shield-check"></i></div>
+              <div>
+                <strong class="d-block text-navy-900" style="font-size: 0.95rem;">Kontrol Substitusi Ketat</strong>
+                <span class="small text-muted">Tidak ada penggantian isi sepihak tanpa persetujuan Anda</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== EDUKASI: APA ITU PARCEL CUSTOM ==================== -->
+    <section class="section-py bg-light">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-magic"></i>
+            <span>Layanan Bespoke</span>
+          </div>
+          <h2 class="h3">Apa Itu Parcel Lebaran Custom?</h2>
+          <p class="text-muted">Parcel Lebaran custom adalah bingkisan Idulfitri yang komposisi isi, tampilan kemasan, pesan personal, dan detail logistiknya dirancang presisi mengikuti preferensi dan alokasi anggaran pemesan.</p>
+        </div>
+
+        <div class="answer-callout-box">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-info-circle-fill text-primary fs-4 mt-1"></i>
+            <div>
+              <strong class="text-navy-900 d-block mb-1">Prinsip Pemesanan Cepat &amp; Transparan:</strong>
+              <span class="text-muted">Anda menyampaikan jumlah paket, batas budget, konsep/tema, penerima, dan target tanggal pengiriman. Kami memeriksa kelayakan stok, menyusun estimasi rincian biaya, lalu memulai perakitan setelah mockup dan rincian disepakati bersama.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-1">
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-sliders text-primary me-2"></i>Elemen yang Bebas Disesuaikan</h3>
+              <ul class="custom-check-list">
+                <li>Pilihan dan kombinasi produk kue kering, teh, madu, kopi, atau suvenir.</li>
+                <li>Material wadah: hardbox mewah, keranjang rotan tradisional, akrilik, atau kayu pinus.</li>
+                <li>Kartu ucapan kaligrafi, hangtag emas, pita satin, dan ornamen Lebaran.</li>
+                <li>Identitas korporat: logo perusahaan, grafir nama, atau warna brand guide.</li>
+                <li>Pengelompokan varian paket dan pengaturan alamat distribusi multi-tujuan.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-clipboard-check text-primary me-2"></i>Hal Penting yang Dikonfirmasi</h3>
+              <ul class="custom-check-list">
+                <li>Ketersediaan stok bahan baku toples dan masa simpan (expired date) aman.</li>
+                <li>Minimum kuantitas pesanan (MOQ), kapasitas harian dapur, dan tenggat waktu kirim.</li>
+                <li>Transparansi biaya cetak kartu, grafir laser, jasa rakit, serta ongkos kirim aman.</li>
+                <li>Akurasi warna proofing kemasan antara mockup layar dan cetak sebenarnya.</li>
+                <li>Penanggung jawab PIC persetujuan sebelum proses penguncian spesifikasi.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SIMULASI KALKULATOR INTERAKTIF LAMA (DIPERTAHANKAN 100%) ==================== -->
+    <section class="section-py bg-white">
+      <div class="container">
+        <div class="section-header text-center mx-auto mb-4" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-calculator"></i>
+            <span>Simulasi Wadah &amp; Toples</span>
+          </div>
+          <h2 class="h3">Kalkulator Estimasi Biaya Custom Instan</h2>
+          <p class="text-muted">Pilih jenis kemasan dasar dan padukan aneka toples kue kering serta suvenir eksklusif di bawah ini untuk melihat total estimasi biaya secara <em>real-time</em>.</p>
+        </div>
+
         <div class="row g-4 g-lg-5">
 
           <!-- Left: Interactive Builder Form -->
@@ -494,17 +941,14 @@
                     <span class="badge bg-primary-subtle text-primary small px-2 py-0-5">Real-time</span>
                   </div>
                   <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-1 mt-1">
-                    <span class="small text-muted d-none d-sm-inline" style="font-size: 0.78rem;">Subtotal ×
-                      Jumlah</span>
+                    <span class="small text-muted d-none d-sm-inline" style="font-size: 0.78rem;">Subtotal × Jumlah</span>
                     <span id="totalEstimateDisplay" class="estimate-grand-total ms-auto text-nowrap">Rp 390.000</span>
                   </div>
                 </div>
 
                 <div class="small text-muted mb-4">
-                  <i class="bi bi-check-circle text-success me-1"></i> Termasuk kartu ucapan &amp; pita satin
-                  cantik.<br>
-                  <i class="bi bi-info-circle text-primary me-1"></i> Angka ini adalah estimasi awal. Admin kami akan
-                  memastikan ketersediaan wadah dan stok toples saat Anda menghubungi.
+                  <i class="bi bi-check-circle text-success me-1"></i> Termasuk kartu ucapan &amp; pita satin cantik.<br>
+                  <i class="bi bi-info-circle text-primary me-1"></i> Angka ini adalah estimasi awal. Admin kami akan memastikan ketersediaan wadah dan stok toples saat Anda menghubungi.
                 </div>
 
                 <a href="#" id="waCustomOrderBtn" target="_blank" rel="noopener noreferrer"
@@ -521,21 +965,21 @@
               <!-- 3 Feature Highlights (Sejajar) -->
               <div class="row g-2 align-items-stretch mt-3">
                 <div class="col-4 d-flex">
-                  <div class="detail-feature-card">
+                  <div class="detail-feature-card w-100">
                     <i class="bi bi-sliders text-primary"></i>
                     <strong>Bebas Racik</strong>
                     <div class="feature-sub">Sesuai Budget</div>
                   </div>
                 </div>
                 <div class="col-4 d-flex">
-                  <div class="detail-feature-card">
+                  <div class="detail-feature-card w-100">
                     <i class="bi bi-box-seam text-success"></i>
                     <strong>4 Opsi Wadah</strong>
                     <div class="feature-sub">Box/Rotan/Kayu</div>
                   </div>
                 </div>
                 <div class="col-4 d-flex">
-                  <div class="detail-feature-card">
+                  <div class="detail-feature-card w-100">
                     <i class="bi bi-headset text-warning"></i>
                     <strong>Free Konsul</strong>
                     <div class="feature-sub">Bantuan Cepat</div>
@@ -549,110 +993,941 @@
       </div>
     </section>
 
-    <!-- ==================== FAQ PARCEL CUSTOM ==================== -->
-    <section class="section-py section-soft">
-      <div class="container" style="max-width: 820px;">
-        <div class="text-center section-header">
+    <!-- ==================== KONSEP BERDASARKAN PENERIMA ==================== -->
+    <section class="section-py bg-light" id="konsepPenerima">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
           <div class="section-eyebrow">
-            <i class="bi bi-question-circle-fill"></i>
-            <span>FAQ Parcel Custom</span>
+            <i class="bi bi-person-heart"></i>
+            <span>Kurasi Personal</span>
           </div>
-          <h2 class="h3">Pertanyaan Seputar Paket Mahabbah Custom</h2>
+          <h2 class="h3">Pilih Konsep Hampers Berdasarkan Penerima</h2>
+          <p class="text-muted">Kesan hadiah berawal dari siapa penerimanya dan nuansa hangat yang ingin dihadirkan. Berikut inspirasi arah kurasi paket yang paling diminati:</p>
         </div>
 
-        <div class="accordion custom-accordion" id="faqCustom">
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqCs1">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCs1"
-                aria-expanded="true" aria-controls="collapseCs1">
-                Apakah isi dan wadah parcel custom bisa dikombinasikan di luar pilihan kalkulator?
-              </button>
-            </h3>
-            <div id="collapseCs1" class="accordion-collapse collapse show" aria-labelledby="faqCs1"
-              data-bs-parent="#faqCustom">
-              <div class="accordion-body">
-                Tentu saja bisa! Kalkulator di atas adalah simulasi awal untuk memudahkan estimasi budget. Anda bebas
-                me-request varian kue kering tertentu, produk suvenir khusus (seperti sajadah travel, mukena sutra, mug
-                keramik, madu murni, atau lilin aromaterapi). Cukup hubungi admin WhatsApp kami untuk konsultasi racikan
-                personal Anda.
-              </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="category-concept-card">
+              <span class="concept-icon">🕌</span>
+              <h3 class="h5 text-navy-900 mb-2">Spiritual Essentials</h3>
+              <p class="small text-muted mb-0">Paduan sajadah sutra travel, tasbih digital/kayu gaharu, buku doa zikir, dan Al-Qur'an terjemah saku. Sempurna untuk nuansa ibadah Idulfitri yang sakral dan bermakna mendalam.</p>
             </div>
           </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqCs2">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseCs2" aria-expanded="false" aria-controls="collapseCs2">
-                Apakah ada minimal nilai anggaran (budget) untuk membuat parcel custom?
-              </button>
-            </h3>
-            <div id="collapseCs2" class="accordion-collapse collapse" aria-labelledby="faqCs2"
-              data-bs-parent="#faqCustom">
-              <div class="accordion-body">
-                Kami sangat fleksibel melayani parcel custom mulai dari anggaran hemat Rp 250.000 hingga paket VIP
-                luxury jutaan rupiah. Tim kurasi kami siap merekomendasikan racikan produk yang paling maksimal dan
-                berkesan sesuai alokasi dana yang Anda siapkan.
-              </div>
+          <div class="col-md-4">
+            <div class="category-concept-card">
+              <span class="concept-icon">🍪</span>
+              <h3 class="h5 text-navy-900 mb-2">Artisan Food &amp; Beverage</h3>
+              <p class="small text-muted mb-0">Kue kering resep klasik Wijsman, teh bunga chamomile artisan, kopi Arabika single origin, serta toples kurma Sukari premium dengan sertifikasi higienis dan halal terjamin.</p>
             </div>
           </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqCs3">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseCs3" aria-expanded="false" aria-controls="collapseCs3">
-                Berapa lama proses pengerjaan dan perakitan Paket custom?
-              </button>
-            </h3>
-            <div id="collapseCs3" class="accordion-collapse collapse" aria-labelledby="faqCs3"
-              data-bs-parent="#faqCustom">
-              <div class="accordion-body">
-                Untuk pesanan satuan (1–5 paket), perakitan hanya membutuhkan waktu 1–2 hari kerja. Untuk pesanan custom
-                jumlah banyak (di atas 20 paket dengan logo perusahaan atau grafir kayu), estimasi pengerjaan berkisar
-                3–5 hari kerja setelah preview desain disetujui.
-              </div>
+          <div class="col-md-4">
+            <div class="category-concept-card">
+              <span class="concept-icon">🌿</span>
+              <h3 class="h5 text-navy-900 mb-2">Wellness &amp; Relaxation</h3>
+              <p class="small text-muted mb-0">Paket self-care relaksasi: reed diffuser aromaterapi, scented candle kedelai alami, dan sabun botani herbal. Menghadirkan ketenangan dan aroma kesegaran di rumah penerima.</p>
             </div>
           </div>
+        </div>
 
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqCs4">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseCs4" aria-expanded="false" aria-controls="collapseCs4">
-                Apakah bisa memesan grafir nama penerima pada peti kayu atau segel wax?
-              </button>
-            </h3>
-            <div id="collapseCs4" class="accordion-collapse collapse" aria-labelledby="faqCs4"
-              data-bs-parent="#faqCustom">
-              <div class="accordion-body">
-                Ya, kami menyediakan layanan grafir laser nama penerima/perusahaan pada peti kayu pinus dan segel lilin
-                tradisional (wax seal stamp) dengan inisial khusus untuk sentuhan personal yang sangat eksklusif dan
-                bernilai seni tinggi.
-              </div>
+        <div class="row g-4 mt-2">
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h4 class="h6 text-navy-900 fw-bold mb-2"><i class="bi bi-cup-hot text-primary me-2"></i>Barang Fungsional &amp; Tahan Lama</h4>
+              <p class="small text-muted mb-0">Untuk bingkisan yang berkesan jangka panjang, Anda dapat memadukan set cangkir keramik motif marmer, tumbler tahan panas bermotif laser nama, toples kaca borosilikat kedap udara, atau taplak meja tenun tradisional.</p>
             </div>
           </div>
-
-          <div class="accordion-item">
-            <h3 class="accordion-header" id="faqCs5">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseCs5" aria-expanded="false" aria-controls="collapseCs5">
-                Bagaimana keamanan pengiriman untuk kombinasi wadah akrilik atau toples kaca?
-              </button>
-            </h3>
-            <div id="collapseCs5" class="accordion-collapse collapse" aria-labelledby="faqCs5"
-              data-bs-parent="#faqCustom">
-              <div class="accordion-body">
-                Semua wadah akrilik dan toples kaca dibungkus busa die-cut presisi serta dilapisi bubble wrap
-                double-layer di dalam kardus luar tebal. Kami sertakan <strong>Garansi Kirim Utuh 100%</strong> apabila
-                ada toples atau akrilik yang mengalami kendala selama transit.
-              </div>
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h4 class="h6 text-navy-900 fw-bold mb-2"><i class="bi bi-briefcase text-primary me-2"></i>Kebutuhan Khusus Korporat (B2B)</h4>
+              <p class="small text-muted mb-0">Gunakan kartu ucapan resmi bertanda tangan direksi, pita satin warna pantone brand, sleeve penutup khusus, dan tag logam nama perusahaan. Pelajari selengkapnya di <a href="../corporate-gift-lebaran.html" class="text-primary fw-semibold">Corporate Gift &amp; Parcel Logo Perusahaan &rarr;</a></p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
+    <!-- ==================== KATALOG INSPIRASI DENGAN FILTER KATEGORI ==================== -->
+    <section class="section-py bg-white" id="katalogInspirasi">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-grid"></i>
+            <span>Inspirasi Desain</span>
+          </div>
+          <h2 class="h3">Contoh Paket Parcel Lebaran Custom</h2>
+          <p class="text-muted">Gunakan portofolio konsep di bawah ini sebagai referensi gaya. Anda dapat memilih konsep yang disukai untuk langsung dimasukkan ke dalam Form Brief Builder.</p>
+        </div>
+
+        <!-- Filter Buttons Toolbar -->
+        <div class="d-flex justify-content-center align-items-center flex-wrap gap-2 mb-4">
+          <button type="button" class="catalog-filter-btn active" data-filter="all">Semua Konsep</button>
+          <button type="button" class="catalog-filter-btn" data-filter="food">Food &amp; Beverage</button>
+          <button type="button" class="catalog-filter-btn" data-filter="spiritual">Spiritual</button>
+          <button type="button" class="catalog-filter-btn" data-filter="wellness">Wellness</button>
+          <button type="button" class="catalog-filter-btn" data-filter="corporate">Korporat</button>
+        </div>
+
+        <!-- Catalog Grid -->
+        <div class="row g-4" id="customCatalogGrid">
+
+          <!-- Card 1: Food -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="food">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">🍪</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">Food &amp; Beverage</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Artisan Treats</h3>
+                <p class="small text-muted">Kombinasi klasik nastar butter toples kaca, artisan chamomile tea, dan kartu ucapan Lebaran elegan dalam rigid box ringkas.</p>
+                <div class="inspiration-price">Simulasi Rp 150–300 rb</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Acuan ukuran small; komposisi final mengikuti brief.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Artisan Treats">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Spiritual -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="spiritual">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">🕌</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">Spiritual Essentials</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Ibadah Bermakna</h3>
+                <p class="small text-muted">Sajadah sutra Turki dengan travel pouch, tasbih kristal, toples kurma Sukari, dan hardbox foil emas berornamen masjid.</p>
+                <div class="inspiration-price">Sesuaikan Brief</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Harga fleksibel mengikuti pilihan aksesoris dan suvenir.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Ibadah Bermakna">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Wellness -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="wellness">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">🌿</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">Wellness &amp; Relaxation</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Self-care Relaksasi</h3>
+                <p class="small text-muted">Reed diffuser botol amber wangi white tea, artisan organic bath soap, dan handuk bordir inisial dalam keranjang anyaman halus.</p>
+                <div class="inspiration-price">Sesuaikan Brief</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Varian wewangian dapat diuji coba via formulir brief.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Self-care Relaksasi">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: Corporate -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="corporate">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">🎁</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">Korporat / B2B</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Apresiasi Mitra</h3>
+                <p class="small text-muted">Parcel terkurasi khusus relasi bisnis dengan sleeve logo perusahaan, tumbler stainless grafir laser, dan aneka toples kue resep wisman.</p>
+                <div class="inspiration-price">Penawaran Sesuai Brief</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Tersedia penanganan distribusi door-to-door multi-alamat.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Apresiasi Mitra">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Food -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="food">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">🧺</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">Food &amp; Beverage</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Hangat Keluarga</h3>
+                <p class="small text-muted">Kombinasi 4 toples kue kering nusantara (nastar, kastengel, putri salju, sagu keju) ditambah madu randu murni dalam keranjang rotan lapis kain.</p>
+                <div class="inspiration-price">Simulasi Rp 300–600 rb</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Acuan ukuran medium; pilihan terlaris untuk hantaran sanak saudara.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Hangat Keluarga">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Corporate Premium -->
+          <div class="col-md-6 col-lg-4 catalog-item" data-category="corporate">
+            <div class="inspiration-card">
+              <div class="inspiration-visual">✨</div>
+              <div class="inspiration-body">
+                <span class="inspiration-badge">VIP / Signature</span>
+                <h3 class="h5 text-navy-900 mb-1">Paket Signature Executive</h3>
+                <p class="small text-muted">Box akrilik tebal 4mm atau rigid hardbox magnetik berisi kurma Medjool, sparkling juice import halal, toples kaca gold rim, dan sertifikat garansi.</p>
+                <div class="inspiration-price">Simulasi Rp 600 rb–1,5 jt</div>
+                <span class="small text-muted" style="font-size: 0.78rem;">Acuan ukuran large/VIP; sudah termasuk packaging anti-pecah berlapis.</span>
+                <button type="button" class="btn btn-sm btn-outline-primary mt-auto choose-package-btn" data-package="Paket Signature Executive">
+                  <i class="bi bi-check2-circle me-1"></i>Pilih Konsep Ini
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="alert alert-light border mt-4 mb-0 small text-muted">
+          <i class="bi bi-info-circle text-primary me-2"></i><strong>Catatan Katalog Editorial:</strong> Seluruh nama paket di atas adalah contoh inspirasi komposisi. Rentang nominal Rp 150.000–Rp 300.000 (Small), Rp 300.000–Rp 600.000 (Medium), dan Rp 600.000–Rp 1.500.000 (Large/VIP) adalah acuan simulasi referensi. Harga penawaran resmi akan dihitung akurat berdasarkan pilihan isian spesifik Anda.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SPESIFIKASI KEMASAN & UKURAN ==================== -->
+    <section class="section-py bg-light" id="spesifikasiKemasan">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-box-seam"></i>
+            <span>Material &amp; Dimensi</span>
+          </div>
+          <h2 class="h3">Tentukan Kemasan, Ukuran, dan Detail Custom</h2>
+          <p class="text-muted">Kemasan membentuk kesan prestisius pertama sekaligus pelindung utama seluruh produk selama di perjalanan.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="table-responsive bg-white rounded-4 border shadow-sm p-3 h-100">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-box text-primary me-2"></i>Pilihan Jenis Material Wadah</h3>
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Jenis Kemasan</th>
+                    <th>Karakteristik &amp; Rekomendasi</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td><strong>Corrugated Box</strong></td>
+                    <td>Ekonomis, ramah lingkungan, kokoh untuk pengiriman kargo, dipercantik pita satin &amp; sleeve foil.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Keranjang Rotan</strong></td>
+                    <td>Anyaman tradisional estetik, memberi kesan hangat kekeluargaan, reusable sebagai wadah serbaguna.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rigid Hardbox</strong></td>
+                    <td>Tampilan mewah VIP, struktur papan tebal 3mm kaku (drawer, book-fold magnetik, atau telescopic).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Akrilik &amp; Kayu Pinus</strong></td>
+                    <td>Eksklusif &amp; modern transparan (akrilik) atau rustic alami (crate kayu pinus dengan grafir laser nama).</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="table-responsive bg-white rounded-4 border shadow-sm p-3 h-100">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-aspect-ratio text-primary me-2"></i>Acuan Ukuran Standar (Dimensi)</h3>
+              <table class="table table-hover align-middle mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th>Ukuran</th>
+                    <th>Dimensi (P × L × T)</th>
+                    <th>Estimasi Kapasitas</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td><strong>Small (S)</strong></td>
+                    <td>25 × 20 × 10 cm</td>
+                    <td>2–3 toples kue kecil atau suvenir ringan + kartu.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Medium (M)</strong></td>
+                    <td>30 × 25 × 12 cm</td>
+                    <td>4–6 toples kue kaca standar 350g + tumbler.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Large (L)</strong></td>
+                    <td>35 × 30 × 15 cm</td>
+                    <td>Toples toples besar, sparkling juice, sajadah &amp; cangkir.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Extra Large (XL)</strong></td>
+                    <td>Tower / Multi-tier Box</td>
+                    <td>Format bertingkat mewah untuk hampers eksekutif.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Personalisasi & Cetak Kartu -->
+        <div class="row g-3 mt-3">
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 border">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-palette text-primary fs-5"></i>
+                <strong class="text-navy-900">Warna &amp; Ornamen</strong>
+              </div>
+              <p class="small text-muted mb-0">Palet eksklusif Navy, Royal Gold, Sage Green, atau krem pastel dengan motif kubah bulan sabit &amp; arabesque geometris.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 border">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-envelope-paper text-primary fs-5"></i>
+                <strong class="text-navy-900">Pesan Personal</strong>
+              </div>
+              <p class="small text-muted mb-0">Kartu ucapan tebal linen/concorde dengan tinta emas, kaligrafi nama penerima, serta stempel wax seal tradisional.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="p-3 bg-white rounded-3 border">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-award text-primary fs-5"></i>
+                <strong class="text-navy-900">Logo &amp; Identitas</strong>
+              </div>
+              <p class="small text-muted mb-0">File logo vector 300 DPI untuk cetak hotprint foil emas, sleeve kemasan presisi, atau grafir laser akrilik bening.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ALUR PEMESANAN & TIMELINE ==================== -->
+    <section class="section-py bg-white" id="alurPemesanan">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-signpost-split"></i>
+            <span>Alur Transparan</span>
+          </div>
+          <h2 class="h3">Dari Pengajuan Brief hingga Parcel Tiba</h2>
+          <p class="text-muted">Alur terdokumentasi rapi mencegah kesalahpahaman dan memastikan pesanan custom Anda selesai tepat waktu dengan kualitas sempurna.</p>
+        </div>
+
+        <!-- 5 Steps Process -->
+        <div class="row g-3">
+          <div class="col-6 col-md">
+            <div class="process-step-item">
+              <div class="process-step-num">1</div>
+              <h3 class="h6 text-navy-900 fw-bold mb-1">Kirim Brief</h3>
+              <p class="small text-muted mb-0">Sampaikan kuantitas, target budget, konsep, dan tanggal terima.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md">
+            <div class="process-step-item">
+              <div class="process-step-num">2</div>
+              <h3 class="h6 text-navy-900 fw-bold mb-1">Cek Kelayakan</h3>
+              <p class="small text-muted mb-0">Kami verifikasi stok kue, material box, dan kapasitas perakitan.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md">
+            <div class="process-step-item">
+              <div class="process-step-num">3</div>
+              <h3 class="h6 text-navy-900 fw-bold mb-1">Penawaran Resmi</h3>
+              <p class="small text-muted mb-0">Terima estimasi rincian komponen biaya HPP, jasa, dan jadwal pengerjaan.</p>
+            </div>
+          </div>
+          <div class="col-6 col-md">
+            <div class="process-step-item">
+              <div class="process-step-num">4</div>
+              <h3 class="h6 text-navy-900 fw-bold mb-1">Kunci Spesifikasi</h3>
+              <p class="small text-muted mb-0">Persetujuan tertulis mockup kemasan, isi, dan komitmen jadwal pengiriman.</p>
+            </div>
+          </div>
+          <div class="col-12 col-md">
+            <div class="process-step-item">
+              <div class="process-step-num">5</div>
+              <h3 class="h6 text-navy-900 fw-bold mb-1">Produksi &amp; Kirim</h3>
+              <p class="small text-muted mb-0">Perakitan higienis, QC ketat, shrink wrap, dan distribusi aman.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Two Col: Checklist vs Substitusi -->
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-check2-square text-primary me-2"></i>Checklist Spesifikasi Sebelum Produksi</h3>
+              <ul class="custom-check-list">
+                <li>Daftar nama varian kue, gramasi toples, dan sertifikat halal.</li>
+                <li>Pilihan material kemasan, dimensi ukuran (P×L×T), dan warna pita.</li>
+                <li>File siap cetak untuk kartu ucapan, hangtag, atau sleeve logo perusahaan.</li>
+                <li>Rincian harga satuan, diskon volume kuantitas, dan total termin pembayaran.</li>
+                <li>Tanggal penguncian pesanan (cut-off date) dan jadwal pengiriman per armada.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-shield-lock text-primary me-2"></i>Prosedur Penggantian (Kontrol Substitusi)</h3>
+              <p class="small text-muted mb-3">Apabila terdapat varian kue atau aksesoris musiman yang mendadak kehabisan stok dari produsen, kami memberlakukan SOP substitusi yang ketat:</p>
+              <ul class="custom-check-list">
+                <li>Alternatif produk wajib memiliki ukuran, fungsi, dan <strong>nilai harga yang setara atau lebih tinggi</strong>.</li>
+                <li>Admin akan memberikan opsi alternatif lengkap beserta foto produk sebelum dipasang.</li>
+                <li><strong>Dilarang keras mengganti produk secara sepihak</strong> tanpa persetujuan tertulis dari pemesan.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Section -->
+        <div class="mt-5 p-4 bg-light rounded-4 border">
+          <h3 class="h5 text-navy-900 mb-2"><i class="bi bi-clock-history text-primary me-2"></i>Rekomendasi Jadwal Mundur Pemesanan (Lead Time)</h3>
+          <p class="small text-muted mb-4">Untuk pesanan korporat berjumlah puluhan hingga ratusan paket, berikut acuan jadwal mundur yang disarankan:</p>
+
+          <div class="timeline-list">
+            <div class="timeline-point">
+              <h4 class="h6 text-navy-900 fw-bold mb-1">H-5 Bulan: Diskusi Konsep &amp; Budgeting</h4>
+              <p class="small text-muted mb-0">Menentukan tema parcel, kurasi item isian, penentuan wadah kemasan, dan survei penawaran awal.</p>
+            </div>
+            <div class="timeline-point">
+              <h4 class="h6 text-navy-900 fw-bold mb-1">H-3 Bulan: Finalisasi Cetak &amp; Pembuatan Dummy</h4>
+              <p class="small text-muted mb-0">Penyelesaian desain kartu ucapan, proofing warna cetak hardbox custom logo, dan persetujuan sampel fisik.</p>
+            </div>
+            <div class="timeline-point">
+              <h4 class="h6 text-navy-900 fw-bold mb-1">H-1 Bulan: Pengadaan Bahan &amp; Perakitan Massal</h4>
+              <p class="small text-muted mb-0">Produksi kue kering fresh dari oven, inspeksi expired date toples, dan perakitan ke dalam kotak kemasan.</p>
+            </div>
+            <div class="timeline-point pb-0">
+              <h4 class="h6 text-navy-900 fw-bold mb-1">H-2 Minggu: Pengemasan Ekstra &amp; Distribusi Armada</h4>
+              <p class="small text-muted mb-0">Pemberian bubble wrap, proses shrink wrap, verifikasi alamat penerima, dan pengantaran bertahap.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PANDUAN PERAKITAN & PACKING AMAN ==================== -->
+    <section class="section-py bg-light" id="panduanPacking">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-shield-check"></i>
+            <span>Keamanan Standar Tinggi</span>
+          </div>
+          <h2 class="h3">Pastikan Parcel Rapi dan Aman dalam Pengiriman</h2>
+          <p class="text-muted">Kerapian tata letak dan lapisan pelindung menentukan apakah parcel sampai dalam kondisi sempurna di tangan penerima.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-layers text-primary me-2"></i>Teknik Perakitan &amp; Shrink Wrap</h3>
+              <ol class="small text-muted ps-3 mb-0" style="line-height: 1.8;">
+                <li>Lapisi toples kaca atau permukaan wadah dengan pelindung sebelum pengeleman agar tidak meninggalkan bekas noda lem silikon.</li>
+                <li>Gunakan ganjalan busa padat di dasar wadah; atur produk tinggi dan berat di belakang, serta toples kecil di bagian depan.</li>
+                <li>Kunci setiap toples dengan isolasi seal bening kedap udara guna mencegah tutup terbuka akibat getaran jalan.</li>
+                <li>Potong plastik shrink wrap PVC/POF dengan kelonggaran sisa 10–15 cm di bagian bawah wadah, kemudian rekatkan kawat pemanas.</li>
+                <li>Gunakan heat gun bersuhu sedang pada jarak aman 7–10 cm secara memutar bertahap dari sisi bawah, belakang, samping, hingga depan secara mulus.</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-box2 text-primary me-2"></i>Prosedur Perlindungan Pecah Belah</h3>
+              <ul class="custom-check-list">
+                <li>Toples kaca, botol sirup, dan keramik dibungkus bubble wrap 2–3 lapis secara individual.</li>
+                <li>Rongga kosong di dalam kotak diisi shredded paper (kertas cacah) padat atau air cushion agar isi tidak bergerak saat terguncang.</li>
+                <li>Penerapan metode <em>Double Box Packaging</em>: kotak parcel dimasukkan lagi ke dalam kardus luar corrugated tebal berdinding ganda.</li>
+                <li>Penempelan stiker peringatan <strong>Fragile / Pecah Belah</strong> mencolok di keempat sisi kardus luar.</li>
+                <li>Disertai Garansi Kirim Utuh 100% dengan proses klaim penggantian instan jika terjadi kerusakan kurir.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PERENCANAAN ANGGARAN & KALKULATOR HPP ==================== -->
+    <section class="section-py bg-white" id="perencanaanHpp">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-pie-chart"></i>
+            <span>Transparansi Biaya</span>
+          </div>
+          <h2 class="h3">Bagaimana Menghitung Budget Parcel Custom?</h2>
+          <p class="text-muted">Harga parcel yang sehat bukan sekadar harga kue toples, melainkan mencakup seluruh struktur HPP (Harga Pokok Penjualan) serta margin usaha yang rasional.</p>
+        </div>
+
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <div class="feature-list-card">
+              <h3 class="h5 text-navy-900 mb-3"><i class="bi bi-receipt text-primary me-2"></i>Komponen Biaya dalam Parcel Custom</h3>
+              <ol class="small text-muted ps-3 mb-0" style="line-height: 1.8;">
+                <li><strong>Biaya Bahan &amp; Isi:</strong> Modal kue kering, madu murni, sirup, teh, atau suvenir sajadah.</li>
+                <li><strong>Kemasan &amp; Aksesoris:</strong> Box hardbox/rotan/akrilik, plastik shrink, pita satin, hangtag, dan stiker segel.</li>
+                <li><strong>Operasional &amp; Alat:</strong> Konsumsi listrik heat gun, lem tembak, depresiasi alat pres, dan transport belanja.</li>
+                <li><strong>Jasa Perakitan:</strong> Tenaga kerja perakit bingkisan profesional dan penataan ornamen estetik.</li>
+                <li><strong>Desain &amp; Branding:</strong> Biaya setting layout kartu ucapan, cetak offset/digital printing, dan proofing.</li>
+                <li><strong>Target Margin Usaha:</strong> Rata-rata margin sehat berkisar antara 20% hingga 35% tergantung skala pesanan.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Kalkulator HPP Interaktif -->
+          <div class="col-lg-6">
+            <div class="hpp-calc-card">
+              <div class="d-flex align-items-center justify-content-between mb-3">
+                <h3 class="h5 text-navy-900 mb-0"><i class="bi bi-calculator-fill text-primary me-2"></i>Simulasi Kalkulasi HPP per Paket</h3>
+                <span class="badge bg-primary-subtle text-primary">Simulasi Bisnis</span>
+              </div>
+              
+              <div class="row g-2">
+                <div class="col-sm-6">
+                  <label for="costItems" class="form-label small fw-semibold text-navy-900">1. Biaya Isi Produk (Rp)</label>
+                  <input type="number" id="costItems" class="form-control form-control-sm" value="150000" min="0" step="5000">
+                </div>
+                <div class="col-sm-6">
+                  <label for="costPack" class="form-label small fw-semibold text-navy-900">2. Kemasan &amp; Aksesoris (Rp)</label>
+                  <input type="number" id="costPack" class="form-control form-control-sm" value="40000" min="0" step="5000">
+                </div>
+                <div class="col-sm-6">
+                  <label for="costOps" class="form-label small fw-semibold text-navy-900">3. Operasional &amp; Jasa (Rp)</label>
+                  <input type="number" id="costOps" class="form-control form-control-sm" value="20000" min="0" step="5000">
+                </div>
+                <div class="col-sm-6">
+                  <label for="margin" class="form-label small fw-semibold text-navy-900">4. Target Margin (%)</label>
+                  <input type="number" id="margin" class="form-control form-control-sm" value="25" min="0" max="100">
+                </div>
+              </div>
+
+              <!-- Result Box -->
+              <div class="hpp-formula-result" aria-live="polite">
+                <div class="small text-white-50 mb-1">Rekomendasi Harga Jual:</div>
+                <div id="estimate" class="h3 fw-bold mb-1">Estimasi Rp 262.500</div>
+                <div id="estimateDetail" class="small text-light opacity-75">HPP Rp 210.000 + target margin 25%. Angka ini merupakan rumus simulasi edukasi.</div>
+              </div>
+
+              <p class="small text-muted mb-0" style="font-size: 0.8rem;">
+                <i class="bi bi-info-circle me-1"></i><strong>Rumus:</strong> <code>(Isi + Kemasan + Operasional) × (1 + Margin%)</code>. Untuk panduan lengkap pengelolaan biaya hampers, silakan baca artikel <a href="../blog/harga-parcel-lebaran-sesuai-budget.html" class="text-primary fw-semibold">Daftar Harga &amp; Estimasi Budget Parcel Lebaran &rarr;</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FORM BRIEF BUILDER INTERAKTIF ==================== -->
+    <section class="section-py bg-light" id="briefSection">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+
+          <!-- Left Info Panel -->
+          <div class="col-lg-4">
+            <div class="brief-contact-panel d-flex flex-column justify-content-between">
+              <div>
+                <div class="section-eyebrow text-white-50 mb-2">
+                  <i class="bi bi-chat-text text-warning"></i>
+                  <span>Langkah Cepat</span>
+                </div>
+                <h2 class="h3 text-white mb-3">Siapkan Brief Parcel Custom Anda</h2>
+                <p class="text-light opacity-75 small mb-4">Lengkapi formulir terstruktur di samping untuk merangkum seluruh preferensi parcel Lebaran Anda. Sistem kami akan membuat ringkasan rapi yang dapat Anda salin atau kirimkan langsung via WhatsApp.</p>
+
+                <h4 class="h6 text-warning text-uppercase fw-bold mb-2">Data yang Sangat Membantu:</h4>
+                <ul class="small text-light opacity-75 ps-3 mb-4">
+                  <li>Estimasi total kuantitas paket yang dibutuhkan.</li>
+                  <li>Alokasi anggaran maksimal per paket bingkisan.</li>
+                  <li>Konsep penerima (karyawan, keluarga, relasi VIP).</li>
+                  <li>Adanya logo perusahaan atau pesan khusus.</li>
+                  <li>Jadwal batas akhir paket harus sudah diterima di lokasi.</li>
+                </ul>
+              </div>
+
+              <div class="pt-3 border-top border-white border-opacity-25 small text-light opacity-75">
+                Butuh bantuan panduan pembayaran dan armada pengiriman? Baca <a href="../cara-pesan-parcel-lebaran.html" class="text-warning text-decoration-underline">Alur Pemesanan &amp; Pengiriman Resmi &rarr;</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Interactive Form -->
+          <div class="col-lg-8">
+            <div class="brief-form-card">
+              <h2 class="h4 text-navy-900 mb-2">Form Brief Parcel Lebaran Custom</h2>
+              <p class="small text-muted mb-4">Data diproses secara lokal di browser Anda. Klik <strong>"Buat Ringkasan Brief"</strong> untuk menghasilkan draf pemesanan resmi, lalu kirim via WhatsApp ke customer service kami.</p>
+
+              <form id="briefForm" onsubmit="return false;">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label for="quantity" class="form-label small fw-semibold text-navy-900">Rencana Jumlah Paket <span class="text-danger">*</span></label>
+                    <input type="number" id="quantity" class="form-control" placeholder="Contoh: 30" min="1" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="budget" class="form-label small fw-semibold text-navy-900">Target Budget per Paket <span class="text-danger">*</span></label>
+                    <input type="text" id="budget" class="form-control" placeholder="Contoh: Rp 350.000" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="recipient" class="form-label small fw-semibold text-navy-900">Target Penerima</label>
+                    <select id="recipient" class="form-select">
+                      <option value="">Pilih Target Penerima</option>
+                      <option value="Keluarga / Pribadi">Keluarga / Kerabat Pribadi</option>
+                      <option value="Karyawan Perusahaan">Karyawan / Staf Perusahaan</option>
+                      <option value="Klien / Mitra Bisnis VIP">Klien / Mitra Bisnis VIP</option>
+                      <option value="Guru & Dosen">Guru &amp; Dosen</option>
+                      <option value="Tetangga & Warga">Tetangga &amp; Komunitas</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="concept" class="form-label small fw-semibold text-navy-900">Arah Konsep Bingkisan</label>
+                    <select id="concept" class="form-select">
+                      <option value="">Pilih Konsep</option>
+                      <option value="Artisan Food & Beverage">Artisan Food &amp; Beverage</option>
+                      <option value="Spiritual Essentials">Spiritual Essentials</option>
+                      <option value="Wellness & Relaxation">Wellness &amp; Relaxation</option>
+                      <option value="Fungsional Lifestyle">Fungsional &amp; Lifestyle</option>
+                      <option value="Campuran / Custom Penuh">Campuran / Custom Penuh</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label for="logo" class="form-label small fw-semibold text-navy-900">Kebutuhan Logo / Branding</label>
+                    <select id="logo" class="form-select">
+                      <option value="Tidak ada">Tanpa Logo (Pribadi/Keluarga)</option>
+                      <option value="Ada, file logo vector siap cetak">Ada, file logo vector siap cetak</option>
+                      <option value="Ada, perlu bantuan penataan desain">Ada, butuh bantuan penataan desain</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="date" class="form-label small fw-semibold text-navy-900">Batas Tanggal Diterima</label>
+                    <input type="date" id="date" class="form-control">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="destination" class="form-label small fw-semibold text-navy-900">Kota / Alamat Tujuan Pengiriman</label>
+                    <input type="text" id="destination" class="form-control" placeholder="Contoh: Jakarta Selatan, Surabaya, atau daftar alamat multi-kota">
+                  </div>
+
+                  <div class="col-12">
+                    <label for="briefItems" class="form-label small fw-semibold text-navy-900">Isi yang Diinginkan atau Pantangan</label>
+                    <textarea id="briefItems" class="form-control" rows="2" placeholder="Tuliskan varian kue wajib (misal: nastar, kastengel), pantangan bahan, atau suvenir tertentu (misal: sajadah biru)."></textarea>
+                  </div>
+
+                  <div class="col-12">
+                    <label for="notesBrief" class="form-label small fw-semibold text-navy-900">Catatan Khusus Tambahan</label>
+                    <textarea id="notesBrief" class="form-control" rows="2" placeholder="Contoh: kartu ucapan bahasa formal direksi, nuansa pita hijau sage, atau permintaan sampel dummy."></textarea>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 mt-4">
+                  <button type="submit" class="btn btn-primary px-4 fw-bold">
+                    <i class="bi bi-file-earmark-text me-1"></i>Buat Ringkasan Brief
+                  </button>
+                  <button type="button" id="copyBriefBtn" class="btn btn-outline-secondary px-3">
+                    <i class="bi bi-clipboard-check me-1"></i>Salin ke Clipboard
+                  </button>
+                  <a href="#" id="sendBriefWaBtn" target="_blank" rel="noopener noreferrer" class="btn btn-success px-4 fw-bold ms-sm-auto">
+                    <i class="bi bi-whatsapp me-1"></i>Kirim via WhatsApp
+                  </a>
+                </div>
+
+                <div id="formMessage" class="mt-3 small fw-semibold" aria-live="polite"></div>
+                <textarea id="briefOutput" class="d-none" aria-label="Output Ringkasan Brief"></textarea>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ KOMPREHENSIF (13 FAQ LENGKAP) ==================== -->
+    <section class="section-py bg-white" id="faqSection">
+      <div class="container" style="max-width: 860px;">
+        <div class="text-center section-header">
+          <div class="section-eyebrow">
+            <i class="bi bi-question-circle-fill"></i>
+            <span>Tanya Jawab Lengkap</span>
+          </div>
+          <h2 class="h3">FAQ Parcel Lebaran Custom</h2>
+          <p class="text-muted">Temukan jawaban atas pertanyaan teknis seputar kustomisasi, spesifikasi, garansi pengiriman, dan estimasi biaya.</p>
+        </div>
+
+        <div class="accordion custom-accordion" id="faqCustom">
+
+          <!-- FAQ 1 (Original) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading1">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaq1"
+                aria-expanded="true" aria-controls="collapseFaq1">
+                Apakah isi dan wadah parcel custom bisa dikombinasikan di luar pilihan kalkulator?
+              </button>
+            </h3>
+            <div id="collapseFaq1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Tentu saja bisa! Kalkulator simulasi wadah dan toples di atas adalah simulasi awal untuk memudahkan estimasi budget. Anda bebas me-request varian kue kering tertentu, produk suvenir khusus (seperti sajadah travel, mukena sutra, mug keramik, madu murni, atau lilin aromaterapi). Cukup hubungi admin WhatsApp kami untuk konsultasi racikan personal Anda.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 (Original) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq2" aria-expanded="false" aria-controls="collapseFaq2">
+                Apakah ada minimal nilai anggaran (budget) untuk membuat parcel custom?
+              </button>
+            </h3>
+            <div id="collapseFaq2" class="accordion-collapse collapse" aria-labelledby="faqHeading2"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Kami sangat fleksibel melayani parcel custom mulai dari anggaran hemat Rp 250.000 hingga paket VIP luxury jutaan rupiah. Tim kurasi kami siap merekomendasikan racikan produk yang paling maksimal dan berkesan sesuai alokasi dana yang Anda siapkan.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 (Original) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq3" aria-expanded="false" aria-controls="collapseFaq3">
+                Berapa lama proses pengerjaan dan perakitan paket custom?
+              </button>
+            </h3>
+            <div id="collapseFaq3" class="accordion-collapse collapse" aria-labelledby="faqHeading3"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Untuk pesanan satuan (1–5 paket), perakitan hanya membutuhkan waktu 1–2 hari kerja. Untuk pesanan custom jumlah banyak (di atas 20 paket dengan logo perusahaan atau grafir kayu), estimasi pengerjaan berkisar 3–5 hari kerja setelah preview desain disetujui.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 (Original) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading4">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq4" aria-expanded="false" aria-controls="collapseFaq4">
+                Apakah bisa memesan grafir nama penerima pada peti kayu atau segel wax?
+              </button>
+            </h3>
+            <div id="collapseFaq4" class="accordion-collapse collapse" aria-labelledby="faqHeading4"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Ya, kami menyediakan layanan grafir laser nama penerima/perusahaan pada peti kayu pinus dan segel lilin tradisional (wax seal stamp) dengan inisial khusus untuk sentuhan personal yang sangat eksklusif dan bernilai seni tinggi.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 5 (Original) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading5">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq5" aria-expanded="false" aria-controls="collapseFaq5">
+                Bagaimana keamanan pengiriman untuk kombinasi wadah akrilik atau toples kaca?
+              </button>
+            </h3>
+            <div id="collapseFaq5" class="accordion-collapse collapse" aria-labelledby="faqHeading5"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Semua wadah akrilik dan toples kaca dibungkus busa die-cut presisi serta dilapisi bubble wrap double-layer di dalam kardus luar tebal. Kami sertakan <strong>Garansi Kirim Utuh 100%</strong> apabila ada toples atau akrilik yang mengalami kendala selama transit.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 6 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading6">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq6" aria-expanded="false" aria-controls="collapseFaq6">
+                Apakah seluruh isi parcel Lebaran bisa dibuat custom secara bebas?
+              </button>
+            </h3>
+            <div id="collapseFaq6" class="accordion-collapse collapse" aria-labelledby="faqHeading6"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Pemesan dapat mengajukan daftar kebutuhan spesifik. Keputusan mengikuti ketersediaan produk, jumlah paket, jadwal pengerjaan, dan hasil penawaran resmi. Tidak semua bahan musiman selalu tersedia, namun kami siap memberikan alternatif setara yang disepakati bersama.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 7 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading7">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq7" aria-expanded="false" aria-controls="collapseFaq7">
+                Apa saja bagian yang dapat disesuaikan pada kemasan dan isi?
+              </button>
+            </h3>
+            <div id="collapseFaq7" class="accordion-collapse collapse" aria-labelledby="faqHeading7"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Penyesuaian dapat diajukan untuk susunan isi produk makanan/suvenir, pilihan material kemasan (hardbox, rotan, akrilik, kayu), desain kartu ucapan, warna pita satin, ornamen hangtag, dan identitas perusahaan (logo hotprint foil atau grafir laser).
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 8 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading8">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq8" aria-expanded="false" aria-controls="collapseFaq8">
+                Kapan desain dan spesifikasi dianggap final?
+              </button>
+            </h3>
+            <div id="collapseFaq8" class="accordion-collapse collapse" aria-labelledby="faqHeading8"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Desain dan spesifikasi dianggap final setelah pemesan menyetujui versi mockup digital, dummy fisik (jika diperlukan untuk pesanan korporat skala besar), dan lembar spesifikasi tertulis yang menjadi acuan resmi produksi massal.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 9 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading9">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq9" aria-expanded="false" aria-controls="collapseFaq9">
+                Bagaimana jika produk yang dipilih kehabisan stok di pasaran?
+              </button>
+            </h3>
+            <div id="collapseFaq9" class="accordion-collapse collapse" aria-labelledby="faqHeading9"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Kami menerapkan aturan <em>anti-substitusi sepihak</em>. Jika ada komponen habis, alternatif wajib dibandingkan dari ukuran, rasa/kualitas, dan nilai harganya. Penggantian wajib mendapatkan konfirmasi dan persetujuan tertulis dari pihak pemesan terlebih dahulu.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 10 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading10">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq10" aria-expanded="false" aria-controls="collapseFaq10">
+                Apa saja informasi minimum untuk meminta penawaran resmi?
+              </button>
+            </h3>
+            <div id="collapseFaq10" class="accordion-collapse collapse" aria-labelledby="faqHeading10"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Cukup siapkan jumlah perkiraan paket, batas budget per paket, arah konsep penerima, kebutuhan logo perusahaan, alamat tujuan pengiriman, serta daftar barang yang diinginkan atau dihindari melalui formulir brief di atas.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 11 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading11">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq11" aria-expanded="false" aria-controls="collapseFaq11">
+                Berapa estimasi kisaran harga parcel custom?
+              </button>
+            </h3>
+            <div id="collapseFaq11" class="accordion-collapse collapse" aria-labelledby="faqHeading11"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Harga bergantung pada material wadah, gramasi toples kue, jumlah kuantitas, tingkat personalisasi, dan logistik. Anda dapat menggunakan kalkulator toples instan di halaman ini untuk simulasi cepat atau menghubungi CS kami untuk proposal harga B2B resmi.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 12 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading12">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq12" aria-expanded="false" aria-controls="collapseFaq12">
+                Kapan sebaiknya memesan kemasan custom khusus korporat?
+              </button>
+            </h3>
+            <div id="collapseFaq12" class="accordion-collapse collapse" aria-labelledby="faqHeading12"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Untuk kemasan hardbox pesanan khusus dengan logo hotprint atau warna Pantone perusahaan, kami menyarankan memulai diskusi 3–5 bulan sebelum Lebaran dan mengunci pesanan cetak selambatnya 2 bulan sebelum hari raya guna menghindari antrean padat di percetakan.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 13 (New) -->
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faqHeading13">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseFaq13" aria-expanded="false" aria-controls="collapseFaq13">
+                Bagaimana metode perlindungan paket pecah belah ke luar kota?
+              </button>
+            </h3>
+            <div id="collapseFaq13" class="accordion-collapse collapse" aria-labelledby="faqHeading13"
+              data-bs-parent="#faqCustom">
+              <div class="accordion-body">
+                Setiap toples kaca dibungkus bubble wrap terpisah, ruang kosong diisi shredded paper peredam getaran, menggunakan sistem kardus ganda (double box), serta stiker Fragile mencolok. Seluruh pengiriman dilindungi Garansi Kirim Utuh 100%.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ARTIKEL & PANDUAN TERKAIT ==================== -->
+    <section class="section-py bg-light" id="artikelTerkait">
+      <div class="container">
+        <div class="section-header text-center mx-auto" style="max-width: 760px;">
+          <div class="section-eyebrow">
+            <i class="bi bi-journal-bookmark"></i>
+            <span>Panduan Lanjutan</span>
+          </div>
+          <h2 class="h3">Artikel &amp; Panduan Terkait Parcel Lebaran</h2>
+          <p class="text-muted">Perdalam wawasan pengadaan dan kurasi parcel Lebaran Anda melalui artikel panduan kami berikut:</p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <a href="../blog/harga-parcel-lebaran-sesuai-budget.html" class="related-card-link">
+              <span><i class="bi bi-tag text-primary me-2"></i>Daftar Estimasi &amp; Harga Parcel Lebaran Sesuai Budget</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="../cara-pesan-parcel-lebaran.html" class="related-card-link">
+              <span><i class="bi bi-cart-check text-primary me-2"></i>Cara Pemesanan, Pembayaran, dan Pengiriman Parcel</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="../corporate-gift-lebaran.html" class="related-card-link">
+              <span><i class="bi bi-buildings text-primary me-2"></i>Corporate Gift &amp; Parcel Custom Logo Perusahaan</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="../blog/cara-membuat-parcel-custom.html" class="related-card-link">
+              <span><i class="bi bi-tools text-primary me-2"></i>Panduan Lengkap Cara Merancang Parcel Custom</span>
+              <i class="bi bi-arrow-up-right text-muted"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FINAL CTA BANNER ==================== -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="final-banner-cta">
+          <h2 class="h2 text-white mb-2">Sudah Punya Gambaran Parcel yang Diinginkan?</h2>
+          <p class="text-light opacity-75 mx-auto mb-4" style="max-width: 640px;">
+            Mulai dari jumlah paket, estimasi anggaran, tema penerima, hingga kebutuhan logo korporat. Konsultasikan rancangan Anda sekarang juga bersama tim kurator kami.
+          </p>
+          <div class="d-flex justify-content-center flex-wrap gap-2">
+            <a href="#briefSection" class="btn btn-warning text-dark fw-bold px-4 py-2 rounded-pill">
+              <i class="bi bi-file-earmark-text me-1"></i>Isi Form Brief Sekarang
+            </a>
+            <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20pemesanan%20Parcel%20Custom."
+              target="_blank" rel="noopener noreferrer" class="btn btn-outline-light fw-bold px-4 py-2 rounded-pill">
+              <i class="bi bi-whatsapp me-1"></i>Hubungi Customer Service
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ==================== FOOTER RESMI ==================== -->
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4">
@@ -666,7 +1941,7 @@
                 style="color: #69BCEB; font-weight: 700;">LEBARAN</span></span>
           </a>
           <p class="small text-light opacity-75 mb-3">
-            Penyedia hantaran dan parcel Lebaran terpercaya. Kurasi halal, kemasan mewah &amp; pengiriman aman.
+            Penyedia hantaran dan parcel Lebaran terpercaya. Kurasi halal, kemasan mewah &amp; pengiriman aman ke seluruh kota.
           </p>
         </div>
         <div class="col-6 col-lg-2">
@@ -736,7 +2011,187 @@
     <i class="bi bi-arrow-up"></i>
   </button>
 
+  <!-- External Website JavaScript (Kalkulator Wadah Lama berjalan otomatis dari sini) -->
   <script src="../assets/js/main.min.js"></script>
+
+  <!-- Script Fitur Tambahan Integrasi (Filter Katalog, HPP Calc, Brief Builder & WA Bridge) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // 1. Filter Katalog Inspirasi
+      const filterBtns = document.querySelectorAll(".catalog-filter-btn");
+      const catalogItems = document.querySelectorAll("#customCatalogGrid .catalog-item");
+
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          filterBtns.forEach(function (b) { b.classList.remove("active"); });
+          this.classList.add("active");
+          const filterValue = this.getAttribute("data-filter");
+
+          catalogItems.forEach(function (item) {
+            if (filterValue === "all" || item.getAttribute("data-category") === filterValue) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // 2. Tombol "Pilih Konsep Ini" ke Form Brief
+      const chooseBtns = document.querySelectorAll(".choose-package-btn");
+      const conceptSelect = document.getElementById("concept");
+      const briefItemsInput = document.getElementById("briefItems");
+      const briefSection = document.getElementById("briefSection");
+
+      chooseBtns.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const packageName = this.getAttribute("data-package");
+          if (conceptSelect) {
+            conceptSelect.value = "Campuran / Custom Penuh";
+          }
+          if (briefItemsInput) {
+            briefItemsInput.value = "Konsep yang diminati: " + packageName + ". Mohon berikan rekomendasi isian kue, kemasan, dan rincian penawarannya.";
+          }
+          if (briefSection) {
+            briefSection.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      });
+
+      // 3. Kalkulator HPP & Target Margin
+      const costItemsInput = document.getElementById("costItems");
+      const costPackInput = document.getElementById("costPack");
+      const costOpsInput = document.getElementById("costOps");
+      const marginInput = document.getElementById("margin");
+      const estimateEl = document.getElementById("estimate");
+      const estimateDetailEl = document.getElementById("estimateDetail");
+
+      function formatIDR(num) {
+        return "Rp " + Math.round(num).toLocaleString("id-ID");
+      }
+
+      function updateHppEstimate() {
+        if (!costItemsInput || !costPackInput || !costOpsInput || !marginInput) return;
+        const cItems = Math.max(0, parseFloat(costItemsInput.value) || 0);
+        const cPack = Math.max(0, parseFloat(costPackInput.value) || 0);
+        const cOps = Math.max(0, parseFloat(costOpsInput.value) || 0);
+        const marginPct = Math.max(0, parseFloat(marginInput.value) || 0);
+
+        const hpp = cItems + cPack + cOps;
+        const sellingPrice = hpp * (1 + marginPct / 100);
+
+        if (estimateEl) {
+          estimateEl.textContent = "Estimasi " + formatIDR(sellingPrice);
+        }
+        if (estimateDetailEl) {
+          estimateDetailEl.textContent = "HPP " + formatIDR(hpp) + " + target margin " + marginPct + "%. Angka ini merupakan rumus simulasi edukasi.";
+        }
+      }
+
+      [costItemsInput, costPackInput, costOpsInput, marginInput].forEach(function (input) {
+        if (input) {
+          input.addEventListener("input", updateHppEstimate);
+          input.addEventListener("change", updateHppEstimate);
+        }
+      });
+      updateHppEstimate();
+
+      // 4. Form Brief Builder Interaktif
+      const briefForm = document.getElementById("briefForm");
+      const copyBriefBtn = document.getElementById("copyBriefBtn");
+      const sendBriefWaBtn = document.getElementById("sendBriefWaBtn");
+      const formMessage = document.getElementById("formMessage");
+      const briefOutput = document.getElementById("briefOutput");
+
+      let generatedBriefText = "";
+
+      function buildBriefText() {
+        const getVal = function (id) {
+          const el = document.getElementById(id);
+          return el && el.value.trim() ? el.value.trim() : "Belum ditentukan";
+        };
+
+        const qty = getVal("quantity");
+        const bgt = getVal("budget");
+        const rcp = getVal("recipient");
+        const cnc = getVal("concept");
+        const lgo = getVal("logo");
+        const dt = getVal("date");
+        const dst = getVal("destination");
+        const itm = getVal("briefItems");
+        const nts = getVal("notesBrief");
+
+        return [
+          "*BRIEF PARCEL LEBARAN CUSTOM*",
+          "--------------------------------",
+          "• Jumlah Paket: " + qty,
+          "• Target Budget: " + bgt,
+          "• Target Penerima: " + rcp,
+          "• Arah Konsep: " + cnc,
+          "• Logo / Branding: " + lgo,
+          "• Batas Tanggal Terima: " + dt,
+          "• Kota / Area Distribusi: " + dst,
+          "• Isi Pilihan / Pantangan: " + itm,
+          "• Catatan Tambahan: " + nts,
+          "--------------------------------",
+          "Mohon info ketersediaan stok toples, wadah, dan penawaran resminya. Terima kasih!"
+        ].join("\n");
+      }
+
+      function updateWaLink(text) {
+        if (sendBriefWaBtn) {
+          sendBriefWaBtn.setAttribute(
+            "href",
+            "https://wa.me/6282131087971?text=" + encodeURIComponent("Halo Parcel Lebaran, berikut brief pesanan custom saya:\n\n" + text)
+          );
+        }
+      }
+
+      if (briefForm) {
+        briefForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          generatedBriefText = buildBriefText();
+          if (briefOutput) briefOutput.value = generatedBriefText;
+          updateWaLink(generatedBriefText);
+
+          if (formMessage) {
+            formMessage.className = "mt-3 small fw-semibold text-success";
+            formMessage.innerHTML = "<i class=\"bi bi-check-circle me-1\"></i> Ringkasan brief berhasil dibuat! Anda dapat langsung <strong>Salin ke Clipboard</strong> atau kirim via <strong>WhatsApp</strong>.";
+          }
+        });
+      }
+
+      if (copyBriefBtn) {
+        copyBriefBtn.addEventListener("click", async function () {
+          if (!generatedBriefText) {
+            generatedBriefText = buildBriefText();
+            if (briefOutput) briefOutput.value = generatedBriefText;
+            updateWaLink(generatedBriefText);
+          }
+
+          try {
+            await navigator.clipboard.writeText(generatedBriefText);
+            if (formMessage) {
+              formMessage.className = "mt-3 small fw-semibold text-success";
+              formMessage.innerHTML = "<i class=\"bi bi-clipboard-check me-1\"></i> Brief berhasil disalin ke clipboard! Silakan paste langsung ke chat customer service.";
+            }
+          } catch (err) {
+            if (briefOutput) {
+              briefOutput.classList.remove("d-none");
+              briefOutput.select();
+            }
+            if (formMessage) {
+              formMessage.className = "mt-3 small fw-semibold text-primary";
+              formMessage.innerHTML = "<i class=\"bi bi-info-circle me-1\"></i> Teks brief tertampil di bawah. Silakan salin secara manual (Ctrl+C).";
+            }
+          }
+        });
+      }
+
+      // Inisialisasi awal link WhatsApp di tombol brief
+      updateWaLink(buildBriefText());
+    });
+  </script>
 </body>
 
 </html>
