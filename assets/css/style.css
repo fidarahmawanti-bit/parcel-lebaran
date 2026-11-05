@@ -173,9 +173,9 @@ img {
 }
 
 .navbar-brand img {
-  height: 42px;
-  width: 42px;
-  max-height: 42px;
+  height: 54px;
+  width: 54px;
+  max-height: 54px;
   object-fit: cover;
   display: block;
 }
@@ -201,9 +201,9 @@ img {
   }
 
   .navbar-brand img {
-    height: 36px;
-    width: 36px;
-    max-height: 36px;
+    height: 44px;
+    width: 44px;
+    max-height: 44px;
   }
 
   .navbar-brand .brand-text {
@@ -2553,6 +2553,12 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   color: var(--sky-500);
 }
 
+.site-footer a img.rounded-circle {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+}
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -4747,9 +4753,9 @@ textarea.form-control {
   }
 
   .navbar-brand img {
-    height: 34px !important;
-    width: 34px !important;
-    max-height: 34px !important;
+    height: 44px !important;
+    width: 44px !important;
+    max-height: 44px !important;
   }
 
   .navbar-brand .brand-text {
