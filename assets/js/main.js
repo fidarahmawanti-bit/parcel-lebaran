@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   function initApp() {
   // 1. Scroll Controller (Navbar & Back-to-Top Button across all pages)
   const navbar = document.querySelector(".site-navbar");
@@ -398,6 +398,15 @@
       }, 350);
     }
   }
+
+  // 10. Dynamic Copyright Year
+  const currentSystemYear = new Date().getFullYear();
+  const footerCopyrightEls = document.querySelectorAll(".site-footer p, footer p, .site-footer .container");
+  footerCopyrightEls.forEach(function (el) {
+    if (el.textContent && el.textContent.includes("Parcel Lebaran. Hak Cipta Dilindungi Undang-Undang")) {
+      el.innerHTML = el.innerHTML.replace(/\b202[0-9]\b/, currentSystemYear);
+    }
+  });
 }
 
 if (document.readyState === "loading") {

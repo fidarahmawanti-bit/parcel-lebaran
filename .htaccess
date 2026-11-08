@@ -15,6 +15,12 @@ AddDefaultCharset UTF-8
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # 0. Canonical Redirect: Force HTTPS and WWW for parcellebaran.web.id
+  RewriteCond %{HTTP_HOST} ^parcellebaran\.web\.id$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?parcellebaran\.web\.id$ [NC]
+  RewriteRule ^(.*)$ https://www.parcellebaran.web.id/$1 [R=301,L]
+
   # 1. Landing pages /paket, /blog, and /portofolio
   RewriteRule ^paket/?$ paket.html [L]
   RewriteRule ^blog/?$ blog.html [L]

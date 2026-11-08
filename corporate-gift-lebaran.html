@@ -38,8 +38,8 @@
   <meta property="og:title" content="Corporate Gift Lebaran untuk HRD dan Purchasing | Parcel Lebaran">
   <meta property="og:description"
     content="Panduan pengadaan corporate gift Lebaran yang terencana, terukur, dan mudah diaudit untuk HRD dan purchasing.">
-  <meta property="og:image" content="https://www.parcellebaran.web.id/assets/images/hero-parcel.webp">
-  <meta property="og:image:secure_url" content="https://www.parcellebaran.web.id/assets/images/hero-parcel.webp">
+  <meta property="og:image" content="https://www.parcellebaran.web.id/assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri.webp">
+  <meta property="og:image:secure_url" content="https://www.parcellebaran.web.id/assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri.webp">
   <meta property="og:image:type" content="image/webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -52,7 +52,7 @@
   <meta name="twitter:title" content="Corporate Gift Lebaran untuk HRD dan Purchasing">
   <meta name="twitter:description"
     content="Panduan corporate gift Lebaran: segmentasi penerima, kurasi halal, budgeting, seleksi vendor, dan backward planning logistik.">
-  <meta name="twitter:image" content="https://www.parcellebaran.web.id/assets/images/hero-parcel.webp">
+  <meta name="twitter:image" content="https://www.parcellebaran.web.id/assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri.webp">
   <meta name="twitter:image:alt" content="Corporate Gift Lebaran">
 
   <!-- Favicon -->
@@ -310,8 +310,17 @@
         },
         "headline": "Corporate Gift Lebaran untuk HRD dan Purchasing: Strategi Pengadaan Profesional",
         "description": "Panduan pengadaan corporate gift Lebaran untuk HRD dan purchasing, mulai dari segmentasi penerima, kurasi produk, budgeting, seleksi vendor, hingga kontrol distribusi.",
+        "image": "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-korporat-hardbox-custom-sleeve.webp",
         "inLanguage": "id-ID",
-        "dateModified": "2026-11-05",
+        "datePublished": "2026-11-05T09:00:00+07:00",
+        "dateModified": "2026-11-08T19:00:00+07:00",
+        "author": {
+          "@type": "Person",
+          "@id": "https://www.parcellebaran.web.id/tentang#fida-rahma-wanti",
+          "name": "Fida Rahma Wanti",
+          "jobTitle": "Content Writer Specialist & Lead Curator",
+          "url": "https://www.parcellebaran.web.id/tentang#fida-rahma-wanti"
+        },
         "isPartOf": { "@id": "https://www.parcellebaran.web.id/#website" },
         "breadcrumb": { "@id": "https://www.parcellebaran.web.id/corporate-gift-lebaran#breadcrumb" },
         "articleSection": ["Corporate Gift Lebaran", "Pengadaan Perusahaan", "Hampers Korporat"],
@@ -949,13 +958,10 @@
               </p>
 
               <div class="guide-related-pills">
-                <a href="parcel-lebaran-karyawan.html" class="guide-related-pill">
-                  <i class="bi bi-people me-1"></i> Parcel Lebaran untuk Karyawan
-                </a>
                 <a href="paket/parcel-korporat.html" class="guide-related-pill">
                   <i class="bi bi-buildings me-1"></i> Paket Parcel Korporat B2B
                 </a>
-                <a href="blog/vendor-parcel-lebaran-untuk-perusahaan.html" class="guide-related-pill">
+                <a href="blog/parcel-lebaran-untuk-perusahaan.html" class="guide-related-pill">
                   <i class="bi bi-shield-check me-1"></i> Panduan Memilih Vendor Perusahaan
                 </a>
                 <a href="blog/harga-parcel-lebaran-sesuai-budget.html" class="guide-related-pill">
@@ -1253,7 +1259,6 @@
             <li><a href="paket/parcel-spesial.html">Parcel Spesial</a></li>
             <li><a href="paket/parcel-korporat.html">Parcel Korporat</a></li>
             <li><a href="paket/parcel-custom.html">Parcel Custom</a></li>
-            <li><a href="parcel-lebaran-2027.html">Parcel Lebaran 2027</a></li>
             <li><a href="paket.html">Semua Paket</a></li>
           </ul>
         </div>
@@ -1295,6 +1300,11 @@
   <!-- Interactive Script for Checklist & Corporate Brief Generator -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+      // Dynamic footer copyright year
+      var footerEl = document.querySelector(".site-footer p, footer p");
+      if (footerEl && footerEl.textContent.includes("Parcel Lebaran. Hak Cipta Dilindungi Undang-Undang")) {
+        footerEl.innerHTML = footerEl.innerHTML.replace(/\b202[0-9]\b/, new Date().getFullYear());
+      }
       // 1. Interactive Checklist Toggle
       const checkItems = document.querySelectorAll('.hrd-check-item');
       checkItems.forEach(function (item) {
