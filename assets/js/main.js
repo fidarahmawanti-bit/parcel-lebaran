@@ -117,6 +117,16 @@
     const waCustomBtn = document.getElementById("waCustomOrderBtn");
 
     function updateCustomCalculation() {
+      // Sync .is-checked class on parent .calc-option-box
+      document.querySelectorAll(".calc-option-box").forEach(function (box) {
+        const inp = box.querySelector("input");
+        if (inp && inp.checked) {
+          box.classList.add("is-checked");
+        } else {
+          box.classList.remove("is-checked");
+        }
+      });
+
       let packagingPrice = 0;
       let packagingName = "Hardbox Signature";
       packagingRadios.forEach(function (radio) {

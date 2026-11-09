@@ -3719,8 +3719,8 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
 .calc-option-box {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
-  background-color: var(--ice-50);
+  gap: 0.75rem;
+  background-color: var(--white);
   border: 1.5px solid var(--border);
   border-radius: 12px;
   padding: 0.75rem 0.85rem;
@@ -3730,26 +3730,75 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   height: 100%;
   margin-bottom: 0;
   user-select: none;
+  box-shadow: 0 1px 3px rgba(21, 59, 91, 0.03);
 }
 
 .calc-option-box:hover {
-  background-color: var(--ice-100);
+  background-color: #f6fbfe;
   border-color: var(--sky-500);
   transform: translateY(-1px);
 }
 
-.calc-option-box:has(input:checked) {
+.calc-option-box:has(input:checked),
+.calc-option-box.is-checked {
   background-color: #ebf5fc;
   border-color: var(--sky-700);
-  box-shadow: 0 0 0 1px var(--sky-700);
+  box-shadow: 0 0 0 1.5px var(--sky-700);
 }
 
+/* Custom Checkbox & Radio Styling */
 .calc-option-box input.form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   flex-shrink: 0;
   cursor: pointer;
-  width: 1.15em;
-  height: 1.15em;
+  width: 1.25rem;
+  height: 1.25rem;
+  min-width: 1.25rem;
+  min-height: 1.25rem;
   margin: 0;
+  background-color: var(--white);
+  border: 2px solid #b8d2e3;
+  transition: all 0.2s ease;
+  display: inline-grid;
+  place-content: center;
+  vertical-align: middle;
+}
+
+.calc-option-box input[type="radio"].form-check-input {
+  border-radius: 50%;
+}
+
+.calc-option-box input[type="radio"].form-check-input:checked {
+  border-color: var(--sky-700);
+  background-color: var(--sky-700);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 55% 55%;
+}
+
+.calc-option-box input[type="checkbox"].form-check-input {
+  border-radius: 5px;
+}
+
+.calc-option-box input[type="checkbox"].form-check-input:checked {
+  border-color: var(--sky-700);
+  background-color: var(--sky-700);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m5 10 3.5 3.5 7-7'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80% 80%;
+}
+
+.calc-option-box:hover input.form-check-input {
+  border-color: var(--sky-500);
+}
+
+.calc-option-box:has(input:checked) input.form-check-input,
+.calc-option-box.is-checked input.form-check-input {
+  border-color: var(--sky-700);
 }
 
 .calc-option-info {
@@ -3782,7 +3831,8 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   flex-shrink: 0;
 }
 
-.calc-option-box:has(input:checked) .calc-price-badge {
+.calc-option-box:has(input:checked) .calc-price-badge,
+.calc-option-box.is-checked .calc-price-badge {
   background-color: var(--sky-700);
   color: var(--white);
 }
