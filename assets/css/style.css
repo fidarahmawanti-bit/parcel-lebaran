@@ -1651,39 +1651,49 @@ img {
 }
 
 .article-content {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.68;
   color: var(--text);
   width: 100%;
 }
 
-.article-content h2 {
-  margin-top: 2.4rem;
-  margin-bottom: 1rem;
-  font-weight: 800;
+.article-content h2,
+.article-content h2.h3 {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem) !important;
+  line-height: 1.28 !important;
+  margin-top: 2.2rem;
+  margin-bottom: 0.85rem;
+  font-weight: 800 !important;
   color: var(--navy-900);
 }
 
-.article-content h3 {
-  margin-top: 1.85rem;
-  margin-bottom: 0.85rem;
-  font-weight: 700;
+.article-content h3,
+.article-content h3.h4,
+.article-content h3.h5 {
+  font-size: 1.12rem !important;
+  line-height: 1.35 !important;
+  margin-top: 1.6rem;
+  margin-bottom: 0.65rem;
+  font-weight: 700 !important;
   color: var(--navy-900);
 }
 
 .article-content p {
-  margin-bottom: 1.35rem;
+  font-size: 0.95rem;
+  line-height: 1.68;
+  margin-bottom: 1.15rem;
 }
 
 .article-content ul,
 .article-content ol {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   padding-left: 1.35rem;
 }
 
 .article-content li {
+  font-size: 0.93rem;
   margin-bottom: 0.45rem;
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 /* Link internal artikel blog berwarna biru jelas */
