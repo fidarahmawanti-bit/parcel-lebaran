@@ -99,640 +99,448 @@
        asli — menambahkan data fiktif melanggar pedoman Google.
        ============================================================ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.parcellebaran.web.id/#website",
-        "url": "https://www.parcellebaran.web.id/",
-        "name": "Parcel Lebaran",
-        "publisher": { "@id": "https://www.parcellebaran.web.id/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://www.parcellebaran.web.id/search?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://www.parcellebaran.web.id/#organization",
-        "name": "Parcel Lebaran",
-        "url": "https://www.parcellebaran.web.id/",
-        "logo": {
-          "@type": "ImageObject",
-          "@id": "https://www.parcellebaran.web.id/#logo",
-          "url": "https://www.parcellebaran.web.id/assets/images/logo.webp",
-          "contentUrl": "https://www.parcellebaran.web.id/assets/images/logo.webp",
-          "width": 512,
-          "height": 512,
-          "caption": "Parcel Lebaran"
-        },
-        "image": { "@id": "https://www.parcellebaran.web.id/#logo" },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+62-821-3108-7971",
-          "contactType": "customer service",
-          "areaServed": "ID",
-          "availableLanguage": ["id"]
-        }
-      },
-      {
-        "@type": "CollectionPage",
-        "@id": "https://www.parcellebaran.web.id/paket#webpage",
-        "url": "https://www.parcellebaran.web.id/paket",
-        "name": "Katalog Paket Lebaran 2027 — Pilihan Premium, Spesial & Korporat",
-        "description": "Katalog resmi koleksi Paket dan hampers Lebaran Idulfitri 2027 dengan harga transparan, kurasi produk halal, dan garansi pengiriman aman.",
-        "isPartOf": { "@id": "https://www.parcellebaran.web.id/#website" },
-        "breadcrumb": { "@id": "https://www.parcellebaran.web.id/paket#breadcrumb" },
-        "mainEntity": { "@id": "https://www.parcellebaran.web.id/paket#itemlist" },
-        "primaryImageOfPage": {
-          "@type": "ImageObject",
-          "url": "https://www.parcellebaran.web.id/assets/images/og-image-parcel-lebaran-hampers-idulfitri.webp"
-        },
-        "inLanguage": "id-ID"
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://www.parcellebaran.web.id/paket#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Beranda",
-            "item": "https://www.parcellebaran.web.id/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Katalog Paket",
-            "item": "https://www.parcellebaran.web.id/paket"
-          }
-        ]
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://www.parcellebaran.web.id/paket#itemlist",
-        "name": "Koleksi Paket Lebaran 2027",
-        "description": "Daftar lengkap Paket Lebaran 2027 dari Parcel Lebaran, mulai dari Paket Spesial hingga korporat VIP.",
-        "numberOfItems": 7,
-        "itemListOrder": "https://schema.org/ItemListOrderAscending",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-al-karim",
-              "name": "Paket Al-Karim (Premium VIP)",
-              "sku": "PL-ALKARIM-850",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-premium",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-premium-al-karim.webp",
-              "description": "Hampers premium dengan hardbox magnetik, toples kaca hexagonal cookies, sirup gourmet, madu murni, kurma ajwa, dan kartu akrilik gold.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "38",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Rina Kusuma" },
-                  "datePublished": "2026-03-15",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Hardbox-nya sangat mewah, cocok untuk mertua. Nastar wisman lembut dan tidak keras."
-                },
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Budi Santoso" },
-                  "datePublished": "2026-03-20",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Pengiriman aman, kemasan tidak penyok. Recommended untuk hampers premium."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-premium",
-                "price": "850000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-an-nur",
-              "name": "Paket An-Nur Luxury (Super VIP)",
-              "sku": "PL-ANNUR-1250",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-premium",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-kue-kering-lebaran-paket-an-nur.webp",
-              "description": "Hampers super VIP 2-tier drawer luxury box berisi sajadah velvet premium, reed diffuser aroma kasturi, 6 toples kue kering artisan, & cangkir keramik elegan.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "24",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Dewi Lestari" },
-                  "datePublished": "2026-03-10",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Luxury box 2-tier-nya luar biasa. Sajadah velvet halus, diffuser wangi kasturi tahan lama."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-premium",
-                "price": "1250000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-fitrah",
-              "name": "Paket Spesial (Fitrah)",
-              "sku": "PL-FITRAH-450",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-spesial",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp",
-              "description": "Hampers spesial terfavorit keluarga berisi 3 toples kue kering klasik (Nastar, Kastengel, Putri Salju), kurma premium, & kartu ucapan lipat.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "56",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Siti Aminah" },
-                  "datePublished": "2026-03-18",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Keranjang rotannya cantik, kue keringnya masih fresh. Cocok untuk tetangga dan keluarga."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-spesial",
-                "price": "450000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-barokah",
-              "name": "Paket Barokah (Hemat)",
-              "sku": "PL-BAROKAH-275",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-spesial",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-kue-kering-lebaran-paket-barokah.webp",
-              "description": "Paket hemat silaturahmi berisi 2 toples kue kering toples segel, teh celup herbal melati, & kartu ucapan elegan.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.7",
-                "reviewCount": "72",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Andi Pratama" },
-                  "datePublished": "2026-03-22",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Harga paling terjangkau tapi kemasan tetap rapi. Pas untuk bagi-bagi ke tetangga komplek."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-spesial",
-                "price": "275000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-sapphire",
-              "name": "Paket Korporat (Korporat B2B)",
-              "sku": "PL-SAPPHIRE-650",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-korporat",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-korporat-sapphire.webp",
-              "description": "Solusi hampers korporat dengan kustomisasi logo perusahaan, sleeve branding, faktur pajak resmi, dan kue kering kurasi premium.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.9",
-                "reviewCount": "41",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "HRD PT Maju Bersama" },
-                  "datePublished": "2026-03-12",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Order 50 box untuk klien kantor, semua sampai tepat waktu dan logo tercetak rapi. Faktur pajak jelas."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-korporat",
-                "price": "650000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-royal",
-              "name": "Paket Royal Corporate VIP",
-              "sku": "PL-ROYAL-1450",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-korporat",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-korporat-paket-royal.webp",
-              "description": "Hampers C-Level & Board of Directors dalam peti kayu rotan eksklusif dengan plakat logam grafir nama perusahaan klien.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "18",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Direktur PT Nusantara Jaya" },
-                  "datePublished": "2026-03-08",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Peti kayu rotan dengan plakat grafir nama perusahaan sangat berkesan untuk relasi direksi. Sangat direkomendasikan."
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-korporat",
-                "price": "1450000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "item": {
-              "@type": "Product",
-              "@id": "https://www.parcellebaran.web.id/paket#product-mahabbah",
-              "name": "Paket Mahabbah Custom (Bespoke)",
-              "sku": "PL-MAHABBAH-350",
-              "brand": { "@type": "Brand", "name": "Parcel Lebaran" },
-              "url": "https://www.parcellebaran.web.id/paket/parcel-custom",
-              "image": "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-custom-kemasan-kue-kering.webp",
-              "description": "Simulasi dan konsultasi pembuatan parcel custom bebas pilih kemasan, isian toples, tumbler, sajadah, dan souvenir sesuai target anggaran.",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "reviewCount": "33",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
-              "review": [
-                {
-                  "@type": "Review",
-                  "author": { "@type": "Person", "name": "Maya Anggraini" },
-                  "datePublished": "2026-03-25",
-                  "reviewRating": {
-                    "@type": "Rating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1"
-                  },
-                  "reviewBody": "Bebas pilih isian sesuai budget. Admin sabar banget bantu simulasi sampai cocok. Hasilnya memuaskan!"
-                }
-              ],
-              "offers": {
-                "@type": "Offer",
-                "url": "https://www.parcellebaran.web.id/paket/parcel-custom",
-                "price": "350000",
-                "priceCurrency": "IDR",
-                "availability": "https://schema.org/InStock",
-                "priceValidUntil": "2027-05-01",
-                "validFrom": "2026-10-01T00:00:00+07:00",
-                "itemCondition": "https://schema.org/NewCondition",
-                "shippingDetails": {
-                  "@type": "OfferShippingDetails",
-                  "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "IDR"
-                  },
-                  "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "ID"
-                  },
-                  "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 0,
-                      "maxValue": 1,
-                      "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                      "@type": "QuantitativeValue",
-                      "minValue": 1,
-                      "maxValue": 3,
-                      "unitCode": "DAY"
-                    }
-                  }
-                },
-                "hasMerchantReturnPolicy": {
-                  "@type": "MerchantReturnPolicy",
-                  "applicableCountry": "ID",
-                  "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                }
-              }
-            }
-          }
-        ]
-      }
-    ]
-  }
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@type":  "WebSite",
+                       "@id":  "https://www.parcellebaran.web.id/#website",
+                       "url":  "https://www.parcellebaran.web.id/",
+                       "name":  "Parcel Lebaran",
+                       "publisher":  {
+                                         "@id":  "https://www.parcellebaran.web.id/#organization"
+                                     },
+                       "potentialAction":  {
+                                               "@type":  "SearchAction",
+                                               "target":  "https://www.parcellebaran.web.id/search?q={search_term_string}",
+                                               "query-input":  "required name=search_term_string"
+                                           }
+                   },
+                   {
+                       "@type":  "Organization",
+                       "@id":  "https://www.parcellebaran.web.id/#organization",
+                       "name":  "Parcel Lebaran",
+                       "url":  "https://www.parcellebaran.web.id/",
+                       "logo":  {
+                                    "@type":  "ImageObject",
+                                    "@id":  "https://www.parcellebaran.web.id/#logo",
+                                    "url":  "https://www.parcellebaran.web.id/assets/images/logo.webp",
+                                    "contentUrl":  "https://www.parcellebaran.web.id/assets/images/logo.webp",
+                                    "width":  512,
+                                    "height":  512,
+                                    "caption":  "Parcel Lebaran"
+                                },
+                       "image":  {
+                                     "@id":  "https://www.parcellebaran.web.id/#logo"
+                                 },
+                       "contactPoint":  {
+                                            "@type":  "ContactPoint",
+                                            "telephone":  "+62-821-3108-7971",
+                                            "contactType":  "customer service",
+                                            "areaServed":  "ID",
+                                            "availableLanguage":  [
+                                                                      "id"
+                                                                  ]
+                                        }
+                   },
+                   {
+                       "@type":  "CollectionPage",
+                       "@id":  "https://www.parcellebaran.web.id/paket#webpage",
+                       "url":  "https://www.parcellebaran.web.id/paket",
+                       "name":  "Katalog Paket Lebaran 2027 — Pilihan Premium, Spesial \u0026 Korporat",
+                       "description":  "Katalog resmi koleksi Paket dan hampers Lebaran Idulfitri 2027 dengan harga transparan, kurasi produk halal, dan garansi pengiriman aman.",
+                       "isPartOf":  {
+                                        "@id":  "https://www.parcellebaran.web.id/#website"
+                                    },
+                       "breadcrumb":  {
+                                          "@id":  "https://www.parcellebaran.web.id/paket#breadcrumb"
+                                      },
+                       "mainEntity":  {
+                                          "@id":  "https://www.parcellebaran.web.id/paket#itemlist"
+                                      },
+                       "primaryImageOfPage":  {
+                                                  "@type":  "ImageObject",
+                                                  "url":  "https://www.parcellebaran.web.id/assets/images/og-image-parcel-lebaran-hampers-idulfitri.webp"
+                                              },
+                       "inLanguage":  "id-ID"
+                   },
+                   {
+                       "@type":  "BreadcrumbList",
+                       "@id":  "https://www.parcellebaran.web.id/paket#breadcrumb",
+                       "itemListElement":  [
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  1,
+                                                   "name":  "Beranda",
+                                                   "item":  "https://www.parcellebaran.web.id/"
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  2,
+                                                   "name":  "Katalog Paket",
+                                                   "item":  "https://www.parcellebaran.web.id/paket"
+                                               }
+                                           ]
+                   },
+                   {
+                       "@type":  "ItemList",
+                       "@id":  "https://www.parcellebaran.web.id/paket#itemlist",
+                       "name":  "Koleksi Paket Lebaran 2027",
+                       "description":  "Daftar lengkap Paket Lebaran 2027 dari Parcel Lebaran, mulai dari Paket Spesial hingga korporat VIP.",
+                       "numberOfItems":  4,
+                       "itemListOrder":  "https://schema.org/ItemListOrderAscending",
+                       "itemListElement":  [
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  1,
+                                                   "item":  {
+                                                                "@type":  "Product",
+                                                                "@id":  "https://www.parcellebaran.web.id/paket#product-al-karim",
+                                                                "name":  "Paket Al-Karim (Premium VIP)",
+                                                                "sku":  "PL-ALKARIM-850",
+                                                                "brand":  {
+                                                                              "@type":  "Brand",
+                                                                              "name":  "Parcel Lebaran"
+                                                                          },
+                                                                "url":  "https://www.parcellebaran.web.id/paket/parcel-premium",
+                                                                "image":  "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-premium-al-karim.webp",
+                                                                "description":  "Hampers premium dengan hardbox magnetik, toples kaca hexagonal cookies, sirup gourmet, madu murni, kurma ajwa, dan kartu akrilik gold.",
+                                                                "aggregateRating":  {
+                                                                                        "@type":  "AggregateRating",
+                                                                                        "ratingValue":  "4.9",
+                                                                                        "reviewCount":  "38",
+                                                                                        "bestRating":  "5",
+                                                                                        "worstRating":  "1"
+                                                                                    },
+                                                                "review":  [
+                                                                               {
+                                                                                   "@type":  "Review",
+                                                                                   "author":  {
+                                                                                                  "@type":  "Person",
+                                                                                                  "name":  "Rina Kusuma"
+                                                                                              },
+                                                                                   "datePublished":  "2026-03-15",
+                                                                                   "reviewRating":  {
+                                                                                                        "@type":  "Rating",
+                                                                                                        "ratingValue":  "5",
+                                                                                                        "bestRating":  "5",
+                                                                                                        "worstRating":  "1"
+                                                                                                    },
+                                                                                   "reviewBody":  "Hardbox-nya sangat mewah, cocok untuk mertua. Nastar wisman lembut dan tidak keras."
+                                                                               },
+                                                                               {
+                                                                                   "@type":  "Review",
+                                                                                   "author":  {
+                                                                                                  "@type":  "Person",
+                                                                                                  "name":  "Budi Santoso"
+                                                                                              },
+                                                                                   "datePublished":  "2026-03-20",
+                                                                                   "reviewRating":  {
+                                                                                                        "@type":  "Rating",
+                                                                                                        "ratingValue":  "5",
+                                                                                                        "bestRating":  "5",
+                                                                                                        "worstRating":  "1"
+                                                                                                    },
+                                                                                   "reviewBody":  "Pengiriman aman, kemasan tidak penyok. Recommended untuk hampers premium."
+                                                                               }
+                                                                           ],
+                                                                "offers":  {
+                                                                               "@type":  "Offer",
+                                                                               "url":  "https://www.parcellebaran.web.id/paket/parcel-premium",
+                                                                               "price":  "850000",
+                                                                               "priceCurrency":  "IDR",
+                                                                               "availability":  "https://schema.org/InStock",
+                                                                               "priceValidUntil":  "2027-05-01",
+                                                                               "validFrom":  "2026-10-01T00:00:00+07:00",
+                                                                               "itemCondition":  "https://schema.org/NewCondition",
+                                                                               "shippingDetails":  {
+                                                                                                       "@type":  "OfferShippingDetails",
+                                                                                                       "shippingRate":  {
+                                                                                                                            "@type":  "MonetaryAmount",
+                                                                                                                            "value":  "0",
+                                                                                                                            "currency":  "IDR"
+                                                                                                                        },
+                                                                                                       "shippingDestination":  {
+                                                                                                                                   "@type":  "DefinedRegion",
+                                                                                                                                   "addressCountry":  "ID"
+                                                                                                                               },
+                                                                                                       "deliveryTime":  {
+                                                                                                                            "@type":  "ShippingDeliveryTime",
+                                                                                                                            "handlingTime":  {
+                                                                                                                                                 "@type":  "QuantitativeValue",
+                                                                                                                                                 "minValue":  0,
+                                                                                                                                                 "maxValue":  1,
+                                                                                                                                                 "unitCode":  "DAY"
+                                                                                                                                             },
+                                                                                                                            "transitTime":  {
+                                                                                                                                                "@type":  "QuantitativeValue",
+                                                                                                                                                "minValue":  1,
+                                                                                                                                                "maxValue":  3,
+                                                                                                                                                "unitCode":  "DAY"
+                                                                                                                                            }
+                                                                                                                        }
+                                                                                                   },
+                                                                               "hasMerchantReturnPolicy":  {
+                                                                                                               "@type":  "MerchantReturnPolicy",
+                                                                                                               "applicableCountry":  "ID",
+                                                                                                               "returnPolicyCategory":  "https://schema.org/MerchantReturnNotPermitted"
+                                                                                                           }
+                                                                           }
+                                                            }
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  2,
+                                                   "item":  {
+                                                                "@type":  "Product",
+                                                                "@id":  "https://www.parcellebaran.web.id/paket#product-fitrah",
+                                                                "name":  "Paket Spesial (Fitrah)",
+                                                                "sku":  "PL-FITRAH-450",
+                                                                "brand":  {
+                                                                              "@type":  "Brand",
+                                                                              "name":  "Parcel Lebaran"
+                                                                          },
+                                                                "url":  "https://www.parcellebaran.web.id/paket/parcel-spesial",
+                                                                "image":  "https://www.parcellebaran.web.id/assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp",
+                                                                "description":  "Hampers spesial terfavorit keluarga berisi 3 toples kue kering klasik (Nastar, Kastengel, Putri Salju), kurma premium, \u0026 kartu ucapan lipat.",
+                                                                "aggregateRating":  {
+                                                                                        "@type":  "AggregateRating",
+                                                                                        "ratingValue":  "4.8",
+                                                                                        "reviewCount":  "56",
+                                                                                        "bestRating":  "5",
+                                                                                        "worstRating":  "1"
+                                                                                    },
+                                                                "review":  [
+                                                                               {
+                                                                                   "@type":  "Review",
+                                                                                   "author":  {
+                                                                                                  "@type":  "Person",
+                                                                                                  "name":  "Siti Aminah"
+                                                                                              },
+                                                                                   "datePublished":  "2026-03-18",
+                                                                                   "reviewRating":  {
+                                                                                                        "@type":  "Rating",
+                                                                                                        "ratingValue":  "5",
+                                                                                                        "bestRating":  "5",
+                                                                                                        "worstRating":  "1"
+                                                                                                    },
+                                                                                   "reviewBody":  "Keranjang rotannya cantik, kue keringnya masih fresh. Cocok untuk tetangga dan keluarga."
+                                                                               }
+                                                                           ],
+                                                                "offers":  {
+                                                                               "@type":  "Offer",
+                                                                               "url":  "https://www.parcellebaran.web.id/paket/parcel-spesial",
+                                                                               "price":  "450000",
+                                                                               "priceCurrency":  "IDR",
+                                                                               "availability":  "https://schema.org/InStock",
+                                                                               "priceValidUntil":  "2027-05-01",
+                                                                               "validFrom":  "2026-10-01T00:00:00+07:00",
+                                                                               "itemCondition":  "https://schema.org/NewCondition",
+                                                                               "shippingDetails":  {
+                                                                                                       "@type":  "OfferShippingDetails",
+                                                                                                       "shippingRate":  {
+                                                                                                                            "@type":  "MonetaryAmount",
+                                                                                                                            "value":  "0",
+                                                                                                                            "currency":  "IDR"
+                                                                                                                        },
+                                                                                                       "shippingDestination":  {
+                                                                                                                                   "@type":  "DefinedRegion",
+                                                                                                                                   "addressCountry":  "ID"
+                                                                                                                               },
+                                                                                                       "deliveryTime":  {
+                                                                                                                            "@type":  "ShippingDeliveryTime",
+                                                                                                                            "handlingTime":  {
+                                                                                                                                                 "@type":  "QuantitativeValue",
+                                                                                                                                                 "minValue":  0,
+                                                                                                                                                 "maxValue":  1,
+                                                                                                                                                 "unitCode":  "DAY"
+                                                                                                                                             },
+                                                                                                                            "transitTime":  {
+                                                                                                                                                "@type":  "QuantitativeValue",
+                                                                                                                                                "minValue":  1,
+                                                                                                                                                "maxValue":  3,
+                                                                                                                                                "unitCode":  "DAY"
+                                                                                                                                            }
+                                                                                                                        }
+                                                                                                   },
+                                                                               "hasMerchantReturnPolicy":  {
+                                                                                                               "@type":  "MerchantReturnPolicy",
+                                                                                                               "applicableCountry":  "ID",
+                                                                                                               "returnPolicyCategory":  "https://schema.org/MerchantReturnNotPermitted"
+                                                                                                           }
+                                                                           }
+                                                            }
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  3,
+                                                   "item":  {
+                                                                "@type":  "Product",
+                                                                "@id":  "https://www.parcellebaran.web.id/paket#product-sapphire",
+                                                                "name":  "Paket Korporat (Korporat B2B)",
+                                                                "sku":  "PL-SAPPHIRE-650",
+                                                                "brand":  {
+                                                                              "@type":  "Brand",
+                                                                              "name":  "Parcel Lebaran"
+                                                                          },
+                                                                "url":  "https://www.parcellebaran.web.id/paket/parcel-korporat",
+                                                                "image":  "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-korporat-sapphire.webp",
+                                                                "description":  "Solusi hampers korporat dengan kustomisasi logo perusahaan, sleeve branding, faktur pajak resmi, dan kue kering kurasi premium.",
+                                                                "aggregateRating":  {
+                                                                                        "@type":  "AggregateRating",
+                                                                                        "ratingValue":  "4.9",
+                                                                                        "reviewCount":  "41",
+                                                                                        "bestRating":  "5",
+                                                                                        "worstRating":  "1"
+                                                                                    },
+                                                                "review":  [
+                                                                               {
+                                                                                   "@type":  "Review",
+                                                                                   "author":  {
+                                                                                                  "@type":  "Person",
+                                                                                                  "name":  "HRD PT Maju Bersama"
+                                                                                              },
+                                                                                   "datePublished":  "2026-03-12",
+                                                                                   "reviewRating":  {
+                                                                                                        "@type":  "Rating",
+                                                                                                        "ratingValue":  "5",
+                                                                                                        "bestRating":  "5",
+                                                                                                        "worstRating":  "1"
+                                                                                                    },
+                                                                                   "reviewBody":  "Order 50 box untuk klien kantor, semua sampai tepat waktu dan logo tercetak rapi. Faktur pajak jelas."
+                                                                               }
+                                                                           ],
+                                                                "offers":  {
+                                                                               "@type":  "Offer",
+                                                                               "url":  "https://www.parcellebaran.web.id/paket/parcel-korporat",
+                                                                               "price":  "650000",
+                                                                               "priceCurrency":  "IDR",
+                                                                               "availability":  "https://schema.org/InStock",
+                                                                               "priceValidUntil":  "2027-05-01",
+                                                                               "validFrom":  "2026-10-01T00:00:00+07:00",
+                                                                               "itemCondition":  "https://schema.org/NewCondition",
+                                                                               "shippingDetails":  {
+                                                                                                       "@type":  "OfferShippingDetails",
+                                                                                                       "shippingRate":  {
+                                                                                                                            "@type":  "MonetaryAmount",
+                                                                                                                            "value":  "0",
+                                                                                                                            "currency":  "IDR"
+                                                                                                                        },
+                                                                                                       "shippingDestination":  {
+                                                                                                                                   "@type":  "DefinedRegion",
+                                                                                                                                   "addressCountry":  "ID"
+                                                                                                                               },
+                                                                                                       "deliveryTime":  {
+                                                                                                                            "@type":  "ShippingDeliveryTime",
+                                                                                                                            "handlingTime":  {
+                                                                                                                                                 "@type":  "QuantitativeValue",
+                                                                                                                                                 "minValue":  0,
+                                                                                                                                                 "maxValue":  1,
+                                                                                                                                                 "unitCode":  "DAY"
+                                                                                                                                             },
+                                                                                                                            "transitTime":  {
+                                                                                                                                                "@type":  "QuantitativeValue",
+                                                                                                                                                "minValue":  1,
+                                                                                                                                                "maxValue":  3,
+                                                                                                                                                "unitCode":  "DAY"
+                                                                                                                                            }
+                                                                                                                        }
+                                                                                                   },
+                                                                               "hasMerchantReturnPolicy":  {
+                                                                                                               "@type":  "MerchantReturnPolicy",
+                                                                                                               "applicableCountry":  "ID",
+                                                                                                               "returnPolicyCategory":  "https://schema.org/MerchantReturnNotPermitted"
+                                                                                                           }
+                                                                           }
+                                                            }
+                                               },
+                                               {
+                                                   "@type":  "ListItem",
+                                                   "position":  4,
+                                                   "item":  {
+                                                                "@type":  "Product",
+                                                                "@id":  "https://www.parcellebaran.web.id/paket#product-mahabbah",
+                                                                "name":  "Paket Mahabbah Custom (Bespoke)",
+                                                                "sku":  "PL-MAHABBAH-275",
+                                                                "brand":  {
+                                                                              "@type":  "Brand",
+                                                                              "name":  "Parcel Lebaran"
+                                                                          },
+                                                                "url":  "https://www.parcellebaran.web.id/paket/parcel-custom",
+                                                                "image":  "https://www.parcellebaran.web.id/assets/images/parcel-lebaran-custom-kemasan-kue-kering.webp",
+                                                                "description":  "Simulasi dan konsultasi pembuatan parcel custom bebas pilih kemasan, isian toples, tumbler, sajadah, dan souvenir sesuai target anggaran.",
+                                                                "aggregateRating":  {
+                                                                                        "@type":  "AggregateRating",
+                                                                                        "ratingValue":  "4.8",
+                                                                                        "reviewCount":  "33",
+                                                                                        "bestRating":  "5",
+                                                                                        "worstRating":  "1"
+                                                                                    },
+                                                                "review":  [
+                                                                               {
+                                                                                   "@type":  "Review",
+                                                                                   "author":  {
+                                                                                                  "@type":  "Person",
+                                                                                                  "name":  "Maya Anggraini"
+                                                                                              },
+                                                                                   "datePublished":  "2026-03-25",
+                                                                                   "reviewRating":  {
+                                                                                                        "@type":  "Rating",
+                                                                                                        "ratingValue":  "5",
+                                                                                                        "bestRating":  "5",
+                                                                                                        "worstRating":  "1"
+                                                                                                    },
+                                                                                   "reviewBody":  "Bebas pilih isian sesuai budget. Admin sabar banget bantu simulasi sampai cocok. Hasilnya memuaskan!"
+                                                                               }
+                                                                           ],
+                                                                "offers":  {
+                                                                               "@type":  "Offer",
+                                                                               "url":  "https://www.parcellebaran.web.id/paket/parcel-custom",
+                                                                               "price":  "275000",
+                                                                               "priceCurrency":  "IDR",
+                                                                               "availability":  "https://schema.org/InStock",
+                                                                               "priceValidUntil":  "2027-05-01",
+                                                                               "validFrom":  "2026-10-01T00:00:00+07:00",
+                                                                               "itemCondition":  "https://schema.org/NewCondition",
+                                                                               "shippingDetails":  {
+                                                                                                       "@type":  "OfferShippingDetails",
+                                                                                                       "shippingRate":  {
+                                                                                                                            "@type":  "MonetaryAmount",
+                                                                                                                            "value":  "0",
+                                                                                                                            "currency":  "IDR"
+                                                                                                                        },
+                                                                                                       "shippingDestination":  {
+                                                                                                                                   "@type":  "DefinedRegion",
+                                                                                                                                   "addressCountry":  "ID"
+                                                                                                                               },
+                                                                                                       "deliveryTime":  {
+                                                                                                                            "@type":  "ShippingDeliveryTime",
+                                                                                                                            "handlingTime":  {
+                                                                                                                                                 "@type":  "QuantitativeValue",
+                                                                                                                                                 "minValue":  0,
+                                                                                                                                                 "maxValue":  1,
+                                                                                                                                                 "unitCode":  "DAY"
+                                                                                                                                             },
+                                                                                                                            "transitTime":  {
+                                                                                                                                                "@type":  "QuantitativeValue",
+                                                                                                                                                "minValue":  1,
+                                                                                                                                                "maxValue":  3,
+                                                                                                                                                "unitCode":  "DAY"
+                                                                                                                                            }
+                                                                                                                        }
+                                                                                                   },
+                                                                               "hasMerchantReturnPolicy":  {
+                                                                                                               "@type":  "MerchantReturnPolicy",
+                                                                                                               "applicableCountry":  "ID",
+                                                                                                               "returnPolicyCategory":  "https://schema.org/MerchantReturnNotPermitted"
+                                                                                                           }
+                                                                           }
+                                                            }
+                                               }
+                                           ]
+                   }
+               ]
+}
   </script>
 </head>
 
@@ -1013,7 +821,7 @@
                 <div class="package-card-footer stacked">
                   <div class="package-price-wrap">
                     <span class="package-price-label">Mulai Dari</span>
-                    <span class="package-price">Rp 350.000</span>
+                    <span class="package-price">Rp 275.000</span>
                   </div>
                   <div class="package-card-actions">
                     <a href="paket/parcel-custom.html" class="btn-custom btn-outline-custom btn-custom-sm">Simulasi</a>
@@ -1205,15 +1013,13 @@
             <h3 class="accordion-header" id="faqKt4">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                 data-bs-target="#collapseKt4" aria-expanded="false" aria-controls="collapseKt4">
-                Kapan waktu terbaik untuk melakukan pemesanan parcel Lebaran?
+                Berapa batas waktu pemesanan Parcel Lebaran untuk pengiriman ke berbagai wilayah?
               </button>
             </h3>
             <div id="collapseKt4" class="accordion-collapse collapse" aria-labelledby="faqKt4"
               data-bs-parent="#faqKatalog">
               <div class="accordion-body">
-                Periode terbaik adalah H-30 hingga H-14 sebelum Hari Raya Idulfitri. Memesan lebih awal menjamin
-                ketersediaan slot varian paket premium pilihan Anda dan menghindari lonjakan traffic ekspedisi jelang
-                hari raya.
+                Batas waktu pemesanan disesuaikan dengan wilayah pengiriman. Untuk luar Pulau Jawa, pemesanan dilakukan paling lambat H-1 bulan sebelum Lebaran. Untuk wilayah Pulau Jawa, paling lambat H-14 hari, sedangkan untuk wilayah Malang paling lambat H-7 hari sebelum Lebaran.
               </div>
             </div>
           </div>
@@ -1305,7 +1111,7 @@
           <div class="footer-contact-item small">
             <i class="bi bi-clock"></i>
             <div>
-              <strong>Jam Operasional:</strong> Senin – Sabtu (08.00 – 16.00 WIB)
+              <strong>Jam Operasional:</strong> Senin – Sabtu: 08.00 – 16.00 WIB | Minggu: Tutup
             </div>
           </div>
         </div>
