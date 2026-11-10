@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -229,23 +229,63 @@
     <!-- ==================== PAGE HEADER ==================== -->
     <header class="page-header-simple">
       <div class="container">
+        <!-- Breadcrumb Nav -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb custom-breadcrumb mb-3">
+          <ol class="breadcrumb custom-breadcrumb mb-2">
             <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
             <li class="breadcrumb-item active" aria-current="page">Blog &amp; Panduan</li>
           </ol>
         </nav>
-        <div class="text-center mx-auto" style="max-width: 780px;">
-          <h1 class="mb-2">Inspirasi &amp; Panduan Parcel Lebaran</h1>
-          <p class="text-muted lead mb-0 mx-auto" style="max-width: 720px;">
-            Pusat wawasan hantaran hari raya terpercaya: panduan alokasi anggaran, kriteria vendor berkualitas, standar produk halal BPOM, hingga etika bingkisan silaturahmi untuk keluarga dan relasi bisnis.
-          </p>
+
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-1 rounded-pill mb-2"
+              style="font-size: 0.75rem; letter-spacing: 0.5px;">Wawasan &amp; Edukasi &bull; Panduan Resmi</span>
+
+            <h1 class="mb-2" style="font-size: clamp(1.6rem, 3vw, 2.35rem); font-weight: 800; color: #153B5B;">
+              Inspirasi &amp; Panduan Parcel Lebaran
+            </h1>
+            <p class="text-muted lead mb-3" style="max-width: 860px; font-size: 1.05rem;">
+              Pusat wawasan hantaran hari raya terpercaya: panduan alokasi anggaran, kriteria vendor berkualitas, standar produk halal BPOM, hingga etika bingkisan silaturahmi untuk keluarga dan relasi bisnis.
+            </p>
+
+            <div class="d-flex flex-wrap gap-2 pt-1">
+              <a href="#artikel-terbaru" class="btn-custom btn-primary-custom btn-custom-sm">
+                <i class="bi bi-journal-text me-1"></i>
+                <span>Jelajahi Artikel</span>
+              </a>
+              <a href="tentang.html" class="btn-custom btn-outline-custom btn-custom-sm">
+                <i class="bi bi-person-badge me-1"></i>
+                <span>Tentang Kurator</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="p-3 bg-white rounded-4 border border-light-subtle shadow-sm">
+              <div class="d-flex align-items-center gap-3 mb-2">
+                <div class="rounded-circle d-flex align-items-center justify-content-center text-white"
+                  style="width: 44px; height: 44px; background: #153B5B;">
+                  <i class="bi bi-lightbulb-fill fs-5"></i>
+                </div>
+                <div>
+                  <h6 class="mb-0 fw-bold text-navy">Pusat Literasi Gifting</h6>
+                  <small class="text-muted">Ditulis oleh Tim Kurator</small>
+                </div>
+              </div>
+              <ul class="list-unstyled small text-muted mb-0 ps-1">
+                <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> 12 Panduan Taktis &amp; Komprehensif</li>
+                <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> Tips Pengadaan B2B HR &amp; Purchasing</li>
+                <li><i class="bi bi-check2 text-success me-1"></i> Ketentuan Lead Time Kirim Seluruh Indonesia</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <!-- ==================== ARTIKEL GRID ==================== -->
-    <section class="section-py">
+    <section class="section-py" id="artikel-terbaru">
       <div class="container">
         <div class="section-header">
           <h2 class="h3">Artikel Terbaru Seputar Hantaran</h2>
