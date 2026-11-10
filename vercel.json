@@ -3,7 +3,17 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/parcel-premium",
+      "destination": "/paket/parcel-premium",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-premium.html",
       "destination": "/paket/parcel-premium",
       "permanent": true
     },
@@ -13,7 +23,17 @@
       "permanent": true
     },
     {
+      "source": "/parcel-spesial.html",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
       "source": "/parcel-korporat",
+      "destination": "/paket/parcel-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-korporat.html",
       "destination": "/paket/parcel-korporat",
       "permanent": true
     },
@@ -23,7 +43,17 @@
       "permanent": true
     },
     {
+      "source": "/parcel-custom.html",
+      "destination": "/paket/parcel-custom",
+      "permanent": true
+    },
+    {
       "source": "/parcel-ekonomis",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-ekonomis.html",
       "destination": "/paket/parcel-spesial",
       "permanent": true
     },
@@ -33,12 +63,17 @@
       "permanent": true
     },
     {
-      "source": "/panduan-memilih-parcel-lebaran",
-      "destination": "/blog/panduan-memilih-parcel-lebaran",
+      "source": "/paket/parcel-ekonomis.html",
+      "destination": "/paket/parcel-spesial",
       "permanent": true
     },
     {
-      "source": "/perbedaan-parcel-spesial-premium-korporat",
+      "source": "/blog/perbedaan-parcel-ekonomis-premium-korporat",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/blog/perbedaan-parcel-ekonomis-premium-korporat.html",
       "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
       "permanent": true
     },
@@ -48,7 +83,47 @@
       "permanent": true
     },
     {
-      "source": "/blog/perbedaan-parcel-ekonomis-premium-korporat",
+      "source": "/perbedaan-parcel-ekonomis-premium-korporat.html",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vendor-parcel-lebaran-untuk-perusahaan",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vendor-parcel-lebaran-untuk-perusahaan.html",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran-untuk-perusahaan",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran-untuk-perusahaan.html",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/panduan-memilih-parcel-lebaran",
+      "destination": "/blog/panduan-memilih-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/panduan-memilih-parcel-lebaran.html",
+      "destination": "/blog/panduan-memilih-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-spesial-premium-korporat",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-spesial-premium-korporat.html",
       "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
       "permanent": true
     },
@@ -58,7 +133,17 @@
       "permanent": true
     },
     {
+      "source": "/checklist-pengadaan-parcel-perusahaan.html",
+      "destination": "/blog/checklist-pengadaan-parcel-perusahaan",
+      "permanent": true
+    },
+    {
       "source": "/cara-membuat-parcel-custom",
+      "destination": "/blog/cara-membuat-parcel-custom",
+      "permanent": true
+    },
+    {
+      "source": "/cara-membuat-parcel-custom.html",
       "destination": "/blog/cara-membuat-parcel-custom",
       "permanent": true
     },
@@ -68,7 +153,17 @@
       "permanent": true
     },
     {
+      "source": "/rekomendasi-parcel-lebaran.html",
+      "destination": "/blog/rekomendasi-parcel-lebaran",
+      "permanent": true
+    },
+    {
       "source": "/ide-parcel-lebaran-unik-fungsional",
+      "destination": "/blog/ide-parcel-lebaran-unik-fungsional",
+      "permanent": true
+    },
+    {
+      "source": "/ide-parcel-lebaran-unik-fungsional.html",
       "destination": "/blog/ide-parcel-lebaran-unik-fungsional",
       "permanent": true
     },
@@ -78,18 +173,63 @@
       "permanent": true
     },
     {
+      "source": "/harga-parcel-lebaran-sesuai-budget.html",
+      "destination": "/blog/harga-parcel-lebaran-sesuai-budget",
+      "permanent": true
+    },
+    {
       "source": "/parcel-lebaran-untuk-perusahaan",
       "destination": "/blog/parcel-lebaran-untuk-perusahaan",
       "permanent": true
     },
     {
-      "source": "/blog/vendor-parcel-lebaran-untuk-perusahaan",
+      "source": "/parcel-lebaran-untuk-perusahaan.html",
       "destination": "/blog/parcel-lebaran-untuk-perusahaan",
       "permanent": true
     },
     {
-      "source": "/vendor-parcel-lebaran-untuk-perusahaan",
-      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "source": "/cara-memilih-vendor-parcel-lebaran",
+      "destination": "/blog/cara-memilih-vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/cara-memilih-vendor-parcel-lebaran.html",
+      "destination": "/blog/cara-memilih-vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/proses-pemesanan-parcel-lebaran",
+      "destination": "/blog/proses-pemesanan-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/proses-pemesanan-parcel-lebaran.html",
+      "destination": "/blog/proses-pemesanan-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran",
+      "destination": "/blog/vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran.html",
+      "destination": "/blog/vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug.html",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/paket/:slug.html",
+      "destination": "/paket/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/portofolio/:slug.html",
+      "destination": "/portofolio/:slug",
       "permanent": true
     }
   ],
