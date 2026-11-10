@@ -218,6 +218,46 @@
       "permanent": true
     },
     {
+      "source": "/parcel-lebaran-sembako",
+      "destination": "/blog/parcel-lebaran-sembako",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-lebaran-sembako.html",
+      "destination": "/blog/parcel-lebaran-sembako",
+      "permanent": true
+    },
+    {
+      "source": "/ide-isi-parcel-sembako-lebaran",
+      "destination": "/blog/ide-isi-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/ide-isi-parcel-sembako-lebaran.html",
+      "destination": "/blog/ide-isi-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-sembako-lebaran",
+      "destination": "/blog/harga-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-sembako-lebaran.html",
+      "destination": "/blog/harga-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "destination": "/blog/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/paket-sembako-lebaran-untuk-karyawan-perusahaan.html",
+      "destination": "/blog/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "permanent": true
+    },
+    {
       "source": "/blog/:slug.html",
       "destination": "/blog/:slug",
       "permanent": true
