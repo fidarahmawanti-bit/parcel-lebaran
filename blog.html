@@ -125,7 +125,7 @@
   <!-- ==================== NAVBAR ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html"
+      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="/"
         aria-label="Beranda Parcel Lebaran">
         <img src="assets/images/logo.webp" alt="Logo Parcel Lebaran" width="60" height="60" style="object-fit: contain;" loading="lazy">
         <span class="brand-text"
@@ -141,7 +141,7 @@
       <div class="collapse navbar-collapse" id="navbarContent">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Beranda</a>
+            <a class="nav-link" href="/">Beranda</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="tentang.html">Tentang</a>
@@ -231,21 +231,21 @@
       <div class="container">
         <!-- Breadcrumb Nav -->
         <nav aria-label="breadcrumb">
-          <ol class="breadcrumb custom-breadcrumb mb-2">
-            <li class="breadcrumb-item"><a href="index.html">Beranda</a></li>
+          <ol class="breadcrumb custom-breadcrumb mb-3">
+            <li class="breadcrumb-item"><a href="/">Beranda</a></li>
             <li class="breadcrumb-item active" aria-current="page">Blog &amp; Panduan</li>
           </ol>
         </nav>
 
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-8">
+        <div class="row g-4 align-items-center justify-content-between">
+          <div class="col-lg-7">
             <span class="badge bg-primary-subtle text-primary fw-bold text-uppercase px-3 py-1 rounded-pill mb-2"
               style="font-size: 0.75rem; letter-spacing: 0.5px;">Wawasan &amp; Edukasi &bull; Panduan Resmi</span>
 
-            <h1 class="mb-2" style="font-size: clamp(1.6rem, 3vw, 2.35rem); font-weight: 800; color: #153B5B;">
+            <h1 class="mb-2" style="font-size: clamp(1.6rem, 3.2vw, 2.35rem); font-weight: 800; color: #153B5B; line-height: 1.25;">
               Inspirasi &amp; Panduan Parcel Lebaran
             </h1>
-            <p class="text-muted lead mb-3" style="max-width: 860px; font-size: 1.05rem;">
+            <p class="text-muted lead mb-3" style="font-size: 1.02rem; line-height: 1.6; max-width: 680px;">
               Pusat wawasan hantaran hari raya terpercaya: panduan alokasi anggaran, kriteria vendor berkualitas, standar produk halal BPOM, hingga etika bingkisan silaturahmi untuk keluarga dan relasi bisnis.
             </p>
 
@@ -261,22 +261,31 @@
             </div>
           </div>
 
-          <div class="col-lg-4">
-            <div class="p-3 bg-white rounded-4 border border-light-subtle shadow-sm">
-              <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="rounded-circle d-flex align-items-center justify-content-center text-white"
-                  style="width: 44px; height: 44px; background: #153B5B;">
-                  <i class="bi bi-lightbulb-fill fs-5"></i>
+          <div class="col-12 col-lg-5">
+            <div class="p-3 p-sm-4 bg-white rounded-4 border border-light-subtle shadow-sm w-100" style="box-shadow: 0 10px 25px -5px rgba(21, 59, 91, 0.08) !important;">
+              <div class="d-flex align-items-center gap-3 mb-3 pb-2 border-bottom border-light-subtle">
+                <div class="rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
+                  style="width: 48px; height: 48px; background: #153B5B; box-shadow: 0 4px 10px rgba(21, 59, 91, 0.2);">
+                  <i class="bi bi-lightbulb-fill fs-5" style="color: #FFC107 !important;"></i>
                 </div>
                 <div>
-                  <h6 class="mb-0 fw-bold text-navy">Pusat Literasi Gifting</h6>
-                  <small class="text-muted">Ditulis oleh Tim Kurator</small>
+                  <h6 class="mb-0 fw-bold" style="color: #153B5B; font-size: 1.05rem;">Pusat Literasi Gifting</h6>
+                  <small class="text-muted" style="font-size: 0.82rem;">Ditulis &amp; Dikurasi Tim Spesialis</small>
                 </div>
               </div>
-              <ul class="list-unstyled small text-muted mb-0 ps-1">
-                <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> 12 Panduan Taktis &amp; Komprehensif</li>
-                <li class="mb-1"><i class="bi bi-check2 text-success me-1"></i> Tips Pengadaan B2B HR &amp; Purchasing</li>
-                <li><i class="bi bi-check2 text-success me-1"></i> Ketentuan Lead Time Kirim Seluruh Indonesia</li>
+              <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                <li class="d-flex align-items-start gap-2 text-secondary" style="font-size: 0.88rem; line-height: 1.45;">
+                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1" style="font-size: 0.95rem;"></i>
+                  <span><strong>12 Panduan Taktis</strong> &amp; Komprehensif Hari Raya</span>
+                </li>
+                <li class="d-flex align-items-start gap-2 text-secondary" style="font-size: 0.88rem; line-height: 1.45;">
+                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1" style="font-size: 0.95rem;"></i>
+                  <span>Tips Pengadaan B2B Divisi <strong>HR &amp; Purchasing</strong></span>
+                </li>
+                <li class="d-flex align-items-start gap-2 text-secondary" style="font-size: 0.88rem; line-height: 1.45;">
+                  <i class="bi bi-check-circle-fill text-success flex-shrink-0 mt-1" style="font-size: 0.95rem;"></i>
+                  <span>Ketentuan <strong>Lead Time Kirim</strong> Seluruh Indonesia</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -630,7 +639,7 @@
     <div class="container">
       <div class="row g-4">
         <div class="col-lg-4">
-          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3"
+          <a href="/" class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3"
             aria-label="Beranda Parcel Lebaran">
             <img src="assets/images/logo.webp" alt="Logo Parcel Lebaran" width="52" height="52" class="rounded-3 bg-white p-1 border border-white border-opacity-25" style="object-fit: contain;" loading="lazy">
             <span class="brand-text fw-bold text-white"
@@ -644,7 +653,7 @@
         <div class="col-6 col-lg-2">
           <p class="footer-heading fw-bold text-white mb-3">Navigasi</p>
           <ul class="footer-links small">
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="/">Beranda</a></li>
             <li><a href="tentang.html">Tentang Kami</a></li>
             <li><a href="paket.html">Katalog Paket</a></li>
             <li><a href="portofolio.html">Portofolio</a></li>
