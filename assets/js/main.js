@@ -500,10 +500,18 @@
         qvOldPrice.textContent = oldPrice;
         qvOldPrice.style.display = oldPrice ? "inline" : "none";
       }
-      if (qvBadge) qvBadge.textContent = badge;
+      if (qvBadge) {
+        qvBadge.textContent = badge;
+        qvBadge.style.display = badge ? "inline-flex" : "none";
+      }
       if (qvImg) {
         qvImg.src = mainImg;
         qvImg.alt = title;
+        qvImg.style.width = "100%";
+        qvImg.style.height = "100%";
+        qvImg.style.maxHeight = "360px";
+        qvImg.style.objectFit = "cover";
+        qvImg.style.display = "block";
       }
       if (qvDesc) qvDesc.textContent = desc;
       if (qvTextLink) qvTextLink.href = url;
@@ -522,14 +530,36 @@
           thumbBtn.type = "button";
           thumbBtn.className = "quickview-thumb-item" + (idx === 0 ? " active" : "");
           thumbBtn.setAttribute("aria-label", "Pilih Foto " + (idx + 1));
+          thumbBtn.style.width = "58px";
+          thumbBtn.style.height = "58px";
+          thumbBtn.style.minWidth = "58px";
+          thumbBtn.style.maxWidth = "58px";
+          thumbBtn.style.borderRadius = "10px";
+          thumbBtn.style.overflow = "hidden";
+          thumbBtn.style.border = idx === 0 ? "2px solid #153B5B" : "2px solid #e2e8f0";
+          thumbBtn.style.padding = "0";
+          thumbBtn.style.background = "#f1f5f9";
+          thumbBtn.style.cursor = "pointer";
+          thumbBtn.style.flexShrink = "0";
+          thumbBtn.style.display = "inline-block";
+
           const imgEl = document.createElement("img");
           imgEl.src = thumbSrc;
           imgEl.alt = title + " thumbnail " + (idx + 1);
+          imgEl.style.width = "100%";
+          imgEl.style.height = "100%";
+          imgEl.style.objectFit = "cover";
+          imgEl.style.display = "block";
+
           thumbBtn.appendChild(imgEl);
 
           thumbBtn.addEventListener("click", function () {
-            qvThumbRow.querySelectorAll(".quickview-thumb-item").forEach(function (b) { b.classList.remove("active"); });
+            qvThumbRow.querySelectorAll(".quickview-thumb-item").forEach(function (b) {
+              b.classList.remove("active");
+              b.style.borderColor = "#e2e8f0";
+            });
             thumbBtn.classList.add("active");
+            thumbBtn.style.borderColor = "#153B5B";
             if (qvImg) qvImg.src = thumbSrc;
           });
 
@@ -550,11 +580,10 @@
       const trigger = e.target.closest("[data-quickview='true']");
       if (!trigger) return;
 
-      e.preventDefault();
       populateQuickView(trigger);
 
-      // Show Bootstrap Modal
-      if (window.bootstrap && window.bootstrap.Modal) {
+      if (!trigger.hasAttribute("data-bs-toggle") && window.bootstrap && window.bootstrap.Modal) {
+        e.preventDefault();
         const modalInstance = window.bootstrap.Modal.getOrCreateInstance(quickViewModalEl);
         modalInstance.show();
       }
