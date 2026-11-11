@@ -1044,6 +1044,7 @@ img {
 }
 
 .package-card-badge {
+  display: none !important;
   position: absolute;
   top: 14px;
   left: 14px;
