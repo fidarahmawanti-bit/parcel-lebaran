@@ -482,12 +482,8 @@
       ]
     };
 
-    document.addEventListener("click", function (e) {
-      const trigger = e.target.closest("[data-quickview='true']");
+    function populateQuickView(trigger) {
       if (!trigger) return;
-
-      e.preventDefault();
-
       const title = trigger.getAttribute("data-title") || "Paket Parcel Lebaran";
       const price = trigger.getAttribute("data-price") || "Rp 0";
       const oldPrice = trigger.getAttribute("data-old-price") || "";
@@ -540,6 +536,22 @@
           qvThumbRow.appendChild(thumbBtn);
         });
       }
+    }
+
+    // Bootstrap native event hook
+    quickViewModalEl.addEventListener("show.bs.modal", function (event) {
+      if (event && event.relatedTarget) {
+        populateQuickView(event.relatedTarget);
+      }
+    });
+
+    // Global click delegate for quickview triggers
+    document.addEventListener("click", function (e) {
+      const trigger = e.target.closest("[data-quickview='true']");
+      if (!trigger) return;
+
+      e.preventDefault();
+      populateQuickView(trigger);
 
       // Show Bootstrap Modal
       if (window.bootstrap && window.bootstrap.Modal) {
