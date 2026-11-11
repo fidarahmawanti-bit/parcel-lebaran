@@ -39,21 +39,44 @@
   const packageCards = document.querySelectorAll("[data-package-category]");
 
   if (packageFilterBtns.length > 0 && packageCards.length > 0) {
+    function applyPackageFilter(filterValue) {
+      packageFilterBtns.forEach(function (b) {
+        const isMatch = b.getAttribute("data-package-filter") === filterValue;
+        b.classList.toggle("active", isMatch);
+        b.setAttribute("aria-selected", isMatch ? "true" : "false");
+      });
+
+      packageCards.forEach(function (card) {
+        const cardCategory = card.getAttribute("data-package-category");
+        const parentItem = card.closest(".package-grid-item");
+        if (parentItem) {
+          parentItem.style.display = (filterValue === "all" || cardCategory === filterValue) ? "block" : "none";
+        }
+      });
+    }
+
     packageFilterBtns.forEach(function (btn) {
       btn.addEventListener("click", function () {
-        packageFilterBtns.forEach(function (b) { b.classList.remove("active"); });
-        this.classList.add("active");
-
         const filterValue = this.getAttribute("data-package-filter");
-        packageCards.forEach(function (card) {
-          const cardCategory = card.getAttribute("data-package-category");
-          const parentItem = card.closest(".package-grid-item");
-          if (parentItem) {
-            parentItem.style.display = (filterValue === "all" || cardCategory === filterValue) ? "block" : "none";
-          }
-        });
+        applyPackageFilter(filterValue);
+        try {
+          history.pushState(null, null, filterValue === "all" ? window.location.pathname : "#" + filterValue);
+        } catch (err) {}
       });
     });
+
+    function checkPackageHash() {
+      const hash = (window.location.hash || "").replace("#", "").toLowerCase();
+      if (hash === "custom") {
+        window.location.replace("paket/parcel-custom.html");
+      } else if (hash === "korporat") {
+        applyPackageFilter("spesial");
+      } else if (hash && ["reguler", "spesial", "all"].includes(hash)) {
+        applyPackageFilter(hash);
+      }
+    }
+    checkPackageHash();
+    window.addEventListener("hashchange", checkPackageHash);
   }
 
   // 3. Portfolio Filter
