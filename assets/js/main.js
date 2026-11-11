@@ -440,6 +440,135 @@
       el.innerHTML = el.innerHTML.replace(/\b202[0-9]\b/, currentSystemYear);
     }
   });
+
+  // 11. Quick View Modal Controller (Sesuai Referensi Gambar Pengguna)
+  const quickViewModalEl = document.getElementById("productQuickViewModal");
+  if (quickViewModalEl) {
+    const qvBadge = document.getElementById("quickViewBadge");
+    const qvImg = document.getElementById("quickViewImg");
+    const qvThumbRow = document.getElementById("quickViewThumbRow");
+    const qvTitle = document.getElementById("quickViewTitle");
+    const qvPrice = document.getElementById("quickViewPrice");
+    const qvOldPrice = document.getElementById("quickViewOldPrice");
+    const qvDesc = document.getElementById("quickViewDesc");
+    const qvTextLink = document.getElementById("quickViewTextLink");
+    const qvBtnDetail = document.getElementById("quickViewBtnDetail");
+    const qvBtnWA = document.getElementById("quickViewBtnWA");
+
+    // Product gallery dataset dictionary for quick view
+    const isSubfolder = window.location.pathname.includes("/paket/") || window.location.pathname.includes("/blog/") || window.location.pathname.includes("/portofolio/");
+    const pathPrefix = isSubfolder ? "../" : "";
+
+    const productGalleries = {
+      "reguler": [
+        pathPrefix + "assets/images/parcel-lebaran-premium-al-karim.webp",
+        pathPrefix + "assets/images/parcel-lebaran-premium-hardbox-navy-gold.webp",
+        pathPrefix + "assets/images/parcel-lebaran-premium-silaturahmi-mertua.webp"
+      ],
+      "spesial": [
+        pathPrefix + "assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp",
+        pathPrefix + "assets/images/parcel-kue-kering-lebaran-keranjang-rotan.webp",
+        pathPrefix + "assets/images/parcel-lebaran-keranjang-rotan-keluarga.webp"
+      ],
+      "korporat": [
+        pathPrefix + "assets/images/parcel-lebaran-korporat-paket-sapphire.webp",
+        pathPrefix + "assets/images/parcel-lebaran-korporat-hardbox-custom-sleeve.webp",
+        pathPrefix + "assets/images/parcel-lebaran-korporat-pengadaan-kantor.webp"
+      ],
+      "custom": [
+        pathPrefix + "assets/images/parcel-lebaran-custom-kemasan-kue-kering.webp",
+        pathPrefix + "assets/images/parcel-lebaran-custom-peti-kayu-rustic.webp",
+        pathPrefix + "assets/images/parcel-lebaran-custom-aneka-wadah.webp"
+      ]
+    };
+
+    document.addEventListener("click", function (e) {
+      const trigger = e.target.closest("[data-quickview='true']");
+      if (!trigger) return;
+
+      e.preventDefault();
+
+      const title = trigger.getAttribute("data-title") || "Paket Parcel Lebaran";
+      const price = trigger.getAttribute("data-price") || "Rp 0";
+      const oldPrice = trigger.getAttribute("data-old-price") || "";
+      const badge = trigger.getAttribute("data-badge") || "PROMO SPESIAL";
+      const mainImg = trigger.getAttribute("data-img") || "";
+      const desc = trigger.getAttribute("data-desc") || "";
+      const url = trigger.getAttribute("data-url") || "#";
+      const waMsg = trigger.getAttribute("data-wa") || "";
+      const catKey = trigger.getAttribute("data-cat") || "reguler";
+
+      if (qvTitle) qvTitle.textContent = title;
+      if (qvPrice) qvPrice.textContent = price;
+      if (qvOldPrice) {
+        qvOldPrice.textContent = oldPrice;
+        qvOldPrice.style.display = oldPrice ? "inline" : "none";
+      }
+      if (qvBadge) qvBadge.textContent = badge;
+      if (qvImg) {
+        qvImg.src = mainImg;
+        qvImg.alt = title;
+      }
+      if (qvDesc) qvDesc.textContent = desc;
+      if (qvTextLink) qvTextLink.href = url;
+      if (qvBtnDetail) qvBtnDetail.href = url;
+      if (qvBtnWA) {
+        const encodedMsg = encodeURIComponent(waMsg || ("Halo Parcel Lebaran, saya tertarik dengan " + title + " (" + price + "). Mohon info detailnya."));
+        qvBtnWA.href = "https://wa.me/6282131087971?text=" + encodedMsg;
+      }
+
+      // Populate Thumbnails
+      if (qvThumbRow) {
+        qvThumbRow.innerHTML = "";
+        const thumbs = productGalleries[catKey] || [mainImg];
+        thumbs.forEach(function (thumbSrc, idx) {
+          const thumbBtn = document.createElement("button");
+          thumbBtn.type = "button";
+          thumbBtn.className = "quickview-thumb-item" + (idx === 0 ? " active" : "");
+          thumbBtn.setAttribute("aria-label", "Pilih Foto " + (idx + 1));
+          const imgEl = document.createElement("img");
+          imgEl.src = thumbSrc;
+          imgEl.alt = title + " thumbnail " + (idx + 1);
+          thumbBtn.appendChild(imgEl);
+
+          thumbBtn.addEventListener("click", function () {
+            qvThumbRow.querySelectorAll(".quickview-thumb-item").forEach(function (b) { b.classList.remove("active"); });
+            thumbBtn.classList.add("active");
+            if (qvImg) qvImg.src = thumbSrc;
+          });
+
+          qvThumbRow.appendChild(thumbBtn);
+        });
+      }
+
+      // Show Bootstrap Modal
+      if (window.bootstrap && window.bootstrap.Modal) {
+        const modalInstance = window.bootstrap.Modal.getOrCreateInstance(quickViewModalEl);
+        modalInstance.show();
+      }
+    });
+  }
+
+  // 12. Product Detail Interactive Gallery Switcher (Dekayu Style)
+  const productMainImg = document.getElementById("mainProductImg");
+  const galleryThumbBtns = document.querySelectorAll(".gallery-thumb-btn");
+
+  if (productMainImg && galleryThumbBtns.length > 0) {
+    galleryThumbBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const targetSrc = this.getAttribute("data-full-img");
+        if (targetSrc && productMainImg) {
+          productMainImg.style.opacity = "0.3";
+          setTimeout(function () {
+            productMainImg.src = targetSrc;
+            productMainImg.style.opacity = "1";
+          }, 150);
+        }
+        galleryThumbBtns.forEach(function (b) { b.classList.remove("active"); });
+        this.classList.add("active");
+      });
+    });
+  }
 }
 
 if (document.readyState === "loading") {
