@@ -2747,8 +2747,7 @@ article li a:not(.btn):not(.btn-custom):not(.badge):not(.dropdown-item):hover,
   }
 }
 
-.portfolio-grid-item.fade-in,
-.package-grid-item.fade-in {
+.portfolio-grid-item.fade-in {
   animation: portfolioFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
