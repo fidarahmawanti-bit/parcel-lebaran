@@ -610,6 +610,29 @@
       });
     });
   }
+
+  // 13. Search Modal Input Handler
+  const searchInputEl = document.getElementById("modalSearchInput");
+  if (searchInputEl) {
+    searchInputEl.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        const val = this.value.trim().toLowerCase();
+        if (!val) return;
+        if (val.includes("reguler") || val.includes("vip")) {
+          window.location.href = "paket.html#reguler";
+        } else if (val.includes("spesial") || val.includes("fitrah")) {
+          window.location.href = "paket.html#spesial";
+        } else if (val.includes("korporat") || val.includes("kantor") || val.includes("b2b")) {
+          window.location.href = "paket/parcel-korporat.html";
+        } else if (val.includes("custom") || val.includes("mahabbah") || val.includes("budget")) {
+          window.location.href = "paket/parcel-custom.html";
+        } else {
+          window.location.href = "paket.html";
+        }
+      }
+    });
+  }
 }
 
 if (document.readyState === "loading") {

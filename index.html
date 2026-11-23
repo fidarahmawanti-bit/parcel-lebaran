@@ -72,11 +72,11 @@
 
   <!-- Google Fonts: Plus Jakarta Sans -->
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 
   <!-- Core Stylesheets: Loaded directly to guarantee Zero Layout Shift (CLS = 0) and eliminate forced reflow -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/style.min.css?v=20261111d">
+  <link rel="stylesheet" href="assets/css/style.min.css?v=1795421633114">
   <link rel="stylesheet" href="assets/css/bootstrap-icons.min.css">
 
   <!-- Critical Quick View Modal Styling -->
@@ -263,92 +263,83 @@
   <div id="perf-btt-sentinel" aria-hidden="true"
     style="position:absolute;top:0;left:0;width:1px;height:250px;pointer-events:none;opacity:0;z-index:-1;"></div>
 
-  <!-- ==================== NAVBAR ==================== -->
+  <!-- ==================== NAVBAR (EIDORA REFERENCE) ==================== -->
+    <!-- ==================== NAVBAR (EIDORA SPLIT PRECISION) ==================== -->
+    <!-- ==================== NAVBAR (EIDORA REFERENCE) ==================== -->
   <nav class="navbar navbar-expand-lg site-navbar sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-inline-flex align-items-center gap-2" href="index.html" aria-label="Beranda Parcel Lebaran">
-        <img src="assets/images/logo.webp" alt="Logo Parcel Lebaran" width="60" height="60" style="object-fit: contain;"
-          loading="lazy">
-        <span class="brand-text"
-          style="font-size: 1.25rem; letter-spacing: -0.5px; color: #153B5B; font-weight: 800;">PARCEL <span
-            style="color: #1b6da0; font-weight: 700;">LEBARAN</span></span>
-      </a>
+    <div class="container navbar-split-wrapper">
+      <!-- Mobile Top Bar: Toggle, Centered Logo, WhatsApp -->
+      <div class="navbar-mobile-header d-flex d-lg-none align-items-center justify-content-between w-100 py-1">
+        <button class="navbar-toggler p-1 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+          aria-controls="navbarContent" aria-expanded="false" aria-label="Buka navigasi menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand-center text-center text-decoration-none" href="./" aria-label="Eidora Parcel Lebaran">
+          <span class="brand-title">E I D O R A</span>
+          <span class="brand-subtitle">PARCEL LEBARAN</span>
+        </a>
+        <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20pemesanan%20parcel%20Lebaran."
+          target="_blank" rel="noopener noreferrer" class="nav-btn-pesan nav-btn-pesan-sm">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-        aria-controls="navbarContent" aria-expanded="false" aria-label="Buka navigasi menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarContent">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+      <!-- Collapsible Nav & Desktop Split Layout -->
+      <div class="collapse navbar-collapse w-100" id="navbarContent">
+        <!-- Left Nav Links: BERANDA, PORTOFOLIO, TENTANG -->
+        <ul class="navbar-nav nav-split-left align-items-lg-center mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+            <a class="nav-link active" href="./">BERANDA</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="tentang.html">Tentang</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="paket.html" id="paketDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Paket
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="paketDropdown">
-              <li>
-                <a class="dropdown-item" href="paket.html">
-                  <span class="dropdown-item-left">
-                    <i class="bi bi-grid-fill icon-all"></i>
-                    <span>Semua Paket</span>
-                  </span>
-                  <span class="dropdown-item-badge badge-all">Katalog</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li>
-                <a class="dropdown-item" href="paket.html#reguler">
-                  <span class="dropdown-item-left">
-                    <i class="bi bi-box-seam icon-vip"></i>
-                    <span>Paket Reguler</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="paket.html#spesial">
-                  <span class="dropdown-item-left">
-                    <i class="bi bi-star-fill icon-eko"></i>
-                    <span>Paket Spesial</span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="paket/parcel-custom.html">
-                  <span class="dropdown-item-left">
-                    <i class="bi bi-palette icon-cst"></i>
-                    <span>Parcel Custom</span>
-                  </span>
-                </a>
-              </li>
-            </ul>
+            <a class="nav-link " href="portofolio.html">PORTOFOLIO</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="portofolio.html">Portofolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">Blog &amp; Panduan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="kontak.html">Kontak</a>
+            <a class="nav-link " href="tentang.html">TENTANG</a>
           </li>
         </ul>
 
-        <div class="d-flex align-items-center gap-2">
-          <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20pemesanan%20parcel%20Lebaran."
-            target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-sm">
-            <i class="bi bi-whatsapp"></i>
-            <span>Pesan via WhatsApp</span>
+        <!-- Center Brand: Strictly Desktop Only -->
+        <div class="nav-split-center d-none d-lg-flex mx-auto">
+          <a class="navbar-brand-center text-center text-decoration-none" href="./" aria-label="Eidora Parcel Lebaran">
+            <span class="brand-title">E I D O R A</span>
+            <span class="brand-subtitle">PARCEL LEBARAN</span>
           </a>
         </div>
+
+        <!-- Right Nav Links: PAKET (with Dropdown), BLOG, KONTAK, PESAN -->
+        <div class="nav-split-right d-flex flex-column flex-lg-row align-items-lg-center gap-3">
+          <ul class="navbar-nav align-items-lg-center gap-lg-3 mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle " href="paket.html" id="navPaketDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                PAKET <i class="bi bi-chevron-down ms-1" style="font-size: 0.68rem;"></i>
+              </a>
+              <ul class="dropdown-menu shadow-sm" aria-labelledby="navPaketDropdown">
+                <li><a class="dropdown-item" href="paket.html"><i class="bi bi-grid-fill text-primary"></i>Semua Paket</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="paket.html#reguler"><i class="bi bi-box-seam" style="color: #c29b38;"></i>Paket Reguler</a></li>
+                <li><a class="dropdown-item" href="paket.html#spesial"><i class="bi bi-star-fill text-warning"></i>Paket Spesial</a></li>
+                <li><a class="dropdown-item" href="paket/parcel-korporat.html"><i class="bi bi-building text-info"></i>Paket Korporat</a></li>
+                <li><a class="dropdown-item" href="paket/parcel-custom.html"><i class="bi bi-palette text-success"></i>Parcel Custom</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="kontak.html">KONTAK</a>
+            </li>
+          </ul>
+
+          <div class="d-none d-lg-flex align-items-center gap-3 mt-2 mt-lg-0">
+            <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20pemesanan%20parcel%20Lebaran."
+              target="_blank" rel="noopener noreferrer" class="nav-btn-pesan">
+              <i class="bi bi-whatsapp"></i>
+              <span>PESAN</span>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </nav>
@@ -356,76 +347,53 @@
   <!-- ==================== MAIN CONTENT ==================== -->
   <main id="main-content">
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <header class="parcel-hero">
-      <div class="container">
-        <div class="row align-items-center g-4 g-lg-5">
-          <div class="col-lg-6 hero-content">
-            <div class="hero-badge">
+    <!-- ==================== HERO SECTION (BACKGROUND FOTO & TEKS TENGAH) ==================== -->
+    <header class="parcel-hero parcel-hero-centered">
+            <div class="container position-relative" style="z-index: 2;">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 col-xl-9 text-center">
+            
+            <div class="hero-badge mx-auto mb-3">
               <i class="bi bi-stars text-warning"></i>
               <span>Koleksi Eksklusif Idulfitri 1448 H / 2027 M</span>
             </div>
-            <h1 class="mb-3">Parcel Lebaran Berkesan untuk Keluarga &amp; Relasi Bisnis</h1>
-            <p class="lead text-muted mb-4">
-              Hadirkan kehangatan silaturahmi dengan parcel lebaran pilihan. Dikurasi dari produk halal berkualitas
-              tinggi, dikemas mewah nan kokoh, dan dikirim tepat waktu dengan amanah penuh.
+
+            <h1 class="hero-title-main mb-3">Parcel Lebaran Berkesan untuk Keluarga &amp; Relasi Bisnis</h1>
+
+            <p class="hero-desc-lead mx-auto mb-4" style="max-width: 780px;">
+              Hadirkan kehangatan silaturahmi dengan <strong>parcel lebaran</strong> pilihan. Dikurasi dari produk halal berkualitas tinggi, dikemas mewah nan kokoh, dan dikirim tepat waktu dengan amanah penuh.
             </p>
 
-            <div class="hero-cta-group d-flex flex-wrap gap-3 mb-4">
-              <a href="paket.html" class="btn-custom btn-primary-custom btn-custom-lg">
-                <i class="bi bi-grid-fill"></i>
+            <div class="hero-cta-group d-flex flex-wrap justify-content-center gap-3 mb-4">
+              <a href="paket.html" class="btn-hero-gold" aria-label="Lihat Katalog Lengkap Paket Lebaran">
+                <i class="bi bi-box-seam-fill"></i>
                 <span>Lihat Katalog Paket</span>
+                <i class="bi bi-arrow-right"></i>
               </a>
-              <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20tanya%20paket%20parcel%20Lebaran%20yang%20tersedia."
-                target="_blank" rel="noopener noreferrer" class="btn-custom btn-outline-custom btn-custom-lg">
-                <i class="bi bi-chat-dots-fill"></i>
-                <span>Konsultasi Cepat</span>
+              <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20pemesanan%20parcel%20Lebaran."
+                target="_blank" rel="noopener noreferrer" class="btn-hero-wa" aria-label="Konsultasi via WhatsApp">
+                <i class="bi bi-whatsapp"></i>
+                <span>Konsultasi via WhatsApp</span>
               </a>
             </div>
 
-            <div class="hero-stats-bar">
-              <div class="hero-stat-item">
-                <div class="hero-stat-val">Tepat Waktu</div>
-                <small class="hero-stat-label">Produksi & pengiriman terjadwal</small>
+            <div class="hero-trust-pill-group d-flex flex-wrap justify-content-center gap-2 gap-md-4 mt-2">
+              <div class="hero-trust-pill">
+                <i class="bi bi-clock-check-fill text-gold"></i>
+                <span>Tepat Waktu</span>
               </div>
-              <div class="hero-stat-divider"></div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-val">Aman Sampai Tujuan</div>
-                <small class="hero-stat-label">Kemasan aman selama pengiriman</small>
+              <div class="hero-trust-dot d-none d-md-block">•</div>
+              <div class="hero-trust-pill">
+                <i class="bi bi-shield-check-fill text-gold"></i>
+                <span>Aman Sampai Tujuan</span>
               </div>
-              <div class="hero-stat-divider"></div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-val">Custom Logo</div>
-                <small class="hero-stat-label">Siap untuk korporasi</small>
+              <div class="hero-trust-dot d-none d-md-block">•</div>
+              <div class="hero-trust-pill">
+                <i class="bi bi-patch-check-fill text-gold"></i>
+                <span>Custom Logo Korporat</span>
               </div>
             </div>
-          </div>
 
-          <div class="col-lg-6">
-            <div class="hero-visual-wrapper">
-              <div class="hero-img-card">
-                <picture>
-                  <source media="(max-width: 575px)"
-                    srcset="assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri-mobile.webp" width="374"
-                    height="208" type="image/webp">
-                  <source media="(min-width: 576px)"
-                    srcset="assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri-sm.webp" width="720" height="401"
-                    type="image/webp">
-                  <img src="assets/images/hampers-lebaran-koleksi-eksklusif-idulfitri-sm.webp"
-                    alt="Koleksi hampers Lebaran eksklusif box hijau zamrud dengan pita satin emas berisi toples nastar dan madu murni di samping lentera hias."
-                    width="720" height="401" fetchpriority="high" decoding="async">
-                </picture>
-              </div>
-              <div class="hero-float-badge">
-                <div class="hero-float-icon">
-                  <i class="bi bi-shield-check"></i>
-                </div>
-                <div>
-                  <div class="fw-bold text-navy-900" style="font-size: 0.9rem;">Garansi Pengiriman Aman</div>
-                  <div class="text-muted" style="font-size: 0.78rem;">Penggantian langsung bila rusak di jalan</div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -475,253 +443,190 @@
       </div>
     </section>
 
-    <!-- ==================== PRODUK PILIHAN ==================== -->
-    <section class="section-py">
+    <!-- ==================== PRODUK PILIHAN (3 CARD GRID) ==================== -->
+    <section class="section-py" id="featured-products" style="background-color: #FAF8F5;">
       <div class="container">
-        <div class="mb-4 section-header">
-          <div class="section-eyebrow">
-            <i class="bi bi-check2-circle"></i>
-            <span>Paling Diminati</span>
+        <!-- Section Header -->
+        <div class="text-center section-header mb-5">
+          <div class="section-eyebrow text-uppercase" style="letter-spacing: 0.2em; font-size: 0.82rem; color: #B48D3C; font-weight: 700;">
+            OUR COLLECTION
           </div>
-          <h2>Koleksi Paket Lebaran</h2>
+          <h2 class="display-5 fw-bold mb-2" style="font-family: var(--font-serif, 'Playfair Display', Georgia, serif); color: #153B5B;">
+            Featured Products
+          </h2>
+          <p class="section-desc mx-auto" style="max-width: 650px; color: #64748B; font-size: 1rem;">
+            Explore our most popular items loved by customers — Koleksi parcel Lebaran kurasi premium untuk keluarga &amp; relasi bisnis
+          </p>
         </div>
 
-        <div class="row g-4">
-          <!-- Card 1: Paket Reguler (VIP) -->
-          <div class="col-md-6 col-lg-3">
-            <div class="package-card">
-              <div class="package-card-img-wrapper" role="button" tabindex="0"
-                data-bs-toggle="modal"
-                data-bs-target="#productQuickViewModal"
-                data-quickview="true"
-                data-cat="reguler"
-                data-title="Paket Reguler (VIP Al-Karim)"
-                data-price="Rp 850.000"
-                data-old-price="Rp 950.000"
-                data-badge="VIP LUXURY"
-                data-img="assets/images/parcel-lebaran-premium-al-karim.webp"
-                data-desc="Hardbox Navy Emboss Gold dengan sajian kue mentega Wisman toples kaca hexagonal, sparkling grape non-alkohol, dan kartu ucapan akrilik gold."
-                data-url="paket/parcel-premium.html"
-                data-wa="Halo Parcel Lebaran, saya tertarik dengan Paket Reguler (Rp 850.000). Mohon info ketersediaannya.">
-                <picture>
-                  <source media="(max-width: 575px)"
-                    srcset="assets/images/parcel-lebaran-premium-hardbox-navy-gold-mobile.webp" width="373" height="280"
-                    type="image/webp">
-                  <img src="assets/images/parcel-lebaran-premium-hardbox-navy-gold-sm.webp"
-                    alt="Parcel Lebaran Paket Reguler hardbox navy gold VIP dengan sajian kue mentega Wisman."
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
-                </picture>
-                <div class="quickview-card-overlay">
-                  <span class="quickview-overlay-btn"><i class="bi bi-eye"></i> Quick View</span>
-                </div>
+        <!-- 3-Column Grid Layout (Sesuai Permintaan Pengguna) -->
+        <div class="row g-4 justify-content-center">
+          
+          <!-- Card 1: Paket Reguler -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="package-card-v3 h-100">
+              <div class="card-v3-header-row">
+                <span class="card-v3-pill-badge badge-vip">BEST SELLER</span>
+                <span class="card-v3-tag-right"><i class="bi bi-patch-check-fill text-gold"></i> Halal</span>
               </div>
-              <div class="package-card-body">
-                <h3 class="package-card-title"><a href="paket/parcel-premium.html" class="text-navy-900 text-decoration-none">Paket Reguler</a></h3>
-                <p class="package-card-desc">Hardbox Navy Gold dengan sajian kue mentega Wisman dan sparkling juice
-                  mewah.
-                </p>
 
-                <div class="package-card-footer stacked">
-                  <div class="package-price-wrap">
-                    <span class="package-price-label">Harga Paket</span>
-                    <span class="package-price">Rp 850.000</span>
-                  </div>
-                  <div class="package-card-actions">
-                    <a href="paket/parcel-premium.html" role="button" class="btn-custom btn-primary-custom btn-custom-sm"
-                      data-bs-toggle="modal"
-                      data-bs-target="#productQuickViewModal"
-                      data-quickview="true"
-                      data-cat="reguler"
-                      data-title="Paket Reguler (VIP Al-Karim)"
-                      data-price="Rp 850.000"
-                      data-old-price="Rp 950.000"
-                      data-badge="VIP LUXURY"
-                      data-img="assets/images/parcel-lebaran-premium-al-karim.webp"
-                      data-desc="Hardbox Navy Emboss Gold dengan sajian kue mentega Wisman toples kaca hexagonal, sparkling grape non-alkohol, dan kartu ucapan akrilik gold."
-                      data-url="paket/parcel-premium.html"
-                      data-wa="Halo Parcel Lebaran, saya tertarik dengan Paket Reguler (Rp 850.000). Mohon info ketersediaannya."
-                      aria-label="Detail Paket Reguler VIP">Detail</a>
-                    <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20tertarik%20dengan%20Paket%20Reguler%20%28Rp%20850.000%29.%20Mohon%20info%20ketersediaannya."
-                      target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-sm"
-                      aria-label="Pesan Paket Reguler via WA">
-                      <i class="bi bi-whatsapp"></i>
-                      <span>Pesan via WA</span>
-                    </a>
-                  </div>
+              <div class="card-v3-img-frame">
+                <picture>
+                  <source srcset="assets/images/hampers-lebaran-korporat-box-navy-gold.webp" type="image/webp">
+                  <img src="assets/images/hampers-lebaran-korporat-box-navy-gold.webp"
+                    alt="Paket Reguler Eidora Parcel Lebaran Hardbox Navy Gold"
+                    class="card-v3-img" loading="lazy">
+                </picture>
+                <button type="button" class="card-v3-quickview-btn" data-bs-toggle="modal" data-bs-target="#quickViewReguler" aria-label="Lihat Cepat Paket Reguler">
+                  <i class="bi bi-arrows-fullscreen"></i> Quick View
+                </button>
+              </div>
+
+              <h3 class="card-v3-title">
+                <a href="paket/parcel-reguler.html">Paket Reguler</a>
+              </h3>
+
+              <p class="card-v3-desc">
+                Hardbox Navy Gold mewah dengan sajian kue mentega Wisman kualitas terbaik, butter cookies renyah, dan sparkling juice.
+              </p>
+
+              <div class="card-v3-rating-row">
+                <i class="bi bi-star-fill"></i>
+                <span class="rating-num">4.9</span>
+                <span class="rating-count">(120 ulasan)</span>
+              </div>
+
+              <div class="card-v3-footer-modern">
+                <div class="card-v3-price-col">
+                  <span class="card-v3-price-caption">HARGA PAKET</span>
+                  <span class="card-v3-price-amount">Rp 850.000</span>
+                </div>
+                <div class="card-v3-btns-group">
+                  <a href="paket/parcel-reguler.html" class="btn-modern-detail">
+                    Detail
+                  </a>
+                  <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20memesan%20Paket%20Reguler%20(Rp%20850.000)."
+                    target="_blank" rel="noopener noreferrer" class="btn-modern-wa">
+                    <i class="bi bi-whatsapp"></i> Pesan WA
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 2: Paket Spesial (Fitrah) -->
-          <div class="col-md-6 col-lg-3">
-            <div class="package-card">
-              <div class="package-card-img-wrapper" role="button" tabindex="0"
-                data-bs-toggle="modal"
-                data-bs-target="#productQuickViewModal"
-                data-quickview="true"
-                data-cat="spesial"
-                data-title="Paket Spesial (Fitrah)"
-                data-price="Rp 450.000"
-                data-old-price="Rp 500.000"
-                data-badge="FAVORIT KELUARGA"
-                data-img="assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp"
-                data-desc="Keranjang rotan anyam berbalut kain tile dan pita satin sky-blue berisi toples nastar legit, kastengel, dan biskuit renyah untuk sanak famili."
-                data-url="paket/parcel-spesial.html"
-                data-wa="Halo Parcel Lebaran, saya tertarik dengan Paket Fitrah (Rp 450.000).">
-                <picture>
-                  <source media="(max-width: 575px)"
-                    srcset="assets/images/parcel-kue-kering-lebaran-paket-fitrah-sm.webp" width="373" height="280"
-                    type="image/webp">
-                  <img src="assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp"
-                    alt="Parcel Lebaran Paket Spesial dalam keranjang rotan anyaman tradisional berbalut pita satin sky blue."
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
-                </picture>
-                <div class="quickview-card-overlay">
-                  <span class="quickview-overlay-btn"><i class="bi bi-eye"></i> Quick View</span>
-                </div>
+          <!-- Card 2: Paket Spesial -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="package-card-v3 h-100">
+              <div class="card-v3-header-row">
+                <span class="card-v3-pill-badge badge-trending">TRENDING</span>
+                <span class="card-v3-tag-right"><i class="bi bi-patch-check-fill text-gold"></i> Halal</span>
               </div>
-              <div class="package-card-body">
-                <h3 class="package-card-title"><a href="paket/parcel-spesial.html" class="text-navy-900 text-decoration-none">Paket Spesial</a></h3>
-                <p class="package-card-desc">Keranjang rotan anyam cantik berbalut pita sky blue untuk sanak saudara
-                  tercinta.</p>
 
-                <div class="package-card-footer stacked">
-                  <div class="package-price-wrap">
-                    <span class="package-price-label">Harga Paket</span>
-                    <span class="package-price">Rp 450.000</span>
-                  </div>
-                  <div class="package-card-actions">
-                    <a href="paket/parcel-spesial.html" role="button" class="btn-custom btn-primary-custom btn-custom-sm"
-                      data-bs-toggle="modal"
-                      data-bs-target="#productQuickViewModal"
-                      data-quickview="true"
-                      data-cat="spesial"
-                      data-title="Paket Spesial (Fitrah)"
-                      data-price="Rp 450.000"
-                      data-old-price="Rp 500.000"
-                      data-badge="FAVORIT KELUARGA"
-                      data-img="assets/images/parcel-kue-kering-lebaran-paket-fitrah.webp"
-                      data-desc="Keranjang rotan anyam berbalut kain tile dan pita satin sky-blue berisi toples nastar legit, kastengel, dan biskuit renyah untuk sanak famili."
-                      data-url="paket/parcel-spesial.html"
-                      data-wa="Halo Parcel Lebaran, saya tertarik dengan Paket Fitrah (Rp 450.000)."
-                      aria-label="Detail Paket Spesial">Detail</a>
-                    <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20tertarik%20dengan%20Paket%20Spesial%20%28Rp%20450.000%29.%20Mohon%20info%20ketersediaannya."
-                      target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-sm"
-                      aria-label="Pesan Paket Spesial via WA">
-                      <i class="bi bi-whatsapp"></i>
-                      <span>Pesan via WA</span>
-                    </a>
-                  </div>
+              <div class="card-v3-img-frame">
+                <picture>
+                  <source srcset="assets/images/parcel-kue-kering-lebaran-keranjang-rotan.webp" type="image/webp">
+                  <img src="assets/images/parcel-kue-kering-lebaran-keranjang-rotan.webp"
+                    alt="Paket Spesial Eidora Parcel Lebaran Keranjang Rotan Anyam"
+                    class="card-v3-img" loading="lazy">
+                </picture>
+                <button type="button" class="card-v3-quickview-btn" data-bs-toggle="modal" data-bs-target="#quickViewSpesial" aria-label="Lihat Cepat Paket Spesial">
+                  <i class="bi bi-arrows-fullscreen"></i> Quick View
+                </button>
+              </div>
+
+              <h3 class="card-v3-title">
+                <a href="paket/parcel-spesial.html">Paket Spesial</a>
+              </h3>
+
+              <p class="card-v3-desc">
+                Keranjang rotan anyam cantik berbalut pita satin sky blue elegan, berisi kue kering klasik favorit keluarga tercinta.
+              </p>
+
+              <div class="card-v3-rating-row">
+                <i class="bi bi-star-fill"></i>
+                <span class="rating-num">4.8</span>
+                <span class="rating-count">(98 ulasan)</span>
+              </div>
+
+              <div class="card-v3-footer-modern">
+                <div class="card-v3-price-col">
+                  <span class="card-v3-price-caption">HARGA PAKET</span>
+                  <span class="card-v3-price-amount">Rp 450.000</span>
+                </div>
+                <div class="card-v3-btns-group">
+                  <a href="paket/parcel-spesial.html" class="btn-modern-detail">
+                    Detail
+                  </a>
+                  <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20memesan%20Paket%20Spesial%20(Rp%20450.000)."
+                    target="_blank" rel="noopener noreferrer" class="btn-modern-wa">
+                    <i class="bi bi-whatsapp"></i> Pesan WA
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 3: Paket Korporat (Korporat) -->
-          <div class="col-md-6 col-lg-3">
-            <div class="package-card">
-              <div class="package-card-img-wrapper" role="button" tabindex="0"
-                data-bs-toggle="modal"
-                data-bs-target="#productQuickViewModal"
-                data-quickview="true"
-                data-cat="korporat"
-                data-title="Paket Korporat (Sapphire B2B)"
-                data-price="Rp 650.000"
-                data-old-price=""
-                data-badge="KORPORASI & B2B"
-                data-img="assets/images/parcel-lebaran-korporat-paket-sapphire.webp"
-                data-desc="Solusi pengadaan hampers kantor elegan dengan free cetak custom sleeve logo perusahaan, smart LED tumbler, dan 3 toples kue kering kurasi premium."
-                data-url="paket/parcel-korporat.html"
-                data-wa="Halo Parcel Lebaran, saya ingin konsultasi Paket Korporat untuk kantor.">
-                <picture>
-                  <source media="(max-width: 575px)"
-                    srcset="assets/images/parcel-lebaran-korporat-hardbox-custom-sleeve-mobile.webp" width="373"
-                    height="280" type="image/webp">
-                  <img src="assets/images/parcel-lebaran-korporat-hardbox-custom-sleeve-sm.webp"
-                    alt="Parcel Lebaran Paket Korporat hardbox elegan dengan custom sleeve logo perusahaan untuk relasi bisnis."
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
-                </picture>
-                <div class="quickview-card-overlay">
-                  <span class="quickview-overlay-btn"><i class="bi bi-eye"></i> Quick View</span>
-                </div>
+          <!-- Card 3: Paket Korporat -->
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="package-card-v3 h-100">
+              <div class="card-v3-header-row">
+                <span class="card-v3-pill-badge badge-b2b">KORPORAT</span>
+                <span class="card-v3-tag-right"><i class="bi bi-shield-check text-primary"></i> Custom Logo</span>
               </div>
-              <div class="package-card-body">
-                <h3 class="package-card-title"><a href="paket/parcel-korporat.html" class="text-navy-900 text-decoration-none">Paket Korporat</a></h3>
-                <p class="package-card-desc">Hampers elegan dengan custom logo perusahaan untuk relasi bisnis dan
-                  pimpinan.</p>
 
-                <div class="package-card-footer stacked">
-                  <div class="package-price-wrap">
-                    <span class="package-price-label">Mulai (Min. 10 box)</span>
-                    <span class="package-price">Rp 650.000</span>
-                  </div>
-                  <div class="package-card-actions">
-                    <a href="paket/parcel-korporat.html" role="button" class="btn-custom btn-primary-custom btn-custom-sm"
-                      data-bs-toggle="modal"
-                      data-bs-target="#productQuickViewModal"
-                      data-quickview="true"
-                      data-cat="korporat"
-                      data-title="Paket Korporat (Sapphire B2B)"
-                      data-price="Rp 650.000"
-                      data-old-price=""
-                      data-badge="KORPORASI & B2B"
-                      data-img="assets/images/parcel-lebaran-korporat-paket-sapphire.webp"
-                      data-desc="Solusi pengadaan hampers kantor elegan dengan free cetak custom sleeve logo perusahaan, smart LED tumbler, dan 3 toples kue kering kurasi premium."
-                      data-url="paket/parcel-korporat.html"
-                      data-wa="Halo Parcel Lebaran, saya ingin konsultasi Paket Korporat untuk kantor."
-                      aria-label="Detail Paket Korporat">Detail</a>
-                    <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20Paket%20Korporat%20untuk%20kantor."
-                      target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-sm"
-                      aria-label="Pesan Paket Korporat via WA">
-                      <i class="bi bi-whatsapp"></i>
-                      <span>Pesan via WA</span>
-                    </a>
-                  </div>
+              <div class="card-v3-img-frame">
+                <picture>
+                  <source srcset="assets/images/parcel-korporat.webp" type="image/webp">
+                  <img src="assets/images/parcel-korporat.webp"
+                    alt="Paket Korporat Eidora Parcel Lebaran Custom Logo Perusahaan"
+                    class="card-v3-img" loading="lazy">
+                </picture>
+                <button type="button" class="card-v3-quickview-btn" data-bs-toggle="modal" data-bs-target="#quickViewKorporat" aria-label="Lihat Cepat Paket Korporat">
+                  <i class="bi bi-arrows-fullscreen"></i> Quick View
+                </button>
+              </div>
+
+              <h3 class="card-v3-title">
+                <a href="paket/parcel-korporat.html">Paket Korporat</a>
+              </h3>
+
+              <p class="card-v3-desc">
+                Hampers korporat eksklusif dengan custom logo perusahaan pada sleeve &amp; kartu ucapan, untuk relasi bisnis dan pimpinan.
+              </p>
+
+              <div class="card-v3-rating-row">
+                <i class="bi bi-star-fill"></i>
+                <span class="rating-num">4.9</span>
+                <span class="rating-count">(60 instansi)</span>
+              </div>
+
+              <div class="card-v3-footer-modern">
+                <div class="card-v3-price-col">
+                  <span class="card-v3-price-caption">MULAI (MIN. 10 BOX)</span>
+                  <span class="card-v3-price-amount">Rp 650.000</span>
+                </div>
+                <div class="card-v3-btns-group">
+                  <a href="paket/parcel-korporat.html" class="btn-modern-detail">
+                    Detail
+                  </a>
+                  <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20Paket%20Korporat%20untuk%20perusahaan."
+                    target="_blank" rel="noopener noreferrer" class="btn-modern-wa">
+                    <i class="bi bi-whatsapp"></i> Pesan WA
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Card 4: Paket Custom Mahabbah -->
-          <div class="col-md-6 col-lg-3">
-            <div class="package-card">
-              <a href="paket/parcel-custom.html" class="package-card-img-wrapper d-block text-decoration-none">
-                <picture>
-                  <source media="(max-width: 575px)"
-                    srcset="assets/images/parcel-lebaran-custom-kemasan-kue-kering-mobile.webp" width="373" height="280"
-                    type="image/webp">
-                  <img src="assets/images/parcel-lebaran-custom-kemasan-kue-kering-sm.webp"
-                    alt="Parcel Lebaran Parcel Custom aneka pilihan box akrilik transparan dan kue kering bebas tentukan budget."
-                    class="package-card-img" width="560" height="420" loading="lazy" decoding="async">
-                </picture>
-                <div class="quickview-card-overlay">
-                  <span class="quickview-overlay-btn"><i class="bi bi-sliders"></i> Buat Custom</span>
-                </div>
-              </a>
-              <div class="package-card-body">
-                <h3 class="package-card-title"><a href="paket/parcel-custom.html" class="text-navy-900 text-decoration-none">Parcel Custom</a></h3>
-                <p class="package-card-desc">Fleksibilitas penuh meracik isi, wadah akrilik atau box kayu sesuai
-                  kebutuhan Anda.</p>
+        </div>
 
-                <div class="package-card-footer stacked">
-                  <div class="package-price-wrap">
-                    <span class="package-price-label">Mulai Dari</span>
-                    <span class="package-price">Rp 275.000</span>
-                  </div>
-                  <div class="package-card-actions">
-                    <a href="paket/parcel-custom.html" class="btn-custom btn-primary-custom btn-custom-sm" aria-label="Detail Paket Parcel Custom">Detail</a>
-                    <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20konsultasi%20Parcel%20Custom%20sesuai%20budget."
-                      target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-sm"
-                      aria-label="Pesan Parcel Custom via WA">
-                      <i class="bi bi-whatsapp"></i>
-                      <span>Pesan via WA</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- View All Packages Link Button -->
+        <div class="text-center mt-4">
+          <a href="paket.html" class="btn-hero-gold" style="font-size: 0.95rem; padding: 12px 28px;">
+            <i class="bi bi-grid-fill"></i>
+            <span>Lihat Semua Paket (Termasuk Parcel Custom)</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -953,7 +858,6 @@
             </div>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -1294,11 +1198,11 @@
         </p>
         <div class="cta-btn-group d-flex flex-wrap justify-content-center gap-3">
           <a href="https://wa.me/6282131087971?text=Halo%20Parcel%20Lebaran%2C%20saya%20ingin%20memesan%20parcel%20Lebaran.%20Bisa%20dibantu%20informasinya%3F"
-            target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom btn-custom-lg">
+            target="_blank" rel="noopener noreferrer" class="btn-custom btn-whatsapp-custom">
             <i class="bi bi-whatsapp"></i>
-            <span>Hubungi via WhatsApp <span class="d-inline-block text-nowrap">(0821-3108-7971)</span></span>
+            <span>Hubungi via WhatsApp</span>
           </a>
-          <a href="paket.html" class="btn-custom btn-outline-white btn-custom-lg">
+          <a href="paket.html" class="btn-custom btn-outline-white">
             <i class="bi bi-grid-fill"></i>
             <span>Jelajahi Paket Lengkap</span>
           </a>
@@ -1313,7 +1217,7 @@
       <div class="row g-4">
         <!-- Col 1: Brand Info -->
         <div class="col-lg-4">
-          <a href="index.html" class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3"
+          <a href="./" class="d-inline-flex align-items-center gap-2 text-decoration-none mb-3"
             aria-label="Beranda Parcel Lebaran">
             <img src="assets/images/logo.webp" alt="Logo Parcel Lebaran" width="52" height="52"
               class="rounded-3 bg-white p-1 border border-white border-opacity-25" style="object-fit: contain;"
@@ -1341,7 +1245,7 @@
         <div class="col-6 col-lg-2">
           <p class="footer-heading fw-bold text-white mb-3">Navigasi</p>
           <ul class="footer-links small">
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="./">Beranda</a></li>
             <li><a href="tentang.html">Tentang Kami</a></li>
             <li><a href="paket.html">Katalog Paket</a></li>
             <li><a href="portofolio.html">Portofolio</a></li>
@@ -1421,7 +1325,7 @@
   </button>
 
   <!-- ==================== QUICK VIEW MODAL (Sesuai Referensi Gambar Pengguna) ==================== -->
-  <div class="modal fade product-quickview-modal" id="productQuickViewModal" tabindex="-1" aria-labelledby="quickViewTitle" aria-hidden="true" style="display: none;">
+  <div class="modal fade product-quickview-modal" id="productQuickViewModal" style="display: none;" tabindex="-1" aria-labelledby="quickViewTitle" aria-hidden="true" style="display: none;">
     <div class="modal-dialog modal-dialog-centered" style="max-width: 760px; margin: 1.75rem auto;">
       <div class="modal-content border-0" style="border-radius: 20px; overflow: hidden; background: #ffffff;">
         <button type="button" class="btn-close quickview-close-btn" data-bs-dismiss="modal" aria-label="Tutup" style="position: absolute; top: 14px; right: 14px; z-index: 30; background-color: #f1f5f9; border-radius: 50%; padding: 8px; border: none;"></button>
@@ -1461,6 +1365,37 @@
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SEARCH MODAL ==================== -->
+  <div class="modal fade" id="siteSearchModal" style="display: none;" tabindex="-1" aria-labelledby="siteSearchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content search-modal-content">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title fs-6 fw-bold text-navy-900" id="siteSearchModalLabel">
+            <i class="bi bi-search me-2 text-warning"></i>Cari Paket Parcel Lebaran
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        </div>
+        <div class="modal-body pt-3">
+          <div class="search-input-wrap mb-3 position-relative">
+            <input type="text" class="form-control form-control-lg search-input-field" id="modalSearchInput" placeholder="Ketik nama paket, isian kue, atau budget..." autocomplete="off">
+            <i class="bi bi-search search-input-icon"></i>
+          </div>
+          <div class="quick-search-recommendations">
+            <div class="text-muted small fw-semibold mb-2">Pencarian Populer:</div>
+            <div class="d-flex flex-wrap gap-2">
+              <a href="paket.html#reguler" class="badge-search-tag">Paket Reguler VIP</a>
+              <a href="paket.html#spesial" class="badge-search-tag">Paket Spesial Fitrah</a>
+              <a href="paket/parcel-korporat.html" class="badge-search-tag">Paket Korporat B2B</a>
+              <a href="paket/parcel-custom.html" class="badge-search-tag">Parcel Custom</a>
+              <a href="harga-parcel-lebaran.html" class="badge-search-tag">Daftar Harga 2027</a>
+              <a href="blog.html" class="badge-search-tag">Panduan Memilih</a>
             </div>
           </div>
         </div>
