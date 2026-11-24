@@ -1,0 +1,44 @@
+DirectoryIndex index.html
+
+# Prevent directory listings
+Options -Indexes
+
+# Force UTF-8 character encoding for all text assets
+AddDefaultCharset UTF-8
+<IfModule mod_mime.c>
+  AddCharset UTF-8 .html .css .js .json .xml
+  AddType "text/html; charset=UTF-8" .html
+  AddType "text/css; charset=UTF-8" .css
+  AddType "application/javascript; charset=UTF-8" .js
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 0. Canonical Redirect: Force HTTPS and WWW for parcellebaran.web.id
+  RewriteCond %{HTTP_HOST} ^parcellebaran\.web\.id$ [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?parcellebaran\.web\.id$ [NC]
+  RewriteRule ^(.*)$ https://www.parcellebaran.web.id/$1 [R=301,L]
+
+  # 1. Landing pages /paket, /blog, and /portofolio
+  RewriteRule ^paket/?$ paket.html [L]
+  RewriteRule ^blog/?$ blog.html [L]
+  RewriteRule ^portofolio/?$ portofolio.html [L]
+
+  # 2. Backward compatibility: route legacy root package URLs to paket/
+  RewriteRule ^(parcel-premium|parcel-ekonomis|parcel-korporat|parcel-custom)(\.html)?$ paket/$1.html [L]
+
+  # 3. Backward compatibility: route legacy root blog URLs to blog/
+  RewriteRule ^(panduan-memilih-parcel-lebaran|perbedaan-parcel-ekonomis-premium-korporat|checklist-pengadaan-parcel-perusahaan|cara-membuat-parcel-custom)(\.html)?$ blog/$1.html [L]
+
+  # 4. Pass through existing files directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 5. Clean URL support: internally rewrite clean path to .html if it exists
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
+
+ErrorDocument 404 /404.html

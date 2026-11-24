@@ -1,0 +1,68 @@
+# robots.txt — Parcel Lebaran (https://www.parcellebaran.web.id/)
+# Dioptimalkan untuk Googlebot, Google Image Search, Bing, dan AI Answer Engines
+
+# 1. Aturan Umum untuk Semua Web Crawler
+User-agent: *
+Allow: /
+Allow: /assets/
+# Jangan blokir /404 atau /404.html agar crawler dapat mendeteksi kode status HTTP 404 dan meta noindex
+Disallow: /*.md$
+Disallow: /vercel.json
+
+# 2. Googlebot & Google Search Console Inspection Tool
+User-agent: Googlebot
+User-agent: Google-InspectionTool
+Allow: /
+Allow: /assets/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Allow: /*.woff$
+Allow: /*.woff2$
+Disallow: /*.md$
+Disallow: /vercel.json
+
+# 3. Googlebot-Image (Katalog Gambar & Foto Parcel Lebaran)
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/images/
+Allow: /*.webp$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.svg$
+Disallow: /*.md$
+
+# 4. Google Extended (Google Gemini & AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# 5. Microsoft Bingbot & Copilot
+User-agent: Bingbot
+Allow: /
+Allow: /assets/
+Disallow: /*.md$
+Disallow: /vercel.json
+
+# 6. AI & Answer Engine Bots (AEO & GEO Search)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# 7. Lokasi Peta Situs Resmi (Sitemap XML)
+Sitemap: https://www.parcellebaran.web.id/sitemap.xml

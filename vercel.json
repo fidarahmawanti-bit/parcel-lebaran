@@ -1,0 +1,331 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-premium",
+      "destination": "/paket/parcel-premium",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-premium.html",
+      "destination": "/paket/parcel-premium",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-spesial",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-spesial.html",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-korporat",
+      "destination": "/paket/parcel-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-korporat.html",
+      "destination": "/paket/parcel-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-custom",
+      "destination": "/paket/parcel-custom",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-custom.html",
+      "destination": "/paket/parcel-custom",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-ekonomis",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-ekonomis.html",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/paket/parcel-ekonomis",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/paket/parcel-ekonomis.html",
+      "destination": "/paket/parcel-spesial",
+      "permanent": true
+    },
+    {
+      "source": "/blog/perbedaan-parcel-ekonomis-premium-korporat",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/blog/perbedaan-parcel-ekonomis-premium-korporat.html",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-ekonomis-premium-korporat",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-ekonomis-premium-korporat.html",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vendor-parcel-lebaran-untuk-perusahaan",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/blog/vendor-parcel-lebaran-untuk-perusahaan.html",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran-untuk-perusahaan",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran-untuk-perusahaan.html",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/panduan-memilih-parcel-lebaran",
+      "destination": "/blog/panduan-memilih-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/panduan-memilih-parcel-lebaran.html",
+      "destination": "/blog/panduan-memilih-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-spesial-premium-korporat",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/perbedaan-parcel-spesial-premium-korporat.html",
+      "destination": "/blog/perbedaan-parcel-spesial-premium-korporat",
+      "permanent": true
+    },
+    {
+      "source": "/checklist-pengadaan-parcel-perusahaan",
+      "destination": "/blog/checklist-pengadaan-parcel-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/checklist-pengadaan-parcel-perusahaan.html",
+      "destination": "/blog/checklist-pengadaan-parcel-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/cara-membuat-parcel-custom",
+      "destination": "/blog/cara-membuat-parcel-custom",
+      "permanent": true
+    },
+    {
+      "source": "/cara-membuat-parcel-custom.html",
+      "destination": "/blog/cara-membuat-parcel-custom",
+      "permanent": true
+    },
+    {
+      "source": "/rekomendasi-parcel-lebaran",
+      "destination": "/blog/rekomendasi-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/rekomendasi-parcel-lebaran.html",
+      "destination": "/blog/rekomendasi-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/ide-parcel-lebaran-unik-fungsional",
+      "destination": "/blog/ide-parcel-lebaran-unik-fungsional",
+      "permanent": true
+    },
+    {
+      "source": "/ide-parcel-lebaran-unik-fungsional.html",
+      "destination": "/blog/ide-parcel-lebaran-unik-fungsional",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-lebaran-sesuai-budget",
+      "destination": "/blog/harga-parcel-lebaran-sesuai-budget",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-lebaran-sesuai-budget.html",
+      "destination": "/blog/harga-parcel-lebaran-sesuai-budget",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-lebaran-untuk-perusahaan",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-lebaran-untuk-perusahaan.html",
+      "destination": "/blog/parcel-lebaran-untuk-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/cara-memilih-vendor-parcel-lebaran",
+      "destination": "/blog/cara-memilih-vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/cara-memilih-vendor-parcel-lebaran.html",
+      "destination": "/blog/cara-memilih-vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/proses-pemesanan-parcel-lebaran",
+      "destination": "/blog/proses-pemesanan-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/proses-pemesanan-parcel-lebaran.html",
+      "destination": "/blog/proses-pemesanan-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran",
+      "destination": "/blog/vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/vendor-parcel-lebaran.html",
+      "destination": "/blog/vendor-parcel-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-lebaran-sembako",
+      "destination": "/blog/parcel-lebaran-sembako",
+      "permanent": true
+    },
+    {
+      "source": "/parcel-lebaran-sembako.html",
+      "destination": "/blog/parcel-lebaran-sembako",
+      "permanent": true
+    },
+    {
+      "source": "/ide-isi-parcel-sembako-lebaran",
+      "destination": "/blog/ide-isi-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/ide-isi-parcel-sembako-lebaran.html",
+      "destination": "/blog/ide-isi-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-sembako-lebaran",
+      "destination": "/blog/harga-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/harga-parcel-sembako-lebaran.html",
+      "destination": "/blog/harga-parcel-sembako-lebaran",
+      "permanent": true
+    },
+    {
+      "source": "/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "destination": "/blog/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/paket-sembako-lebaran-untuk-karyawan-perusahaan.html",
+      "destination": "/blog/paket-sembako-lebaran-untuk-karyawan-perusahaan",
+      "permanent": true
+    },
+    {
+      "source": "/blog/:slug.html",
+      "destination": "/blog/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/paket/:slug.html",
+      "destination": "/paket/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/portofolio/:slug.html",
+      "destination": "/portofolio/:slug",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*\\.(?:webp|jpg|jpeg|png|gif|svg|ico|woff|woff2|ttf|eot))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*\\.(?:css|js))",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*\\.html)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/((?!assets/).*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ]
+}
